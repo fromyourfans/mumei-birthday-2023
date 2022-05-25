@@ -33,12 +33,12 @@ class PartyScene extends Phaser.Scene {
     const centerY = height / 2;
 
     // Version number
-    this.add.text(width - 10, height - 20, 'Version 220525-0210', {
+    this.add.text(width - 5, height - 20, 'Version 220525-0210', {
       fontSize: 14,
       align: 'right',
       color: '#000000',
       stroke: '#f0f0f0',
-      strokeThickness: 2,
+      strokeThickness: 5,
     })
       .setDepth(60000)
       .setOrigin(1, 0);
