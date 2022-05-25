@@ -21,18 +21,18 @@ module.exports = {
     // HTML Title used for OpenGraph linters (social media links)
     config.plugin('html').tap((args) => {
       // eslint-disable-next-line no-param-reassign
-      args[0].title = 'Happy Birthday Enna!';
+      args[0].title = 'Happy Birthday Mumei!';
       // eslint-disable-next-line no-param-reassign
       args[0].meta = {
-        description: 'Aloupeeps celebrate Enna Alouette\'s Birthday!',
-        'og:title': 'Happy Birthday Enna!',
+        description: 'Hoomans celebrate Nanashi Mumei\'s Birthday',
+        'og:title': 'Happy Birthday Mumei!',
         'og:type': 'website',
-        'og:description': 'Aloupeeps celebrate Enna Alouette\'s Birthday!',
-        'og:image': 'https://birthday.ennaalouette.com/ogimage.png',
+        'og:description': 'Hoomans celebrate Nanashi Mumei\'s Birthday',
+        'og:image': 'https://mumei-birthday.fromyour.fans/ogimage.png',
         'twitter:card': 'summary_large_image',
-        'twitter:title': 'Happy Birthday Enna!',
-        'twitter:description': 'Aloupeeps celebrate Enna Alouette\'s Birthday!',
-        'twitter:image': 'https://birthday.ennaalouette.com/ogimage.png',
+        'twitter:title': 'Happy Birthday Mumei!',
+        'twitter:description': 'Hoomans celebrate Nanashi Mumei\'s Birthday',
+        'twitter:image': 'https://mumei-birthday.fromyour.fans/ogimage.png',
       };
       return args;
     });
@@ -56,8 +56,8 @@ module.exports = {
       });
   },
   pwa: {
-    name: 'Enna Birthday',
-    themeColor: '#102471',
+    name: 'Mumei Birthday',
+    themeColor: '#907D6F',
     workboxOptions: {
       skipWaiting: true,
       exclude: [
@@ -66,14 +66,14 @@ module.exports = {
         /(.*).js.map/g,
       ],
     },
-    assetsVersion: '2022_02_19_18_09',
+    assetsVersion: '2022_05_25_02_31',
     manifestOptions: {
-      name: 'Enna Birthday',
-      short_name: 'Enna Birthday',
-      description: 'Aloupeeps celebrate Enna Alouette\'s Birthday in 2022',
+      name: 'Mumei Birthday',
+      short_name: 'Mumei Birthday',
+      description: 'Hoomans celebrate Nanashi Mumei\'s Birthday',
       display: 'standalone',
       orientation: 'landscape',
-      background_color: '#ffffff',
+      background_color: '#907D6F',
       start_url: './',
     },
   },
