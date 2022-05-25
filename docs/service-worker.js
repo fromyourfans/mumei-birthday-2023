@@ -14,10 +14,10 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.637bc1bdf7eabbad59648e2c887a58d8.js"
+  "/precache-manifest.7eee9f0ee96a74ae2c55e1f0b727ae49.js"
 );
 
-workbox.core.setCacheNameDetails({prefix: "tribute-enna2022"});
+workbox.core.setCacheNameDetails({prefix: "mumei-birthday-2022"});
 
 workbox.core.skipWaiting();
 
