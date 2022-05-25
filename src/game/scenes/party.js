@@ -1,7 +1,5 @@
 import Phaser from 'phaser';
 import ElementsData from '@/data/elements';
-import AloupeepsData from '@/data/aloupeeps';
-import Aloupeeps from '../objects/aloupeeps';
 
 const INTENSITY_X = 0.008;
 const INTENSITY_Y = 0.004;
@@ -35,13 +33,19 @@ class PartyScene extends Phaser.Scene {
     const centerY = height / 2;
 
     // Version number
-    this.add.text(width - 10, 10, 'Version 19.18.09', { fontSize: 14, color: '#000000' })
+    this.add.text(width - 10, height - 20, 'Version 220525-0210', {
+      fontSize: 14,
+      align: 'right',
+      color: '#000000',
+      stroke: '#f0f0f0',
+      strokeThickness: 2,
+    })
       .setDepth(60000)
       .setOrigin(1, 0);
 
     // BGM
-    this.bgm = this.sound.add('bgm01').setVolume(0.1).setLoop(true);
-    this.bgm.play();
+    // this.bgm = this.sound.add('bgm01').setVolume(0.1).setLoop(true);
+    // this.bgm.play();
 
     // Candle Lights
     this.lights.setAmbientColor(0x0e0e0e);
@@ -77,30 +81,6 @@ class PartyScene extends Phaser.Scene {
           image,
         };
       });
-
-    // Animated Aloupeeps
-    AloupeepsData.forEach(({
-      sprite, x, y, z, scale, str, flip, ox = 0.5, oy = 0.5,
-      start, text, project, font, audio, volume,
-    }, index) => {
-      const ax = (width * x) - centerX;
-      const ay = (height * y) - centerY;
-      const container = new Aloupeeps({
-        scene: this, x: ax, y: ay, ox, oy, sprite, scale, flip, start,
-      })
-        .setDepth(z * 10)
-        .setPosition(centerX, centerY);
-      this.movables[`aloupeeps${index}`] = {
-        container,
-        strX: str * INTENSITY_X,
-        strY: str * INTENSITY_Y,
-        sprite: container.sprite,
-      };
-      // Interactive object
-      if (text) this.interactiveAloupeep(container, text, project, font, audio, volume);
-      // Transition
-      this.transitionIn(container, 'top');
-    });
 
     // Transition Animation
     this.transition

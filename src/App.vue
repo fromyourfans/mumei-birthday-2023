@@ -34,7 +34,7 @@
 </template>
 
 <script>
-import MuralImg from '@/assets/mural.jpg';
+import MuralImg from '@/assets/mural.png';
 import ProjectList from '@/data/projects';
 import ProjectVideo from '@/components/ProjectVideo.vue';
 import ProjectImage from '@/components/ProjectImage.vue';
@@ -118,13 +118,13 @@ html::-webkit-scrollbar {
   height: 0;
 }
 body {
-  background-color:#858ED1;
-  background: linear-gradient(180deg,
-    rgb(193, 196, 219) 0%,
-    rgba(133,142,209,1) 40%,
-    rgba(94,110,227,1) 100%
-  );
-  background-image: url(./game/assets/images/wbg.png);
+  background-color:#131313;
+  // background: linear-gradient(180deg,
+  //   rgb(193, 196, 219) 0%,
+  //   rgba(133,142,209,1) 40%,
+  //   rgba(94,110,227,1) 100%
+  // );
+  // background-image: url(./game/assets/images/room.png);
   background-size:cover;
   #app {
     background:none;
