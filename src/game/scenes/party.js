@@ -47,6 +47,14 @@ class PartyScene extends Phaser.Scene {
     // this.bgm = this.sound.add('bgm01').setVolume(0.1).setLoop(true);
     // this.bgm.play();
 
+    // Bark sounds
+    this.barks = [
+      this.sound.add('bark1').setVolume(0.4),
+      this.sound.add('bark2').setVolume(0.4),
+      this.sound.add('bark3').setVolume(0.4),
+      this.sound.add('bark4').setVolume(0.4),
+    ];
+
     // Candle Lights
     this.lights.setAmbientColor(0x0e0e0e);
     this.lights.addLight(width * 0.477, height * 0.73, 900, 0xffdd88, 2);
@@ -211,7 +219,9 @@ class PartyScene extends Phaser.Scene {
           // Toggle BGM and Hover SFX
           this.toggleSounds();
         } else if (key === 'animol') {
-          console.log('ANIMOL');
+          // Animol barks
+          const bark = this.barks[Math.floor(Math.random() * 4)];
+          bark.play();
         } else if (key === 'bae') {
           console.log('BAE');
         } else if (key === 'sana') {

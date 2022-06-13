@@ -20,6 +20,11 @@ import bae from '../assets/images/bae.png';
 import mumei from '../assets/images/mumei.png';
 import sana from '../assets/images/sana.png';
 
+import bark1 from '../assets/audio/bark01.mp3';
+import bark2 from '../assets/audio/bark02.mp3';
+import bark3 from '../assets/audio/bark03.mp3';
+import bark4 from '../assets/audio/bark04.mp3';
+
 import Cursor3 from '../assets/cursor/cursor3.png';
 
 import confettiPng from '../assets/atlas/confetti.png';
@@ -61,6 +66,11 @@ class IndexScene extends Phaser.Scene {
     this.load.image('bae', bae);
     this.load.image('mumei', mumei);
     this.load.image('sana', sana);
+
+    this.load.audio('bark1', bark1);
+    this.load.audio('bark2', bark2);
+    this.load.audio('bark3', bark3);
+    this.load.audio('bark4', bark4);
 
     this.load.atlas('confetti', confettiPng, confettiJson);
   }
