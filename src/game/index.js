@@ -17,7 +17,7 @@ class EnnaBirthday {
         width: 1920,
         height: 937,
       },
-      backgroundColor: Phaser.Display.Color.HexStringToColor('#858ED1').color,
+      backgroundColor: Phaser.Display.Color.HexStringToColor('#242424').color,
       plugins,
       scene,
       callbacks: {

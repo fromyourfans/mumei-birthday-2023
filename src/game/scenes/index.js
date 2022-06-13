@@ -35,10 +35,10 @@ class IndexScene extends Phaser.Scene {
     // Loading text
     const { width, height } = this.sys.game.canvas;
     this.loadingText = this.add.text(width / 2, height / 2, 'Loading....', {
-      fontSize: 20,
+      fontSize: 24,
       color: '#ffffff',
-      stroke: '#003366',
-      strokeThickness: 5,
+      stroke: '#000000',
+      strokeThickness: 3,
     }).setOrigin(0.5, 0.5);
 
     // Add scenes

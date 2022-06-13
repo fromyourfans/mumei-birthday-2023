@@ -33,7 +33,7 @@ class PartyScene extends Phaser.Scene {
     const centerY = height / 2;
 
     // Version number
-    this.add.text(width - 5, height - 20, 'Version 220525-0210', {
+    this.add.text(width - 5, height - 20, 'Version 220612-1547', {
       fontSize: 14,
       align: 'right',
       color: '#000000',
@@ -58,7 +58,7 @@ class PartyScene extends Phaser.Scene {
     // Create game objects and placements
     Object.entries(ElementsData)
       .forEach(([key, {
-        texture, x, y, z, scale, str, ox, oy,
+        texture, x, y, z, scale, str, ox, oy, lx, ly,
         text, project, font, dir, audio, volume,
       }]) => {
         const container = this.add.container(centerX, centerY).setDepth(z * 10);
@@ -69,10 +69,10 @@ class PartyScene extends Phaser.Scene {
         container.add(image);
         // Interactive object
         if (text) {
-          this.interactiveElement(key, container, image, text, project, font, audio, volume);
+          this.interactiveElement(key, container, image, text, project, font, audio, volume, lx, ly);
         }
         // Transition
-        if (key !== 'room') this.transitionIn(container, dir);
+        if (key !== 'room' && key !== 'trunk' && key !== 'table') this.transitionIn(container, dir);
         // Add to movable list
         this.movables[key] = {
           container,
@@ -161,10 +161,12 @@ class PartyScene extends Phaser.Scene {
 
   interactiveElement(
     key, container, image, text, project, fontSize = 30,
-    audio = null, volume = 0.5,
+    audio = null, volume = 0.5, lx = 0, ly = 0,
   ) {
     // Label
-    const label = this.createLabel(image.x, image.y, text, fontSize)
+    const lblOffX = (lx * image.width) || 0;
+    const lblOffY = (ly * image.height) || 0;
+    const label = this.createLabel(image.x + lblOffX, image.y + lblOffY, text, fontSize)
       .setDepth(2000 + image.depth);
     container.add(label);
     // Interaction
@@ -179,8 +181,6 @@ class PartyScene extends Phaser.Scene {
             .setAngle((Math.random() * 11) - 5)
             .setVisible(true);
         }
-        // Painting special hover
-        if (key === 'painting' && this.lightState) image.setTexture('painting-color');
         // Hover Audio
         if (audio && this.soundsEnabled) {
           if (this.projectAudio) this.projectAudio.stop();
@@ -192,7 +192,6 @@ class PartyScene extends Phaser.Scene {
       .on('pointerout', () => {
         image.setAngle(0);
         label.setVisible(false);
-        if (key === 'painting') image.setTexture('painting');
         // Stop hover audio
         if (this.projectAudio) this.projectAudio.stop();
         this.projectAudio = null;
@@ -211,6 +210,16 @@ class PartyScene extends Phaser.Scene {
         } else if (key === 'playbtn') {
           // Toggle BGM and Hover SFX
           this.toggleSounds();
+        } else if (key === 'animol') {
+          console.log('ANIMOL');
+        } else if (key === 'bae') {
+          console.log('BAE');
+        } else if (key === 'sana') {
+          console.log('SANA');
+        } else if (key === 'mumei') {
+          console.log('MUMEI');
+        } else if (key === 'banner') {
+          console.log('BANNER');
         } else if (this.lightState) {
           // Everything else available only if lights are on
           this.overlay.setVisible(true);
