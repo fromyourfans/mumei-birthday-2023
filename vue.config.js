@@ -55,26 +55,26 @@ module.exports = {
         return options;
       });
   },
-  pwa: {
-    name: 'Mumei Birthday',
-    themeColor: '#907D6F',
-    workboxOptions: {
-      skipWaiting: true,
-      exclude: [
-        'CNAME',
-        /(.*).css.map/g,
-        /(.*).js.map/g,
-      ],
-    },
-    assetsVersion: '2022_06_12_17_25',
-    manifestOptions: {
-      name: 'Mumei Birthday',
-      short_name: 'Mumei Birthday',
-      description: 'Hoomans celebrate Nanashi Mumei\'s Birthday',
-      display: 'standalone',
-      orientation: 'landscape',
-      background_color: '#907D6F',
-      start_url: './',
-    },
-  },
+  // pwa: {
+  //   name: 'Mumei Birthday',
+  //   themeColor: '#907D6F',
+  //   workboxOptions: {
+  //     skipWaiting: true,
+  //     exclude: [
+  //       'CNAME',
+  //       /(.*).css.map/g,
+  //       /(.*).js.map/g,
+  //     ],
+  //   },
+  //   assetsVersion: '2022_06_12_17_25',
+  //   manifestOptions: {
+  //     name: 'Mumei Birthday',
+  //     short_name: 'Mumei Birthday',
+  //     description: 'Hoomans celebrate Nanashi Mumei\'s Birthday',
+  //     display: 'standalone',
+  //     orientation: 'landscape',
+  //     background_color: '#907D6F',
+  //     start_url: './',
+  //   },
+  // },
 };
