@@ -29,6 +29,8 @@ import Cursor3 from '../assets/cursor/cursor3.png';
 
 import confettiPng from '../assets/atlas/confetti.png';
 import confettiJson from '../assets/atlas/confetti.json';
+import friendPng from '../assets/atlas/friend.png';
+import friendJson from '../assets/atlas/friend.json';
 
 class IndexScene extends Phaser.Scene {
   loadingText = null;
@@ -73,6 +75,7 @@ class IndexScene extends Phaser.Scene {
     this.load.audio('bark4', bark4);
 
     this.load.atlas('confetti', confettiPng, confettiJson);
+    this.load.atlas('friend', friendPng, friendJson);
   }
 
   async create() {

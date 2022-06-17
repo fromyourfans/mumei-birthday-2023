@@ -77,7 +77,10 @@ class PartyScene extends Phaser.Scene {
         container.add(image);
         // Interactive object
         if (text) {
-          this.interactiveElement(key, container, image, text, project, font, audio, volume, lx, ly);
+          this.interactiveElement(
+            key, container, image, text, project, font,
+            audio, volume, lx, ly,
+          );
         }
         // Transition
         if (key !== 'room' && key !== 'trunk' && key !== 'table') this.transitionIn(container, dir);
@@ -89,6 +92,41 @@ class PartyScene extends Phaser.Scene {
           image,
         };
       });
+
+    // Friend
+    const friendContainer = this.add.container(centerX, centerY).setDepth(900);
+    let friendNum = Math.ceil(Math.random() * 96);
+    let friendNumStr = String(friendNum).padStart(4, '0');
+    this.friend = this.add.sprite(
+      (width * 0.4) - centerX,
+      (height * 0.55) - centerY,
+      'friend',
+      `f${friendNumStr}.png`,
+    )
+      .setDepth(1000)
+      .setInteractive({ useHandCursor: true })
+      .on('pointerdown', () => {
+        friendNum += 1;
+        if (friendNum > 96) friendNum = 1;
+        friendNumStr = String(friendNum).padStart(4, '0');
+        this.friend.setFrame(`f${friendNumStr}.png`);
+      });
+    this.add.tween({
+      targets: this.friend,
+      y: this.friend.y - 30,
+      x: this.friend.x - 7,
+      angle: 5,
+      ease: 'Cubic.easeInOut',
+      yoyo: true,
+      duration: 4000,
+      loop: -1,
+    });
+    friendContainer.add(this.friend);
+    this.movables.friend = {
+      container: friendContainer,
+      strX: 0.85 * INTENSITY_X,
+      strY: 0.85 * INTENSITY_Y,
+    };
 
     // Transition Animation
     this.transition
