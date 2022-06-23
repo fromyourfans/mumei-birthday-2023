@@ -14,6 +14,7 @@ import animol from '../assets/images/animol.png';
 import banner from '../assets/images/banner.png';
 import lantern from '../assets/images/lantern.png';
 import table from '../assets/images/table.png';
+import cake from '../assets/images/cake.png';
 import trunk from '../assets/images/trunk.png';
 
 import bae from '../assets/images/bae.png';
@@ -64,6 +65,7 @@ class IndexScene extends Phaser.Scene {
     this.load.image('banner', banner);
     this.load.image('lantern', lantern);
     this.load.image('table', table);
+    this.load.image('cake', cake);
     this.load.image('trunk', trunk);
     this.load.image('bae', bae);
     this.load.image('mumei', mumei);

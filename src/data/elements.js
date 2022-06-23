@@ -91,6 +91,8 @@ module.exports = {
     oy: 0.7,
     str: 0,
     scale: 0.87,
+    lx: 0,
+    ly: -0.56,
     text: 'Mumei',
     font: 40,
   },
@@ -123,6 +125,15 @@ module.exports = {
     z: 100,
     str: -0.3,
     scale: 0.97,
+  },
+  cake: {
+    x: 0.495,
+    y: 0.83,
+    z: 100.1,
+    str: -0.33,
+    scale: 0.97,
+    text: 'Blow the candle!',
+    font: 30,
   },
 
   front1: {
