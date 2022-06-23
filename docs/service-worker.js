@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.1cd933602a764849993cb6a7db63cd8a.js"
+  "/precache-manifest.116eaf7dd05e84b82ee5011581844c2e.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "mumei-birthday-2022"});
