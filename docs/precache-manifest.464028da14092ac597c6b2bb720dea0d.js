@@ -4,7 +4,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/CNAME"
   },
   {
-    "revision": "7ea459947c927b393b91",
+    "revision": "1c51394d777768567a8f",
     "url": "/css/app.168e519f.css"
   },
   {
@@ -26,6 +26,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "b3a4ce245ae794b7dd77e7ac4a4c2a84",
     "url": "/img/bed.b3a4ce24.png"
+  },
+  {
+    "revision": "20e98ed7855533871c132c9dcc2e3378",
+    "url": "/img/bowls.20e98ed7.png"
   },
   {
     "revision": "5bba7cde3778b568e25e9d6b12029c63",
@@ -76,6 +80,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/outside.682bbe66.png"
   },
   {
+    "revision": "b1a73d082d10a6e9efee4c127c14de5c",
+    "url": "/img/rice.b1a73d08.png"
+  },
+  {
     "revision": "986287ac17411eb7711632bf328b13f2",
     "url": "/img/room.986287ac.png"
   },
@@ -96,12 +104,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/trunk.a4d09565.png"
   },
   {
-    "revision": "f911c431fd5ea6fe8b5847414b2e774b",
+    "revision": "d9a8cd8672a1c5f02c115e24b056c79a",
     "url": "/index.html"
   },
   {
-    "revision": "7ea459947c927b393b91",
-    "url": "/js/app.b4fc8b82.js"
+    "revision": "1c51394d777768567a8f",
+    "url": "/js/app.839d5c0a.js"
   },
   {
     "revision": "9d7b746c8092fd874117",
