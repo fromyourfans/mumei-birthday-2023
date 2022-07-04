@@ -98,8 +98,8 @@ class PartyScene extends Phaser.Scene {
     let friendNum = Math.ceil(Math.random() * 96);
     let friendNumStr = String(friendNum).padStart(4, '0');
     this.friend = this.add.sprite(
-      (width * 0.4) - centerX,
-      (height * 0.55) - centerY,
+      (width * 0.41) - centerX,
+      (height * 0.61) - centerY,
       'friend',
       `f${friendNumStr}.png`,
     )
