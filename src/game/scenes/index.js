@@ -22,6 +22,7 @@ import bowls from '../assets/images/bowls.png';
 import bae from '../assets/images/bae.png';
 import mumei from '../assets/images/mumei.png';
 import sana from '../assets/images/sana.png';
+import fauna from '../assets/images/fauna.png';
 
 import bark1 from '../assets/audio/bark01.mp3';
 import bark2 from '../assets/audio/bark02.mp3';
@@ -74,6 +75,7 @@ class IndexScene extends Phaser.Scene {
     this.load.image('bae', bae);
     this.load.image('mumei', mumei);
     this.load.image('sana', sana);
+    this.load.image('fauna', fauna);
 
     this.load.audio('bark1', bark1);
     this.load.audio('bark2', bark2);

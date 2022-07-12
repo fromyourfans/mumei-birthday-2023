@@ -111,6 +111,15 @@ module.exports = {
     // ly: 0,
   },
 
+  fauna: {
+    x: 0.66,
+    y: 0.54,
+    z: 91,
+    str: 0.8,
+    scale: 0.84,
+    text: 'Fauna',
+    font: 40,
+  },
   mumei: {
     x: 0.495,
     y: 0.75,
