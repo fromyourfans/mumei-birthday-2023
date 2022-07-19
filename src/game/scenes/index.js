@@ -114,8 +114,21 @@ class IndexScene extends Phaser.Scene {
     // Done all preloading
     this.loadingText.destroy();
 
-    // Proceed to next scene
-    this.scene.start('party');
+    // Click to Start label
+    const { width, height } = this.sys.game.canvas;
+    this.loadingText = this.add.text(width / 2, height / 2, 'TOUCH TO START', {
+      fontFamily: 'Londrina Solid',
+      fontSize: 40,
+      color: '#ffffff',
+      stroke: '#000000',
+      strokeThickness: 3,
+    }).setOrigin(0.5, 0.5);
+
+    // Click to Start
+    this.input.once('pointerdown', () => {
+      // Proceed to next scene
+      this.scene.start('party');
+    });
   }
 }
 
