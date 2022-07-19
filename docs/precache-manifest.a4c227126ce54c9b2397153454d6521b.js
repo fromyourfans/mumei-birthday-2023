@@ -4,8 +4,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/CNAME"
   },
   {
-    "revision": "6bae379bef90959ef61e",
-    "url": "/css/app.168e519f.css"
+    "revision": "be4466b6911c131615be",
+    "url": "/css/app.3987bd7d.css"
   },
   {
     "revision": "9d7b746c8092fd874117",
@@ -18,6 +18,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "e31333f562a7cbcc1b36b14133cf872f",
     "url": "/img/bae.e31333f5.png"
+  },
+  {
+    "revision": "76500ac4d1b476a3f9fcaf1cc256cae3",
+    "url": "/img/balloon1.76500ac4.png"
+  },
+  {
+    "revision": "21779d6c268e7dbfc4f0cbba23cb6c74",
+    "url": "/img/balloon2.21779d6c.png"
   },
   {
     "revision": "a28496124779f149357833c9ca7a3b97",
@@ -48,6 +56,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/cursor3.43b5ebd9.png"
   },
   {
+    "revision": "cda5ca0c6e98cc319bb41704b75d6038",
+    "url": "/img/decors.cda5ca0c.png"
+  },
+  {
     "revision": "940d56d16422e463a1837cdaf07c1637",
     "url": "/img/fauna.940d56d1.png"
   },
@@ -72,16 +84,28 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/lantern.0e57f8b4.png"
   },
   {
+    "revision": "84551664c89759a111de678c3e1cf72e",
+    "url": "/img/letters.84551664.png"
+  },
+  {
     "revision": "b5136f12e0c5e2fc207e2094cbad96cc",
     "url": "/img/mumei.b5136f12.png"
   },
   {
-    "revision": "b34eb720fbbfcbd1fbd9f49ded3fa25a",
-    "url": "/img/mural.b34eb720.png"
+    "revision": "b22f1baab8c63c077177a81a78e106f5",
+    "url": "/img/mural-20220719.b22f1baa.jpg"
   },
   {
     "revision": "682bbe661b5f28d84f206ace49b1e4d0",
     "url": "/img/outside.682bbe66.png"
+  },
+  {
+    "revision": "c655e4e1379677069c1b860a212e8ce4",
+    "url": "/img/painting.c655e4e1.png"
+  },
+  {
+    "revision": "6d257800d2b36a7b1a655823875b4c25",
+    "url": "/img/quests.6d257800.png"
   },
   {
     "revision": "b1a73d082d10a6e9efee4c127c14de5c",
@@ -92,12 +116,36 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/room.986287ac.png"
   },
   {
+    "revision": "ef4f29e6b00fd5774310b9fad7fe2d59",
+    "url": "/img/sample1.ef4f29e6.png"
+  },
+  {
+    "revision": "5bba7cde3778b568e25e9d6b12029c63",
+    "url": "/img/sample2.5bba7cde.png"
+  },
+  {
+    "revision": "c655e4e1379677069c1b860a212e8ce4",
+    "url": "/img/sample3.c655e4e1.png"
+  },
+  {
+    "revision": "b5136f12e0c5e2fc207e2094cbad96cc",
+    "url": "/img/sample4.b5136f12.png"
+  },
+  {
+    "revision": "e31333f562a7cbcc1b36b14133cf872f",
+    "url": "/img/sample5.e31333f5.png"
+  },
+  {
     "revision": "2c95e1e2f329877a8b635a2dafb290d1",
     "url": "/img/sana.2c95e1e2.png"
   },
   {
     "revision": "c755e38e98ee06dcf918ab634144d2e7",
     "url": "/img/shelf.c755e38e.png"
+  },
+  {
+    "revision": "3589fdaf7d4b77a953e0448fd65fc406",
+    "url": "/img/shelftop.3589fdaf.png"
   },
   {
     "revision": "b335039d512a797854d240ca390a8dc0",
@@ -108,12 +156,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/trunk.a4d09565.png"
   },
   {
-    "revision": "e08373d118384afb14f56c159d7a569f",
+    "revision": "f27e6bd512ff7abd0bb663c4c1d01719",
     "url": "/index.html"
   },
   {
-    "revision": "6bae379bef90959ef61e",
-    "url": "/js/app.97375cb0.js"
+    "revision": "be4466b6911c131615be",
+    "url": "/js/app.5cdd8fe3.js"
   },
   {
     "revision": "9d7b746c8092fd874117",
