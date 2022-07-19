@@ -3,18 +3,10 @@
     <div id="game-container" ref="game-container"></div>
     <v-dialog id="projects" v-model="dialog"
       :max-width="dialogWidth"
-      elevation="0" overlay-color="purple darken-4" overlay-opacity="0.85">
+      elevation="0" overlay-color="brown darken-4" overlay-opacity="0.85">
       <v-card tile class="pa-4">
-        <div v-for="(project, projectKey) in ProjectList" :key="projectKey">
-          <ProjectVideo
-            v-if="openProject === projectKey"
-            :title="project.title"
-            :description="project.description"
-            :warnings="project.warnings"
-            :lead="project.lead"
-            :credits="project.credits"
-            :video="project.video"
-          ></ProjectVideo>
+        <div v-if="openProject === 'tour'">
+          <ProjectTour />
         </div>
         <div v-if="openProject === 'mural'">
           <ProjectImage :image="MuralImg" />
@@ -34,9 +26,9 @@
 </template>
 
 <script>
-import MuralImg from '@/assets/mural.png';
+import MuralImg from '@/assets/mural-20220719.jpg';
 import ProjectList from '@/data/projects';
-import ProjectVideo from '@/components/ProjectVideo.vue';
+import ProjectTour from '@/components/ProjectTour.vue';
 import ProjectImage from '@/components/ProjectImage.vue';
 import ProjectMessages from '@/components/ProjectMessages.vue';
 import ProjectCredits from '@/components/ProjectCredits.vue';
@@ -98,7 +90,7 @@ export default {
     });
   },
   components: {
-    ProjectVideo,
+    ProjectTour,
     ProjectImage,
     ProjectMessages,
     ProjectCredits,

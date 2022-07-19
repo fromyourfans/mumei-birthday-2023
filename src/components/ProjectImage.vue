@@ -2,12 +2,12 @@
   <div class="project">
     <div class="project-description">
       <h2>Drawing Board</h2>
-      <p>Some aloupeeps drew their greetings on a shared community board!</p>
+      <p>Hoomans doodled their birthday greetings on a shared drawing board!</p>
     </div>
     <div class="project-close">
       <v-btn
         @click="$root.$emit('closeProject')"
-        block large elevation="1" color="purple lighten-4">
+        block large elevation="1" color="brown lighten-4">
         Close
       </v-btn>
     </div>
@@ -66,6 +66,7 @@ export default {
     left: 0;
     right: 0;
     bottom: 0;
+    background: #c2af8b;
   }
   .project-close {
     position:absolute;

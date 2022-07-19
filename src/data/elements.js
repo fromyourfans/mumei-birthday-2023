@@ -7,6 +7,11 @@ module.exports = {
     ox: 0.5,
     oy: 0.5,
     scale: 0.97,
+    text: 'World Tour',
+    font: 34,
+    lx: 0.1,
+    ly: 0.3,
+    project: 'tour',
   },
 
   room: {
@@ -80,6 +85,7 @@ module.exports = {
     scale: 0.75,
     text: 'Drawing Board',
     font: 40,
+    project: 'mural',
   },
   lantern: {
     x: 0.13,
@@ -153,8 +159,6 @@ module.exports = {
     ox: 0.5,
     oy: 0.5,
     scale: 0.85,
-    text: 'Happy Birthday Mumei!',
-    font: 50,
   },
   letters: {
     x: 0.83,
@@ -166,6 +170,7 @@ module.exports = {
     scale: 1,
     text: 'Birthday Messages',
     font: 40,
+    project: 'messages',
   },
 
   fauna: {
@@ -174,8 +179,6 @@ module.exports = {
     z: 91,
     str: 0.8,
     scale: 0.84,
-    text: 'Fauna',
-    font: 40,
   },
   mumei: {
     x: 0.495,
@@ -187,8 +190,6 @@ module.exports = {
     scale: 0.87,
     lx: 0,
     ly: -0.56,
-    text: 'Mumei',
-    font: 40,
   },
   sana: {
     x: 0.34,
@@ -196,8 +197,6 @@ module.exports = {
     z: 92,
     str: -0.15,
     scale: 0.87,
-    text: 'Sana',
-    font: 40,
   },
   bae: {
     x: 0.1,
@@ -209,8 +208,6 @@ module.exports = {
     ly: 0.27,
     str: 0.4,
     scale: 0.8,
-    text: 'Bae',
-    font: 40,
   },
 
   table: {

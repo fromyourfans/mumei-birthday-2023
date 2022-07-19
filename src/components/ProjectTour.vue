@@ -1,13 +1,9 @@
 <template>
   <div class="project">
     <div class="project-description">
-      <h2>Birthday Cards</h2>
+      <h2>World Tour</h2>
       <p>
-        Many hoomans sincerely wish Nanashi Mumei a very happy birthday this year!
-      </p>
-      <p class="blue--text">
-        PROTIP: Click on a card to mark it as read. It will persist even across website visits.
-        <span class="red--text font-weight-bold">Read messages:  {{countRead}} / {{countAll}}</span>
+        Meet Friends around the world who also celebrate Mumei's birthday!
       </p>
     </div>
     <div class="project-close">
@@ -19,15 +15,25 @@
     </div>
     <div class="project-content">
       <div v-masonry="'bdaycards'" transition-duration="0.3s" item-selector=".card" stagger="0s">
-        <div
-          v-masonry-tile
-          :class="[ 'card', read[item.name] ? 'card-read' : '' ]"
-          v-for="(item, ix) in cards" :key="`card-${ix}`"
-          @click="toggleRead(item.name)"
-        >
-          <div class="binder"></div>
-          <div class="card-name text-h6 pr-12 py-2">{{item.name}}</div>
-          <div class="card-text text-body-1 pr-4 pb-2">{{item.message}}</div>
+        <div v-masonry-tile class="card">
+          <img src="@/assets/tour/sample1.png" />
+          <div class="artist text-center">submissionName</div>
+        </div>
+        <div v-masonry-tile class="card">
+          <img src="@/assets/tour/sample2.png" />
+          <div class="artist text-center">submissionName</div>
+        </div>
+        <div v-masonry-tile class="card">
+          <img src="@/assets/tour/sample3.png" />
+          <div class="artist text-center">submissionName</div>
+        </div>
+        <div v-masonry-tile class="card">
+          <img src="@/assets/tour/sample4.png" />
+          <div class="artist text-center">submissionName</div>
+        </div>
+        <div v-masonry-tile class="card">
+          <img src="@/assets/tour/sample5.png" />
+          <div class="artist text-center">submissionName</div>
         </div>
       </div>
     </div>
@@ -41,7 +47,7 @@ import twemoji from 'twemoji';
 
 export default {
   data: () => ({
-    source: 'https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumei2022.json',
+    source: 'https://vtubertools.sfo3.digitaloceanspaces.com/tribute/enna2022.json',
     cards: [],
     read: {},
     countRead: 0,
@@ -51,15 +57,15 @@ export default {
     toggleRead(key) {
       if (typeof this.read[key] === 'undefined') this.read[key] = false;
       this.read = { ...this.read, [key]: !this.read[key] };
-      localStorage.setItem('mumei2022_read', JSON.stringify(this.read));
+      localStorage.setItem('enna2022_read', JSON.stringify(this.read));
       this.countRead = Object.values(this.read).filter((v) => !!v).length;
     },
   },
   mounted() {
     // Load data
     (async () => {
-      if (!localStorage.getItem('mumei2022_read')) localStorage.setItem('mumei2022_read', '{}');
-      this.read = JSON.parse(localStorage.getItem('mumei2022_read'));
+      if (!localStorage.getItem('enna2022_read')) localStorage.setItem('enna2022_read', '{}');
+      this.read = JSON.parse(localStorage.getItem('enna2022_read'));
       this.countRead = Object.values(this.read).filter((v) => !!v).length;
       const fetchSource = await axios.get(this.source).catch(() => null);
       const data = fetchSource && fetchSource.data ? fetchSource.data : {};
@@ -104,7 +110,7 @@ export default {
     left: 0;
     right: 0;
     bottom: 0;
-    // background:#c2af8b;
+    // background:#927a4d;
     overflow-y:scroll;
   }
   .project-close {
@@ -117,34 +123,25 @@ export default {
 }
 
 .card {
-  background:#FFFFFF;
+  background:#f1e7d5;
   position:relative;
-  padding-left:20px;
   min-height:100px;
   width:24%;
   margin:10px 0.5%;
-  border:2px solid #c2af8b;
-  background:#f1e7d5;
-  .binder {
-    background:#c2af8b;
+  padding:10px 10px 24px 10px;
+  border:2px solid #927a4d;
+  img {
+    width:100%;
+  }
+  .artist {
     position:absolute;
-    top:0px;
-    left:0px;
-    width:10px;
-    height:100%;
-  }
-  .card-name {
-    color:#343c75;
-  }
-  .card-text {
-    white-space: pre-line;
-  }
-  &.card-read {
-    background:#927a4d;
-    color:#ffffff;
-    .card-name {
-      color:#ffffff;
-    }
+    bottom:0;
+    left:2px;
+    right:2px;
+    height:30px;
+    line-height:30px;
+    font-size:20px;
+    color:#927a4d;
   }
 }
 
