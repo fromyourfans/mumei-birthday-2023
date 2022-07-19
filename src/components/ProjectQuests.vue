@@ -1,8 +1,8 @@
 <template>
   <div class="project">
     <div class="project-title">
-      <h2 class="text-center">Quests</h2>
-      <!-- <h3 class="text-center">List is in the suggested viewing order</h3> -->
+      <h1 class="text-center">Quests</h1>
+      <h2 class="text-center red--text">Complete all Quests for a surprise at the end!</h2>
     </div>
     <div class="project-content">
       <ul>
@@ -35,12 +35,17 @@ export default {
       tour: 'Go outside, and meet Hoomans around the world',
     },
   }),
+  mounted() {
+    if (Object.values(this.questStatus).reduce((c, v) => c && v, true)) {
+      this.$root.$emit('allQuestComplete');
+    }
+  },
 };
 </script>
 
 <style lang="scss" scoped>
 .project {
-  height:90vh;
+  height:60vh;
   position:relative;
   .project-title {
     left:0;
@@ -48,17 +53,17 @@ export default {
   }
   .project-content {
     position:absolute;
-    top: 80px;
+    top: 100px;
     left:0;
     right:0;
-    bottom:110px;
+    bottom:60px;
     overflow-y:scroll;
-    background:#f0f0f0;
+    background:#f1e7d5;
     padding:10px 20px;
   }
   .project-close {
     position:absolute;
-    bottom:40px;
+    bottom:0px;
     left:0;
     right:0;
   }
@@ -69,7 +74,7 @@ ul {
   padding:0;
   font-size:24px;
   li {
-    margin:0;
+    margin:10px 0px 0px 0px;
     padding:0;
     list-style: none;
     input {

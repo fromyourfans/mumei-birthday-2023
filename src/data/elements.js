@@ -223,7 +223,7 @@ module.exports = {
     z: 100.1,
     str: -0.33,
     scale: 0.97,
-    text: 'Blow the candle!',
+    text: 'Make a wish! Blow the candle!',
     font: 30,
   },
 

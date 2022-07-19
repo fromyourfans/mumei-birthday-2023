@@ -11,7 +11,7 @@ class PartyScene extends Phaser.Scene {
 
   transition = null;
 
-  confettiState = false;
+  confettiState = true;
 
   lightState = true;
 
@@ -25,7 +25,7 @@ class PartyScene extends Phaser.Scene {
 
   bgm = null;
 
-  soundsEnabled = true;
+  candleBlown = false;
 
   create() {
     const { width, height } = this.sys.game.canvas;
@@ -44,10 +44,6 @@ class PartyScene extends Phaser.Scene {
       .setDepth(60000)
       .setOrigin(1, 0);
 
-    // BGM
-    // this.bgm = this.sound.add('bgm01').setVolume(0.1).setLoop(true);
-    // this.bgm.play();
-
     // Bark sounds
     this.barks = [
       this.sound.add('bark1').setVolume(0.4),
@@ -58,8 +54,8 @@ class PartyScene extends Phaser.Scene {
 
     // Candle Lights
     this.lights.setAmbientColor(0x0e0e0e);
-    this.lights.addLight(width * 0.477, height * 0.73, 900, 0xffdd88, 2);
-    this.lights.addLight(width * 0.477, height * 0.73, 50, 0xffffff, 3);
+    this.lights.addLight(width * 0.5, height * 0.75, 1200, 0xffdd88, 2);
+    this.lights.addLight(width * 0.5, height * 0.75, 30, 0xffffff, 0.5);
 
     // Animation transition
     this.transition = this.tweens.createTimeline();
@@ -157,7 +153,9 @@ class PartyScene extends Phaser.Scene {
       .setVisible(false);
     this.game.vue.$root.$on('projectClosed', () => {
       this.overlay.setVisible(false);
-      if (this.soundsEnabled) this.bgm.resume();
+      // setTimeout(() => {
+      //   this.overlay.setVisible(false);
+      // }, 500);
     });
 
     // Confetti
@@ -176,27 +174,33 @@ class PartyScene extends Phaser.Scene {
     this.confettiEmitter.setVisible(this.confettiState);
 
     // Quests
-    this.add.rectangle(0, height - 240, 240, 240)
-      .setOrigin(0, 0)
-      .setDepth(3601)
-      .setInteractive({ useHandCursor: true })
-      .on('pointerdown', () => {
-        this.game.vue.dialog = true;
-        this.game.vue.openProject = 'quests';
-      });
-    this.add.image(20, height - 220, 'quests')
-      .setDisplaySize(180, 180)
-      .setOrigin(0, 0)
-      .setDepth(3602);
-    this.add.text(20, height - 60, 'Quests', {
-      fontFamily: 'Londrina Solid',
-      fontSize: 40,
-      color: '#ffffff',
-      stroke: '#131313',
-      strokeThickness: 4,
-      fixedWidth: 180,
-      align: 'center',
-    }).setDepth(3603);
+    this.questIcon = this.add.container(0, 0, [
+      this.add.rectangle(0, height - 240, 240, 240)
+        .setOrigin(0, 0)
+        .setInteractive({ useHandCursor: true })
+        .on('pointerdown', () => {
+          this.overlay.setVisible(true);
+          this.game.vue.dialog = true;
+          this.game.vue.openProject = 'quests';
+        }),
+      this.add.image(20, height - 220, 'quests')
+        .setDisplaySize(180, 180)
+        .setOrigin(0, 0),
+      this.add.text(20, height - 60, 'Quests', {
+        fontFamily: 'Londrina Solid',
+        fontSize: 40,
+        color: '#ffffff',
+        stroke: '#131313',
+        strokeThickness: 4,
+        fixedWidth: 180,
+        align: 'center',
+      }),
+    ]).setDepth(3601);
+
+    // All Quests Completed
+    this.game.vue.$root.$on('allQuestComplete', () => {
+      this.lightsOff();
+    });
   }
 
   transitionIn(container, dir) {
@@ -252,13 +256,6 @@ class PartyScene extends Phaser.Scene {
             .setAngle((Math.random() * 11) - 5)
             .setVisible(true);
         }
-        // Hover Audio
-        if (audio && this.soundsEnabled) {
-          if (this.projectAudio) this.projectAudio.stop();
-          this.projectAudio = this.sound.add(audio).setVolume(volume);
-          this.projectAudio.on('complete', () => { this.projectAudio = null; });
-          this.projectAudio.play();
-        }
       })
       .on('pointerout', () => {
         image.setAngle(0);
@@ -270,7 +267,7 @@ class PartyScene extends Phaser.Scene {
       .on('pointerdown', () => {
         if (key === 'cake') {
           // Cake available if lights off
-          if (!this.lightState) this.blowCakeCandles();
+          if (!this.lightState) this.fanfare();
         } else if (key === 'animol') {
           // Animol barks
           const bark = this.barks[Math.floor(Math.random() * 4)];
@@ -302,13 +299,6 @@ class PartyScene extends Phaser.Scene {
         label
           .setAngle((Math.random() * 11) - 5)
           .setVisible(true);
-        // Hover Audio
-        if (audio && this.soundsEnabled) {
-          if (this.projectAudio) this.projectAudio.stop();
-          this.projectAudio = this.sound.add(audio).setVolume(volume);
-          this.projectAudio.on('complete', () => { this.projectAudio = null; });
-          this.projectAudio.play();
-        }
       })
       .on('pointerout', () => {
         container.sprite.setAngle(0);
@@ -351,6 +341,8 @@ class PartyScene extends Phaser.Scene {
   }
 
   lightsOff() {
+    if (this.candleBlown) return;
+    this.candleBlown = true;
     this.lightState = false;
     Object.values(this.movables).forEach(({ image, sprite }) => {
       if (image) image.setPipeline('Light2D');
@@ -359,15 +351,11 @@ class PartyScene extends Phaser.Scene {
         sprite.stop();
       }
     });
+    this.friend.setPipeline('Light2D');
+    this.questIcon.setVisible(false);
     this.lights.enable();
     this.confettiState = false;
     this.confettiEmitter.setVisible(this.confettiState);
-  }
-
-  blowCakeCandles() {
-    const blowSound = this.sound.add('cake').setVolume(0.7);
-    blowSound.on('complete', () => { this.fanfare(); });
-    blowSound.play();
   }
 
   fanfare() {
@@ -379,64 +367,11 @@ class PartyScene extends Phaser.Scene {
         sprite.anims.restart();
       }
     });
+    this.friend.setPipeline('MultiPipeline');
+    this.questIcon.setVisible(true);
     this.lights.disable();
     this.confettiState = true;
     this.confettiEmitter.setVisible(this.confettiState);
-    // More confetti
-    const { width, height } = this.sys.game.canvas;
-    this.confetti
-      .createEmitter({
-        frame: ['1', '2', '3', '4', '5', '6', '7', '8'],
-        x: width * 0.648,
-        y: height * 0.775,
-        scale: 0.4,
-        gravityY: 150,
-        angle: { min: -170, max: -80 },
-        frequency: 1,
-        quantity: 20,
-        lifespan: 9000,
-        speed: { min: 200, max: 400 },
-        maxParticles: 40,
-      });
-    // Confetti sound after some delay
-    setTimeout(() => {
-      this.sound.add('confetti').setVolume(0.7).play();
-    }, 300);
-  }
-
-  toggleRadio() {
-    if (!this.radioAudio) {
-      // Audio. Randomize tune in/out sounds
-      const tuneIn = this.sound.add(`radio_in_0${Math.floor(Math.random() * 4) + 1}`).setVolume(0.4);
-      this.radioAudio = this.sound.add('aloucast').setVolume(0.8);
-      const tuneOut = this.sound.add(`radio_out_0${Math.floor(Math.random() * 3) + 1}`).setVolume(0.4);
-      // Events
-      tuneIn.on('complete', () => {
-        if (this.radioAudio) this.radioAudio.play();
-      });
-      this.radioAudio.on('complete', () => {
-        this.radioAudio = null;
-        tuneOut.play();
-      });
-      // Start
-      tuneIn.play();
-    } else {
-      const tuneOut = this.sound.add(`radio_out_0${Math.floor(Math.random() * 3) + 1}`).setVolume(0.4);
-      tuneOut.play();
-      this.radioAudio.stop();
-      this.radioAudio = null;
-    }
-  }
-
-  toggleSounds() {
-    this.soundsEnabled = !this.soundsEnabled;
-    if (this.soundsEnabled) {
-      this.movables.playbtn.image.setTexture('playbtn');
-      this.bgm.play();
-    } else {
-      this.movables.playbtn.image.setTexture('pausebtn');
-      this.bgm.stop();
-    }
   }
 }
 
