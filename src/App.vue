@@ -43,14 +43,11 @@ export default {
     ProjectList,
     dialogWidth: '80vw',
     questStatus: {
-      aloucast: false,
       mural: false,
       messages: false,
-      bdaydance: false,
-      gsacover: false,
-      bdayvoices: false,
-      rickroll: false,
-      bakingrelay: false,
+      friend: false,
+      animol: false,
+      tour: false,
     },
   }),
   watch: {
@@ -60,11 +57,6 @@ export default {
         this.openProject = null;
       } else {
         this.dialogWidth = { credits: 660, quests: 700 }[this.openProject] || '96vw';
-      }
-    },
-    openProject(val) {
-      if (typeof this.questStatus[val] !== 'undefined') {
-        this.questStatus[val] = true;
       }
     },
   },
@@ -85,6 +77,11 @@ export default {
     }
 
     // Close Project
+    this.$root.$on('doneQuest', (data) => {
+      if (typeof this.questStatus[data.questId] !== 'undefined') {
+        this.questStatus[data.questId] = true;
+      }
+    });
     this.$root.$on('closeProject', () => {
       this.dialog = false;
     });

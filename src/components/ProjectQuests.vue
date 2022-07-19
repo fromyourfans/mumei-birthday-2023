@@ -2,7 +2,7 @@
   <div class="project">
     <div class="project-title">
       <h2 class="text-center">Quests</h2>
-      <h3 class="text-center">List is in the suggested viewing order</h3>
+      <!-- <h3 class="text-center">List is in the suggested viewing order</h3> -->
     </div>
     <div class="project-content">
       <ul>
@@ -11,30 +11,11 @@
           <span>{{questText[project]}}</span>
         </li>
       </ul>
-      <hr class="my-4" />
-      <ul>
-        <li>
-          <input type="checkbox" onclick="return false;" checked />
-          <span>Play Button on the wall toggles BGM and SFX</span>
-        </li>
-        <li>
-          <input type="checkbox" onclick="return false;" checked />
-          <span>Millie turns the confetti on or off</span>
-        </li>
-        <li>
-          <input type="checkbox" onclick="return false;" checked />
-          <span>Aloupeep with sunglasses on the right</span>
-        </li>
-        <li>
-          <input type="checkbox" onclick="return false;" checked />
-          <span>(Bonus Quest) Blow the candle</span>
-        </li>
-      </ul>
     </div>
     <div class="project-close">
       <v-btn
         @click="$root.$emit('closeProject')"
-        block large elevation="1" color="purple lighten-4">
+        block large elevation="1" color="brown lighten-4">
         Close
       </v-btn>
     </div>
@@ -47,14 +28,11 @@ export default {
   props: ['questStatus'],
   data: () => ({
     questText: {
-      aloucast: 'Listen to the Radio',
-      mural: 'Check the painting the Aloupeeps drew together',
-      messages: 'Gifts at the back contain birthday cards',
-      bdaydance: 'Bottom-left Aloupeep is dancing',
-      gsacover: 'Talk to Nina',
-      bdayvoices: 'Right Aloupeeps voicing their warm wishes',
-      rickroll: 'Watch the Television',
-      bakingrelay: 'Talk to the Chef Aloupeep',
+      mural: 'Check the painting the Hoomans drew together',
+      messages: 'Read of letters scattered on the floor',
+      friend: 'Friend has a few outfits he wants to show',
+      animol: 'Click on animol and hear what she has to say',
+      tour: 'Go outside, and meet Hoomans around the world',
     },
   }),
 };

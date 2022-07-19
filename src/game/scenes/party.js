@@ -110,6 +110,7 @@ class PartyScene extends Phaser.Scene {
         if (friendNum > 96) friendNum = 1;
         friendNumStr = String(friendNum).padStart(4, '0');
         this.friend.setFrame(`f${friendNumStr}.png`);
+        this.game.vue.$root.$emit('doneQuest', { questId: 'friend' });
       });
     this.add.tween({
       targets: this.friend,
@@ -172,6 +173,29 @@ class PartyScene extends Phaser.Scene {
       speed: { min: 3, max: 15 },
     });
     this.confettiEmitter.setVisible(this.confettiState);
+
+    // Quests
+    this.add.rectangle(0, height - 240, 240, 240)
+      .setOrigin(0, 0)
+      .setDepth(3601)
+      .setInteractive({ useHandCursor: true })
+      .on('pointerdown', () => {
+        this.game.vue.dialog = true;
+        this.game.vue.openProject = 'quests';
+      });
+    this.add.image(20, height - 220, 'quests')
+      .setDisplaySize(180, 180)
+      .setOrigin(0, 0)
+      .setDepth(3602);
+    this.add.text(20, height - 60, 'Quests', {
+      fontFamily: 'Londrina Solid',
+      fontSize: 40,
+      color: '#ffffff',
+      stroke: '#131313',
+      strokeThickness: 4,
+      fixedWidth: 180,
+      align: 'center',
+    }).setDepth(3603);
   }
 
   transitionIn(container, dir) {
@@ -246,43 +270,19 @@ class PartyScene extends Phaser.Scene {
         if (key === 'cake') {
           // Cake available if lights off
           if (!this.lightState) this.blowCakeCandles();
-        } else if (this.lightState && key === 'millie') {
-          // Millie special interaction when lights on, toggles confetti
-          this.toggleConfetti();
-        } else if (this.lightState && key === 'radio') {
-          // Radio special interaction when lights on, plays Aloucast
-          this.toggleRadio();
-          this.game.vue.openProject = project;
-        } else if (key === 'playbtn') {
-          // Toggle BGM and Hover SFX
-          this.toggleSounds();
         } else if (key === 'animol') {
           // Animol barks
           const bark = this.barks[Math.floor(Math.random() * 4)];
           bark.play();
-        } else if (key === 'bae') {
-          console.log('BAE');
-        } else if (key === 'sana') {
-          console.log('SANA');
-        } else if (key === 'mumei') {
-          console.log('MUMEI');
-        } else if (key === 'banner') {
-          console.log('BANNER');
+          this.game.vue.$root.$emit('doneQuest', { questId: 'animol' });
         } else if (this.lightState) {
           // Everything else available only if lights are on
           this.overlay.setVisible(true);
           this.game.vue.dialog = true;
           this.game.vue.openProject = project;
-          // Stop radio audio
-          if (this.radioAudio) this.radioAudio.stop();
-          this.radioAudio = null;
-          // Stop hover audio
-          if (this.projectAudio) this.projectAudio.stop();
-          this.projectAudio = null;
-          // Stop BGM
-          this.bgm.pause();
-          // Special baking relay interaction, lights off into blowing candles
-          if (project === 'bakingrelay') this.lightsOff();
+          if (project === 'tour') this.game.vue.$root.$emit('doneQuest', { questId: 'tour' });
+          if (project === 'mural') this.game.vue.$root.$emit('doneQuest', { questId: 'mural' });
+          if (project === 'messages') this.game.vue.$root.$emit('doneQuest', { questId: 'messages' });
         }
       });
   }

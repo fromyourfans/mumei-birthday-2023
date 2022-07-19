@@ -24,6 +24,7 @@ import decors from '../assets/images/decors.png';
 import letters from '../assets/images/letters.png';
 import painting from '../assets/images/painting.png';
 import shelftop from '../assets/images/shelftop.png';
+import quests from '../assets/images/quests.png';
 
 import bae from '../assets/images/bae.png';
 import mumei from '../assets/images/mumei.png';
@@ -84,6 +85,7 @@ class IndexScene extends Phaser.Scene {
     this.load.image('letters', letters);
     this.load.image('painting', painting);
     this.load.image('shelftop', shelftop);
+    this.load.image('quests', quests);
 
     this.load.image('bae', bae);
     this.load.image('mumei', mumei);
