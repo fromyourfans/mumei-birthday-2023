@@ -4,6 +4,7 @@
       <h2>World Tour</h2>
       <p>
         Meet Friends around the world who also celebrate Mumei's birthday!
+        This tour gallery is organized by Sanctuary.
       </p>
     </div>
     <div class="project-close">
