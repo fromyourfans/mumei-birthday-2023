@@ -18,6 +18,12 @@ import cake from '../assets/images/cake.png';
 import trunk from '../assets/images/trunk.png';
 import rice from '../assets/images/rice.png';
 import bowls from '../assets/images/bowls.png';
+import balloon1 from '../assets/images/balloon1.png';
+import balloon2 from '../assets/images/balloon2.png';
+import decors from '../assets/images/decors.png';
+import letters from '../assets/images/letters.png';
+import painting from '../assets/images/painting.png';
+import shelftop from '../assets/images/shelftop.png';
 
 import bae from '../assets/images/bae.png';
 import mumei from '../assets/images/mumei.png';
@@ -72,6 +78,13 @@ class IndexScene extends Phaser.Scene {
     this.load.image('trunk', trunk);
     this.load.image('rice', rice);
     this.load.image('bowls', bowls);
+    this.load.image('balloon1', balloon1);
+    this.load.image('balloon2', balloon2);
+    this.load.image('decors', decors);
+    this.load.image('letters', letters);
+    this.load.image('painting', painting);
+    this.load.image('shelftop', shelftop);
+
     this.load.image('bae', bae);
     this.load.image('mumei', mumei);
     this.load.image('sana', sana);
