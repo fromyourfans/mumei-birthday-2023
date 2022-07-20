@@ -72,6 +72,11 @@ class PartyScene extends Phaser.Scene {
           .setOrigin(ox, oy);
         if (scale) image.setScale(scale);
         container.add(image);
+        // Cover
+        if (key === 'cover') {
+          this.cover = container;
+          this.cover.setVisible(false);
+        }
         // Interactive object
         if (text) {
           this.interactiveElement(
@@ -360,6 +365,7 @@ class PartyScene extends Phaser.Scene {
     if (this.candleBlown) return;
     this.candleBlown = true;
     this.lightState = false;
+    this.cover.setVisible(true);
     Object.values(this.movables).forEach(({ image, sprite }) => {
       if (image) image.setPipeline('Light2D');
       if (sprite) {
@@ -378,6 +384,7 @@ class PartyScene extends Phaser.Scene {
 
   fanfare() {
     this.lightState = true;
+    this.cover.setVisible(false);
     Object.values(this.movables).forEach(({ image, sprite }) => {
       if (image) image.setPipeline('MultiPipeline');
       if (sprite) {

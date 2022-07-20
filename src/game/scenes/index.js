@@ -9,6 +9,7 @@ import front2 from '../assets/images/front2.png';
 import front3 from '../assets/images/front3.png';
 import outside from '../assets/images/outside.png';
 import room from '../assets/images/room.png';
+import cover from '../assets/images/cover.png';
 import shelf from '../assets/images/shelf.png';
 import animol from '../assets/images/animol.png';
 import banner from '../assets/images/banner.png';
@@ -90,6 +91,7 @@ class IndexScene extends Phaser.Scene {
     this.load.image('front3', front3);
     this.load.image('outside', outside);
     this.load.image('room', [room, roomN]);
+    this.load.image('cover', cover);
     this.load.image('shelf', [shelf, shelfN]);
     this.load.image('animol', [animol, animolN]);
     this.load.image('banner', banner);

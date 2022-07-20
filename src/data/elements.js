@@ -23,6 +23,15 @@ module.exports = {
     oy: 0.5,
     scale: 0.97,
   },
+  cover: {
+    x: 0.765,
+    y: -0.09,
+    z: 2.1,
+    str: 0.85,
+    ox: 0,
+    oy: 0,
+    scale: 1,
+  },
   bed: {
     x: -0.015,
     y: 0.3,
