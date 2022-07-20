@@ -106,8 +106,8 @@ module.exports = {
     lx: 0.5,
     ly: 0.5,
     scale: 1,
-    text: 'Lights Off',
-    font: 20,
+    // text: 'Lights Off',
+    // font: 20,
   },
   shelf: {
     x: 0.484,
