@@ -80,7 +80,10 @@ class PartyScene extends Phaser.Scene {
           );
         }
         // Transition
-        if (key !== 'room' && key !== 'trunk' && key !== 'table') this.transitionIn(container, dir);
+        if (
+          key !== 'room' && key !== 'trunk' && key !== 'table'
+          && key !== 'front1' && key !== 'front2' && key !== 'front3'
+        ) this.transitionIn(container, dir);
         // Add to movable list
         this.movables[key] = {
           container,
