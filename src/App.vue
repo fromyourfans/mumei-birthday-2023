@@ -26,7 +26,7 @@
 </template>
 
 <script>
-import MuralImg from '@/assets/mural-20220719.jpg';
+import MuralImg from '@/assets/mural-20220721.jpg';
 import ProjectList from '@/data/projects';
 import ProjectTour from '@/components/ProjectTour.vue';
 import ProjectImage from '@/components/ProjectImage.vue';
