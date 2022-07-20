@@ -11,7 +11,7 @@ class PartyScene extends Phaser.Scene {
 
   transition = null;
 
-  confettiState = true;
+  confettiState = false;
 
   lightState = true;
 
@@ -54,8 +54,8 @@ class PartyScene extends Phaser.Scene {
 
     // Candle Lights
     this.lights.setAmbientColor(0x0e0e0e);
-    this.lights.addLight(width * 0.5, height * 0.75, 1200, 0xffdd88, 2);
-    this.lights.addLight(width * 0.5, height * 0.75, 30, 0xffffff, 0.5);
+    this.light1 = this.lights.addLight(width * 0.5, height * 0.75, 900, 0xffdd88, 1);
+    this.light2 = this.lights.addLight(width * 0.5, height * 0.75, 1200, 0xffdd88, 2);
 
     // Animation transition
     this.transition = this.tweens.createTimeline();
@@ -134,14 +134,18 @@ class PartyScene extends Phaser.Scene {
       .on('complete', () => {
         // Parallax
         this.input.on('pointermove', (pointer) => {
-          if (!this.lightState) return;
-          const dx = pointer.x - centerX;
-          const dy = pointer.y - centerY;
-          Object.values(this.movables).forEach(({ container, strX, strY }) => {
-            const newX = centerX - (dx * strX);
-            const newY = centerY - (dy * strY);
-            container.setPosition(newX, newY);
-          });
+          if (!this.lightState) {
+            this.light2.x = pointer.x;
+            this.light2.y = pointer.y;
+          } else {
+            const dx = pointer.x - centerX;
+            const dy = pointer.y - centerY;
+            Object.values(this.movables).forEach(({ container, strX, strY }) => {
+              const newX = centerX - (dx * strX);
+              const newY = centerY - (dy * strY);
+              container.setPosition(newX, newY);
+            });
+          }
         });
       })
       .play();
@@ -251,9 +255,14 @@ class PartyScene extends Phaser.Scene {
     image
       .setInteractive({ pixelPerfect: true })
       .on('pointerover', () => {
-        // Cake available if lights are off, but not when on
-        // Everything else available only if lights are on
-        if ((key !== 'cake' && this.lightState) || (key === 'cake' && !this.lightState)) {
+        if (key === 'cake' && !this.lightState) {
+          // Cake available if lights are off, but not when on
+          label.setVisible(true);
+          this.light1.setIntensity(2);
+        } else if (key === 'lantern' && this.candleBlown) {
+          // Lantern no hover on candleBlown
+        } else if (key !== 'cake' && this.lightState) {
+          // Everything else available only if lights are on
           image.setAngle((Math.random() * 3) - 1);
           label
             .setAngle((Math.random() * 11) - 5)
@@ -263,6 +272,7 @@ class PartyScene extends Phaser.Scene {
       .on('pointerout', () => {
         image.setAngle(0);
         label.setVisible(false);
+        this.light1.setIntensity(1);
         // Stop hover audio
         if (this.projectAudio) this.projectAudio.stop();
         this.projectAudio = null;
@@ -276,6 +286,9 @@ class PartyScene extends Phaser.Scene {
           const bark = this.barks[Math.floor(Math.random() * 4)];
           bark.play();
           this.game.vue.$root.$emit('doneQuest', { questId: 'animol' });
+        } else if (key === 'lantern') {
+          // Lights Off
+          if (!this.candleBlown) this.lightsOff();
         } else if (this.lightState) {
           // Everything else available only if lights are on
           this.overlay.setVisible(true);
@@ -357,6 +370,8 @@ class PartyScene extends Phaser.Scene {
     this.friend.setPipeline('Light2D');
     this.questIcon.setVisible(false);
     this.lights.enable();
+    this.light2.x = this.input.x;
+    this.light2.y = this.input.y;
     this.confettiState = false;
     this.confettiEmitter.setVisible(this.confettiState);
   }

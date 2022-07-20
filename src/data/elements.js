@@ -94,7 +94,11 @@ module.exports = {
     str: 0.4,
     ox: 0,
     oy: 0,
+    lx: 0.5,
+    ly: 0.5,
     scale: 1,
+    text: 'Lights Off',
+    font: 20,
   },
   shelf: {
     x: 0.484,

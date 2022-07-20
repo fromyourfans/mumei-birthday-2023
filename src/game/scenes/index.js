@@ -28,11 +28,28 @@ import flag1 from '../assets/images/flag1.png';
 import flag2 from '../assets/images/flag2.png';
 import flag3 from '../assets/images/flag3.png';
 import quests from '../assets/images/quests.png';
-
 import bae from '../assets/images/bae.png';
 import mumei from '../assets/images/mumei.png';
 import sana from '../assets/images/sana.png';
 import fauna from '../assets/images/fauna.png';
+
+import bedN from '../assets/normals/bed_n.png';
+import counterN from '../assets/normals/counter_n.png';
+import roomN from '../assets/normals/room_n.png';
+import shelfN from '../assets/normals/shelf_n.png';
+import animolN from '../assets/normals/animol_n.png';
+import cakeN from '../assets/normals/cake_n.png';
+import trunkN from '../assets/normals/trunk_n.png';
+import riceN from '../assets/normals/rice_n.png';
+import bowlsN from '../assets/normals/bowls_n.png';
+import balloon1N from '../assets/normals/balloon1_n.png';
+import balloon2N from '../assets/normals/balloon2_n.png';
+import decorsN from '../assets/normals/decors_n.png';
+import lettersN from '../assets/normals/letters_n.png';
+import baeN from '../assets/normals/bae_n.png';
+import mumeiN from '../assets/normals/mumei_n.png';
+import sanaN from '../assets/normals/sana_n.png';
+import faunaN from '../assets/normals/fauna_n.png';
 
 import bark1 from '../assets/audio/bark01.mp3';
 import bark2 from '../assets/audio/bark02.mp3';
@@ -66,26 +83,26 @@ class IndexScene extends Phaser.Scene {
     this.scene.add('party', PartyScene);
 
     // Preload assets
-    this.load.image('bed', bed);
-    this.load.image('counter', counter);
+    this.load.image('bed', [bed, bedN]);
+    this.load.image('counter', [counter, counterN]);
     this.load.image('front1', front1);
     this.load.image('front2', front2);
     this.load.image('front3', front3);
     this.load.image('outside', outside);
-    this.load.image('room', room);
-    this.load.image('shelf', shelf);
-    this.load.image('animol', animol);
+    this.load.image('room', [room, roomN]);
+    this.load.image('shelf', [shelf, shelfN]);
+    this.load.image('animol', [animol, animolN]);
     this.load.image('banner', banner);
     this.load.image('lantern', lantern);
     this.load.image('table', table);
-    this.load.image('cake', cake);
-    this.load.image('trunk', trunk);
-    this.load.image('rice', rice);
-    this.load.image('bowls', bowls);
-    this.load.image('balloon1', balloon1);
-    this.load.image('balloon2', balloon2);
-    this.load.image('decors', decors);
-    this.load.image('letters', letters);
+    this.load.image('cake', [cake, cakeN]);
+    this.load.image('trunk', [trunk, trunkN]);
+    this.load.image('rice', [rice, riceN]);
+    this.load.image('bowls', [bowls, bowlsN]);
+    this.load.image('balloon1', [balloon1, balloon1N]);
+    this.load.image('balloon2', [balloon2, balloon2N]);
+    this.load.image('decors', [decors, decorsN]);
+    this.load.image('letters', [letters, lettersN]);
     this.load.image('painting', painting);
     this.load.image('shelftop', shelftop);
     this.load.image('flag1', flag1);
@@ -93,10 +110,10 @@ class IndexScene extends Phaser.Scene {
     this.load.image('flag3', flag3);
     this.load.image('quests', quests);
 
-    this.load.image('bae', bae);
-    this.load.image('mumei', mumei);
-    this.load.image('sana', sana);
-    this.load.image('fauna', fauna);
+    this.load.image('bae', [bae, baeN]);
+    this.load.image('mumei', [mumei, mumeiN]);
+    this.load.image('sana', [sana, sanaN]);
+    this.load.image('fauna', [fauna, faunaN]);
 
     this.load.audio('bark1', bark1);
     this.load.audio('bark2', bark2);
