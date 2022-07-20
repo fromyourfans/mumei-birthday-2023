@@ -120,14 +120,26 @@ class IndexScene extends Phaser.Scene {
     // Done all preloading
     this.loadingText.destroy();
 
-    // Click to Start label
     const { width, height } = this.sys.game.canvas;
-    this.loadingText = this.add.text(width / 2, height / 2, 'TOUCH TO START', {
+    this.add.graphics({ x: 0, y: 0 })
+      .fillGradientStyle(0xc2af8b, 0xc2af8b, 0xf1e7d5, 0xf1e7d5, 1, 1, 1, 1)
+      .fillRect(0, 0, width, height);
+
+    // Click to Start label
+    this.add.text(width * 0.5, height * 0.7, 'TOUCH TO START', {
       fontFamily: 'Londrina Solid',
-      fontSize: 40,
+      fontSize: 60,
       color: '#ffffff',
       stroke: '#000000',
       strokeThickness: 3,
+    }).setOrigin(0.5, 0.5);
+    this.add.text(width * 0.5, height * 0.76, 'Mumei, no spoilers :D', {
+      fontFamily: 'Arial',
+      fontStyle: 'bold',
+      fontSize: 24,
+      color: '#927a4d',
+      // stroke: '#000000',
+      // strokeThickness: 3,
     }).setOrigin(0.5, 0.5);
 
     // Click to Start
