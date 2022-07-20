@@ -8,31 +8,36 @@
       </p>
     </div>
     <div class="project-close">
+      <v-btn style="margin-right:10px"
+        @click="spoiler()"
+        large elevation="1" color="brown lighten-4">
+        Spoiler
+      </v-btn>
       <v-btn
         @click="$root.$emit('closeProject')"
-        block large elevation="1" color="brown lighten-4">
+        large elevation="1" color="brown lighten-4">
         Close
       </v-btn>
     </div>
     <div class="project-content">
       <div v-masonry="'bdaycards'" transition-duration="0.3s" item-selector=".card" stagger="0s">
-        <div v-masonry-tile class="card">
+        <div v-masonry-tile :class="[ 'card', censor ? 'card-censor' : '' ]">
           <img src="@/assets/tour/sample1.png" />
           <div class="artist text-center">submissionName</div>
         </div>
-        <div v-masonry-tile class="card">
+        <div v-masonry-tile :class="[ 'card', censor ? 'card-censor' : '' ]">
           <img src="@/assets/tour/sample2.png" />
           <div class="artist text-center">submissionName</div>
         </div>
-        <div v-masonry-tile class="card">
+        <div v-masonry-tile :class="[ 'card', censor ? 'card-censor' : '' ]">
           <img src="@/assets/tour/sample3.png" />
           <div class="artist text-center">submissionName</div>
         </div>
-        <div v-masonry-tile class="card">
+        <div v-masonry-tile :class="[ 'card', censor ? 'card-censor' : '' ]">
           <img src="@/assets/tour/sample4.png" />
           <div class="artist text-center">submissionName</div>
         </div>
-        <div v-masonry-tile class="card">
+        <div v-masonry-tile :class="[ 'card', censor ? 'card-censor' : '' ]">
           <img src="@/assets/tour/sample5.png" />
           <div class="artist text-center">submissionName</div>
         </div>
@@ -53,6 +58,7 @@ export default {
     read: {},
     countRead: 0,
     countAll: 0,
+    censor: true,
   }),
   methods: {
     toggleRead(key) {
@@ -60,6 +66,9 @@ export default {
       this.read = { ...this.read, [key]: !this.read[key] };
       localStorage.setItem('enna2022_read', JSON.stringify(this.read));
       this.countRead = Object.values(this.read).filter((v) => !!v).length;
+    },
+    spoiler() {
+      this.censor = !this.censor;
     },
   },
   mounted() {
@@ -118,7 +127,7 @@ export default {
     position:absolute;
     top: 0;
     right: 0;
-    width: 100px;
+    width: 230px;
     height: 50px;
   }
 }
@@ -143,6 +152,11 @@ export default {
     line-height:30px;
     font-size:20px;
     color:#927a4d;
+  }
+  &.card-censor {
+    img {
+      filter:blur(20px);
+    }
   }
 }
 
