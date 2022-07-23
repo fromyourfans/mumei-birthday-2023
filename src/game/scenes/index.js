@@ -139,10 +139,19 @@ class IndexScene extends Phaser.Scene {
     // Done all preloading
     this.loadingText.destroy();
 
+    // Backgrounds
     const { width, height } = this.sys.game.canvas;
     this.add.graphics({ x: 0, y: 0 })
       .fillGradientStyle(0xc2af8b, 0xc2af8b, 0xf1e7d5, 0xf1e7d5, 1, 1, 1, 1)
       .fillRect(0, 0, width, height);
+    this.add.image(0, 0, 'room')
+      .setScale(1.1)
+      .setAlpha(0.2)
+      .setOrigin(0, 0);
+
+    // Friend
+    this.add.sprite(width * 0.5, height * 0.45, 'friend', 'f0004.png')
+      .setScale(1.3);
 
     // Click to Start label
     this.add.text(width * 0.5, height * 0.7, 'TOUCH TO START', {
@@ -152,13 +161,18 @@ class IndexScene extends Phaser.Scene {
       stroke: '#000000',
       strokeThickness: 3,
     }).setOrigin(0.5, 0.5);
-    this.add.text(width * 0.5, height * 0.76, 'Mumei, no spoilers :D', {
+    this.add.text(width * 0.5, height * 0.78, 'Check for Quests at the bottom-left icon', {
+      fontFamily: 'Londrina Solid',
+      fontSize: 30,
+      color: '#ffffff',
+      stroke: '#000000',
+      strokeThickness: 2,
+    }).setOrigin(0.5, 0.5);
+    this.add.text(width * 0.5, height * 0.83, 'Mumei, no spoilers until your birthday :D', {
       fontFamily: 'Arial',
       fontStyle: 'bold',
-      fontSize: 24,
+      fontSize: 20,
       color: '#927a4d',
-      // stroke: '#000000',
-      // strokeThickness: 3,
     }).setOrigin(0.5, 0.5);
 
     // Click to Start
