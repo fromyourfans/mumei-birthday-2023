@@ -20,6 +20,9 @@
         <div v-if="openProject === 'quests'">
           <ProjectQuests :questStatus="questStatus" />
         </div>
+        <div v-if="openProject === 'fanarts'">
+          <ProjectArts />
+        </div>
       </v-card>
     </v-dialog>
   </v-app>
@@ -33,6 +36,7 @@ import ProjectImage from '@/components/ProjectImage.vue';
 import ProjectMessages from '@/components/ProjectMessages.vue';
 import ProjectCredits from '@/components/ProjectCredits.vue';
 import ProjectQuests from '@/components/ProjectQuests.vue';
+import ProjectArts from '@/components/ProjectArts.vue';
 import EnnaBirthday from './game';
 
 export default {
@@ -48,6 +52,7 @@ export default {
       friend: false,
       animol: false,
       tour: false,
+      fanarts: false,
     },
   }),
   watch: {
@@ -92,6 +97,7 @@ export default {
     ProjectMessages,
     ProjectCredits,
     ProjectQuests,
+    ProjectArts,
   },
 };
 </script>

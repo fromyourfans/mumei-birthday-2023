@@ -302,6 +302,7 @@ class PartyScene extends Phaser.Scene {
           if (project === 'tour') this.game.vue.$root.$emit('doneQuest', { questId: 'tour' });
           if (project === 'mural') this.game.vue.$root.$emit('doneQuest', { questId: 'mural' });
           if (project === 'messages') this.game.vue.$root.$emit('doneQuest', { questId: 'messages' });
+          if (project === 'fanarts') this.game.vue.$root.$emit('doneQuest', { questId: 'fanarts' });
         }
       });
   }

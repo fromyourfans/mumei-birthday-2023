@@ -33,6 +33,7 @@ export default {
       friend: 'Friend has a few outfits he wants to show',
       animol: 'Click on animol and hear what she has to say',
       tour: 'Go outside, and meet Hoomans around the world',
+      fanarts: 'Open birthday gifts at the bottom of the shelves',
     },
   }),
   mounted() {
