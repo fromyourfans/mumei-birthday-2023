@@ -339,8 +339,6 @@ class PartyScene extends Phaser.Scene {
         // Stop hover audio
         if (this.projectAudio) this.projectAudio.stop();
         this.projectAudio = null;
-        // Stop BGM
-        this.bgm.pause();
       });
   }
 
@@ -366,6 +364,7 @@ class PartyScene extends Phaser.Scene {
     this.candleBlown = true;
     this.lightState = false;
     this.cover.setVisible(true);
+    this.bgm = this.sound.add('bgm').setVolume(0.7).play();
     Object.values(this.movables).forEach(({ image, sprite }) => {
       if (image) image.setPipeline('Light2D');
       if (sprite) {

@@ -56,6 +56,7 @@ import bark1 from '../assets/audio/bark01.mp3';
 import bark2 from '../assets/audio/bark02.mp3';
 import bark3 from '../assets/audio/bark03.mp3';
 import bark4 from '../assets/audio/bark04.mp3';
+import bgm from '../assets/audio/musicbox.ogg';
 
 import cursor from '../assets/cursor/cursor.png';
 
@@ -121,6 +122,7 @@ class IndexScene extends Phaser.Scene {
     this.load.audio('bark2', bark2);
     this.load.audio('bark3', bark3);
     this.load.audio('bark4', bark4);
+    this.load.audio('bgm', bgm);
 
     this.load.atlas('confetti', confettiPng, confettiJson);
     this.load.atlas('friend', friendPng, friendJson);
