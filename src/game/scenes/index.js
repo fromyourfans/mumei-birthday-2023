@@ -22,12 +22,16 @@ import bowls from '../assets/images/bowls.png';
 import balloon1 from '../assets/images/balloon1.png';
 import balloon2 from '../assets/images/balloon2.png';
 import decors from '../assets/images/decors.png';
+import gifts from '../assets/images/gifts.png';
+import spider from '../assets/images/spider.png';
+import daki from '../assets/images/daki.png';
 import letters from '../assets/images/letters.png';
 import painting from '../assets/images/painting.png';
 import shelftop from '../assets/images/shelftop.png';
 import flag1 from '../assets/images/flag1.png';
 import flag2 from '../assets/images/flag2.png';
 import flag3 from '../assets/images/flag3.png';
+
 import quests from '../assets/images/quests.png';
 import bae from '../assets/images/bae.png';
 import mumei from '../assets/images/mumei.png';
@@ -105,6 +109,9 @@ class IndexScene extends Phaser.Scene {
     this.load.image('balloon1', [balloon1, balloon1N]);
     this.load.image('balloon2', [balloon2, balloon2N]);
     this.load.image('decors', [decors, decorsN]);
+    this.load.image('gifts', gifts);
+    this.load.image('spider', spider);
+    this.load.image('daki', daki);
     this.load.image('letters', [letters, lettersN]);
     this.load.image('painting', painting);
     this.load.image('shelftop', shelftop);
