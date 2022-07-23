@@ -1,5 +1,6 @@
 <template>
   <v-app id="app">
+    <div id="bg"></div>
     <div id="game-container" ref="game-container"></div>
     <v-dialog id="projects" v-model="dialog"
       :max-width="dialogWidth"
@@ -113,16 +114,28 @@ html::-webkit-scrollbar {
   height: 0;
 }
 body {
-  background-color:#131313;
-  // background: linear-gradient(180deg,
-  //   rgb(193, 196, 219) 0%,
-  //   rgba(133,142,209,1) 40%,
-  //   rgba(94,110,227,1) 100%
-  // );
-  // background-image: url(./game/assets/images/room.png);
-  background-size:cover;
+  background: linear-gradient(180deg,
+    #c2af8b 0%,
+    #f1e7d5 100%
+  );
   #app {
     background:none;
+    #bg {
+      background-image: url(./game/assets/images/room.png);
+      background-size:cover;
+      z-index:1;
+      position:absolute;
+      top:0;
+      left:-30px;
+      right:0;
+      bottom:-300px;
+      filter:blur(5px);
+      opacity:0.4;
+    }
+    #game-container {
+      z-index:2;
+      position:relative;
+    }
   }
   .v-dialog {
     overflow:hidden;
