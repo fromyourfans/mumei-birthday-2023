@@ -31,7 +31,6 @@
 
 <script>
 import MuralImg from '@/assets/mural-20220724.jpg';
-import ProjectList from '@/data/projects';
 import ProjectTour from '@/components/ProjectTour.vue';
 import ProjectImage from '@/components/ProjectImage.vue';
 import ProjectMessages from '@/components/ProjectMessages.vue';
@@ -45,7 +44,6 @@ export default {
     MuralImg,
     dialog: false,
     openProject: null,
-    ProjectList,
     dialogWidth: '80vw',
     questStatus: {
       mural: false,

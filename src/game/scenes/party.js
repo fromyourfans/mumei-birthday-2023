@@ -5,23 +5,11 @@ const INTENSITY_X = 0.008;
 const INTENSITY_Y = 0.004;
 
 class PartyScene extends Phaser.Scene {
-  overlay = null;
-
   movables = {};
-
-  transition = null;
 
   confettiState = false;
 
   lightState = true;
-
-  ambientLight = null;
-
-  candleLight = null;
-
-  radioAudio = null;
-
-  projectAudio = null;
 
   bgm = null;
 
@@ -33,7 +21,7 @@ class PartyScene extends Phaser.Scene {
     const centerY = height / 2;
 
     // Version number
-    this.add.text(width - 5, height - 25, 'Version 2207190000', {
+    this.add.text(width - 5, height - 25, 'Version 220723.1638', {
       fontFamily: 'Arial',
       fontSize: 16,
       align: 'right',
@@ -64,7 +52,7 @@ class PartyScene extends Phaser.Scene {
     Object.entries(ElementsData)
       .forEach(([key, {
         texture, x, y, z, scale, str, ox, oy, lx, ly,
-        text, project, font, dir, audio, volume,
+        text, project, font, dir,
       }]) => {
         const container = this.add.container(centerX, centerY).setDepth(z * 10);
         // Image
@@ -79,10 +67,7 @@ class PartyScene extends Phaser.Scene {
         }
         // Interactive object
         if (text) {
-          this.interactiveElement(
-            key, container, image, text, project, font,
-            audio, volume, lx, ly,
-          );
+          this.interactiveElement(key, container, image, text, project, font, lx, ly);
         }
         // Transition
         if (
@@ -165,9 +150,6 @@ class PartyScene extends Phaser.Scene {
       .setVisible(false);
     this.game.vue.$root.$on('projectClosed', () => {
       this.overlay.setVisible(false);
-      // setTimeout(() => {
-      //   this.overlay.setVisible(false);
-      // }, 500);
     });
 
     // Confetti
@@ -246,10 +228,7 @@ class PartyScene extends Phaser.Scene {
     });
   }
 
-  interactiveElement(
-    key, container, image, text, project, fontSize = 30,
-    audio = null, volume = 0.5, lx = 0, ly = 0,
-  ) {
+  interactiveElement(key, container, image, text, project, fontSize = 30, lx = 0, ly = 0) {
     // Label
     const lblOffX = (lx * image.width) || 0;
     const lblOffY = (ly * image.height) || 0;
@@ -278,9 +257,6 @@ class PartyScene extends Phaser.Scene {
         image.setAngle(0);
         label.setVisible(false);
         this.light1.setIntensity(1);
-        // Stop hover audio
-        if (this.projectAudio) this.projectAudio.stop();
-        this.projectAudio = null;
       })
       .on('pointerdown', () => {
         if (key === 'cake') {
@@ -304,42 +280,6 @@ class PartyScene extends Phaser.Scene {
           if (project === 'messages') this.game.vue.$root.$emit('doneQuest', { questId: 'messages' });
           if (project === 'fanarts') this.game.vue.$root.$emit('doneQuest', { questId: 'fanarts' });
         }
-      });
-  }
-
-  interactiveAloupeep(container, text, project, fontSize = 30, audio = null, volume = 0.5) {
-    // Label
-    const label = this.createLabel(container.sprite.x, container.sprite.y, text, fontSize)
-      .setDepth(2000 + container.sprite.depth);
-    container.add(label);
-    // Interaction
-    container.sprite
-      .setInteractive()
-      .on('pointerover', () => {
-        if (!this.lightState) return;
-        container.sprite.setAngle((Math.random() * 3) - 1);
-        label
-          .setAngle((Math.random() * 11) - 5)
-          .setVisible(true);
-      })
-      .on('pointerout', () => {
-        container.sprite.setAngle(0);
-        label.setVisible(false);
-        // Stop hover audio
-        if (this.projectAudio) this.projectAudio.stop();
-        this.projectAudio = null;
-      })
-      .on('pointerdown', () => {
-        if (!this.lightState) return;
-        this.overlay.setVisible(true);
-        this.game.vue.dialog = true;
-        this.game.vue.openProject = project;
-        // Stop radio audio
-        if (this.radioAudio) this.radioAudio.stop();
-        this.radioAudio = null;
-        // Stop hover audio
-        if (this.projectAudio) this.projectAudio.stop();
-        this.projectAudio = null;
       });
   }
 
