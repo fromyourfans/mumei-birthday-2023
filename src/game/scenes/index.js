@@ -57,7 +57,7 @@ import bark2 from '../assets/audio/bark02.mp3';
 import bark3 from '../assets/audio/bark03.mp3';
 import bark4 from '../assets/audio/bark04.mp3';
 
-import Cursor3 from '../assets/cursor/cursor3.png';
+import cursor from '../assets/cursor/cursor.png';
 
 import confettiPng from '../assets/atlas/confetti.png';
 import confettiJson from '../assets/atlas/confetti.json';
@@ -128,7 +128,7 @@ class IndexScene extends Phaser.Scene {
 
   async create() {
     // Cursor
-    this.input.setDefaultCursor(`url(${Cursor3}), auto`);
+    this.input.setDefaultCursor(`url(${cursor}), auto`);
 
     // Wait for asyncs to finish
     await Promise.all([
