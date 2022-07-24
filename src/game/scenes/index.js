@@ -35,6 +35,7 @@ import flag3 from '../assets/images/flag3.png';
 import quests from '../assets/images/quests.png';
 import bae from '../assets/images/bae.png';
 import mumei from '../assets/images/mumei.png';
+import kronii from '../assets/images/kronii.png';
 import sana from '../assets/images/sana.png';
 import fauna from '../assets/images/fauna.png';
 
@@ -125,6 +126,7 @@ class IndexScene extends Phaser.Scene {
     this.load.image('bae', [bae, baeN]);
     this.load.image('mumei', [mumei, mumeiN]);
     this.load.image('sana', [sana, sanaN]);
+    this.load.image('kronii', kronii);
     this.load.image('fauna', [fauna, faunaN]);
 
     this.load.audio('bark1', bark1);

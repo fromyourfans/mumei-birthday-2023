@@ -249,6 +249,13 @@ module.exports = {
     str: 0.8,
     scale: 0.84,
   },
+  kronii: {
+    x: 0.555,
+    y: 0.789,
+    z: 92,
+    str: -0.1,
+    scale: 0.9,
+  },
   mumei: {
     x: 0.495,
     y: 0.75,
