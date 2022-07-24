@@ -26,16 +26,30 @@ class PartyScene extends Phaser.Scene {
     const centerY = height / 2;
 
     // Version number
+    this.add.rectangle(0, 0, 150, 50)
+      .setDepth(60001).setOrigin(0, 0)
+      .setInteractive()
+      .on('pointerdown', () => {
+        this.overlay.setVisible(true);
+        this.game.vue.dialog = true;
+        this.game.vue.openProject = 'credits';
+      });
     this.add.text(5, 5, 'Version 220723.2021', {
+      fontFamily: 'Arial',
+      fontSize: 14,
+      align: 'left',
+      color: '#e0e0e0',
+      stroke: '#131313',
+      strokeThickness: 3,
+    }).setDepth(60002).setOrigin(0, 0);
+    this.add.text(5, 22, 'Credits', {
       fontFamily: 'Arial',
       fontSize: 16,
       align: 'left',
       color: '#ffffff',
       stroke: '#131313',
       strokeThickness: 4,
-    })
-      .setDepth(60000)
-      .setOrigin(0, 0);
+    }).setDepth(60003).setOrigin(0, 0);
 
     // Bark sounds
     this.barks = [
