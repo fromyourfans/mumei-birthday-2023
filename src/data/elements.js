@@ -60,7 +60,7 @@ module.exports = {
   animol: {
     x: 0.14,
     y: 0.53,
-    z: 4,
+    z: 4.1,
     str: 0.8,
     scale: 0.86,
     text: 'Animol',
@@ -70,7 +70,7 @@ module.exports = {
   balloon2: {
     x: 0.09,
     y: 0.6,
-    z: 4,
+    z: 4.2,
     str: 0.4,
     ox: 0,
     oy: 0,
@@ -79,7 +79,7 @@ module.exports = {
   counter: {
     x: 0.08,
     y: 0.8,
-    z: 4,
+    z: 4.3,
     str: 0.5,
     ox: 0,
     oy: 0,
@@ -87,7 +87,7 @@ module.exports = {
   rice: {
     x: 0.407,
     y: 0.336,
-    z: 4,
+    z: 4.4,
     str: 0.83,
     ox: 0,
     oy: 0,
@@ -96,7 +96,7 @@ module.exports = {
   balloon1: {
     x: 0.3,
     y: 0.08,
-    z: 4,
+    z: 4.5,
     str: 0.75,
     ox: 0,
     oy: 0,
@@ -105,7 +105,7 @@ module.exports = {
   painting: {
     x: 0.37,
     y: 0.43,
-    z: 4,
+    z: 4.6,
     str: 0.9,
     // ox: 0,
     // oy: 0,
@@ -130,7 +130,7 @@ module.exports = {
   shelf: {
     x: 0.484,
     y: 0.01,
-    z: 5,
+    z: 5.1,
     str: 0.9,
     ox: 0,
     oy: 0,
@@ -148,7 +148,7 @@ module.exports = {
   decors: {
     x: 0.496,
     y: 0.085,
-    z: 5,
+    z: 5.3,
     str: 0.85,
     ox: 0,
     oy: 0,
@@ -157,7 +157,7 @@ module.exports = {
   gifts: {
     x: 0.56,
     y: 0.53,
-    z: 5.1,
+    z: 5.4,
     str: 0.8,
     scale: 0.9,
     text: 'Birthday Gifts',
@@ -269,7 +269,7 @@ module.exports = {
   mumei: {
     x: 0.495,
     y: 0.75,
-    z: 91,
+    z: 93,
     ox: 0.5,
     oy: 0.7,
     str: 0,
@@ -280,14 +280,14 @@ module.exports = {
   sana: {
     x: 0.34,
     y: 0.82,
-    z: 92,
+    z: 94,
     str: -0.15,
     scale: 0.87,
   },
   bae: {
     x: 0.1,
     y: -0.005,
-    z: 93,
+    z: 95,
     ox: 0.05,
     oy: 0,
     lx: 0.58,
