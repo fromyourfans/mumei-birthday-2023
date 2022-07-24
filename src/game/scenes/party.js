@@ -12,8 +12,6 @@ class PartyScene extends Phaser.Scene {
 
   dance = null;
 
-  confettiState = false;
-
   lightState = true;
 
   bgm = null;
@@ -67,7 +65,7 @@ class PartyScene extends Phaser.Scene {
     // Candle Lights
     this.lights.setAmbientColor(0x0e0e0e);
     this.light1 = this.lights.addLight(width * 0.5, height * 0.75, 900, 0xffdd88, 1);
-    this.light2 = this.lights.addLight(width * 0.5, height * 0.75, 1200, 0xffdd88, 2);
+    this.light2 = this.lights.addLight(width * 0.5, height * 0.75, 1200, 0xffdd88, 1);
 
     // Animation transition
     this.transition = this.tweens.createTimeline();
@@ -196,19 +194,7 @@ class PartyScene extends Phaser.Scene {
     });
 
     // Confetti
-    this.confetti = this.add.particles('confetti');
-    this.confettiEmitter = this.confetti.setDepth(3500).createEmitter({
-      frame: ['1', '2', '3', '4', '5', '6', '7', '8'],
-      x: { min: 0, max: 1920 },
-      y: { min: -300, max: -30 },
-      scale: 0.4,
-      gravityX: -3,
-      gravityY: 50,
-      frequency: 100,
-      lifespan: 7000,
-      speed: { min: 3, max: 15 },
-    });
-    this.confettiEmitter.setVisible(this.confettiState);
+    this.confetti = this.add.particles('confetti').setDepth(1009);
 
     // Quests
     this.questIcon = this.add.container(0, 0, [
@@ -369,16 +355,11 @@ class PartyScene extends Phaser.Scene {
       fontFamily: 'Londrina Solid',
       fontSize: fontSize || 50,
       color: '#ffffff',
-      stroke: '#003366',
+      stroke: '#131313',
       strokeThickness: 5,
     })
       .setOrigin(0.5, 0.5)
       .setVisible(false);
-  }
-
-  toggleConfetti() {
-    this.confettiState = !this.confettiState;
-    this.confettiEmitter.setVisible(this.confettiState);
   }
 
   lightsOff() {
@@ -400,8 +381,6 @@ class PartyScene extends Phaser.Scene {
     this.lights.enable();
     this.light2.x = this.input.x;
     this.light2.y = this.input.y;
-    this.confettiState = false;
-    this.confettiEmitter.setVisible(this.confettiState);
   }
 
   fanfare() {
@@ -418,8 +397,31 @@ class PartyScene extends Phaser.Scene {
     this.questIcon.setVisible(true);
     this.musicIcon.setVisible(true);
     this.lights.disable();
-    this.confettiState = true;
-    this.confettiEmitter.setVisible(this.confettiState);
+    if (!this.confettiEmitter) {
+      this.confettiEmitter = this.confetti.createEmitter({
+        frame: ['1', '2', '3', '4', '5', '6', '7', '8'],
+        x: { min: 0, max: 1920 },
+        y: { min: -300, max: -30 },
+        scale: 0.5,
+        gravityX: -3,
+        gravityY: 100,
+        frequency: 70,
+        lifespan: { min: 5000, max: 9000 },
+        speed: { min: 3, max: 15 },
+      });
+      this.confetti.createEmitter({
+        frame: ['1', '2', '3', '4', '5', '6', '7', '8'],
+        x: { min: 0, max: 1920 },
+        y: { min: -100, max: 50 },
+        scale: 0.5,
+        gravityX: -3,
+        gravityY: 200,
+        maxParticles: 100,
+        lifespan: { min: 5000, max: 9000 },
+        speedX: { min: 10, max: 30 },
+        speedY: { min: 10, max: 300 },
+      }).explode(100);
+    }
   }
 
   switchBGM(audioKey) {

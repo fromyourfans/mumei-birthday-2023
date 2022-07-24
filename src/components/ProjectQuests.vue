@@ -2,13 +2,17 @@
   <div class="project">
     <div class="project-title">
       <h1 class="text-center">Quests</h1>
-      <h2 class="text-center red--text">Complete all Quests for a surprise at the end!</h2>
+      <h2 class="text-center red--text">Complete all quests to unlock the secret!</h2>
     </div>
     <div class="project-content">
       <ul>
         <li v-for="(quest, project) in questStatus" :key="`quest-${project}`">
           <input type="checkbox" onclick="return false;" :checked="quest" />
           <span>{{questText[project]}}</span>
+        </li>
+        <li>
+          <input type="checkbox" onclick="return false;" disabled />
+          <span>{{questText.lightsoff}}</span>
         </li>
       </ul>
     </div>
@@ -36,10 +40,12 @@ export default {
       fanarts: 'Open birthday gifts at the bottom of the shelves',
       ipod: 'Listen to the music player on the bed',
       credits: 'Read [The Afterword] on Credits (top-left)',
+      lightsoff: '- Secret Final Quest -',
     },
   }),
   mounted() {
     if (Object.values(this.questStatus).reduce((c, v) => c && v, true)) {
+      this.questText.lightsoff = 'Make a wish and blow the candle!';
       this.$root.$emit('allQuestComplete');
     }
   },

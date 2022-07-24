@@ -183,14 +183,14 @@ class IndexScene extends Phaser.Scene {
       fontSize: 60,
       color: '#ffffff',
       stroke: '#000000',
-      strokeThickness: 3,
+      strokeThickness: 4,
     }).setOrigin(0.5, 0.5);
     this.add.text(width * 0.5, height * 0.78, 'Check for Quests at the bottom-left icon', {
       fontFamily: 'Londrina Solid',
       fontSize: 30,
       color: '#ffffff',
       stroke: '#000000',
-      strokeThickness: 2,
+      strokeThickness: 4,
     }).setOrigin(0.5, 0.5);
     this.add.text(width * 0.5, height * 0.83, 'Mumei, no spoilers until your birthday :D', {
       fontFamily: 'Arial',
