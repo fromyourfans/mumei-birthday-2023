@@ -30,6 +30,7 @@ class PartyScene extends Phaser.Scene {
       .setDepth(60001).setOrigin(0, 0)
       .setInteractive()
       .on('pointerdown', () => {
+        this.game.vue.$root.$emit('doneQuest', { questId: 'credits' });
         this.overlay.setVisible(true);
         this.game.vue.dialog = true;
         this.game.vue.openProject = 'credits';

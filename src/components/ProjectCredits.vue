@@ -17,8 +17,8 @@
       <p>
         The first and foremost "thank you" is for Nanashi Mumei.
         You are the one who brought us together,
-        you are the one making us smile, laugh, and inspired.
-        The hooman community was built around you and the amazing things you do, and show us.
+        you are the one making us smile, laugh, and inspired regularly.
+        The hooman community was built around you, and the amazing things you show us.
         In this special day, let us be the one giving back to you.
       </p>
       <p>

@@ -35,6 +35,7 @@ export default {
       tour: 'Go outside, and meet Hoomans around the world',
       fanarts: 'Open birthday gifts at the bottom of the shelves',
       ipod: 'Listen to the music player on the bed',
+      credits: 'Read [The Afterword] on Credits (top-left)',
     },
   }),
   mounted() {

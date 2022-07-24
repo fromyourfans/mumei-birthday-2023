@@ -53,6 +53,7 @@ export default {
       tour: false,
       fanarts: false,
       ipod: false,
+      credits: false,
     },
   }),
   watch: {
