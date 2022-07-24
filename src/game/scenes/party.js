@@ -14,6 +14,8 @@ class PartyScene extends Phaser.Scene {
 
   bgm = null;
 
+  bgmOn = true;
+
   candleBlown = false;
 
   ipodOn = false;
@@ -209,6 +211,29 @@ class PartyScene extends Phaser.Scene {
       }),
     ]).setDepth(3601);
 
+    // Music toggle
+    this.musicImg = this.add.image(45, height - 330, 'musicon')
+      .setDisplaySize(70, 70)
+      .setOrigin(0, 0);
+    this.musicIcon = this.add.container(0, 0, [
+      this.add.circle(20, height - 340, 60, 0xffffff, 0.25)
+        .setOrigin(0, 0)
+        .setInteractive({ useHandCursor: true })
+        .on('pointerdown', () => {
+          this.toggleBGM();
+        }),
+      this.musicImg,
+      this.add.text(20, height - 260, 'Toggle Music', {
+        fontFamily: 'Londrina Solid',
+        fontSize: 24,
+        color: '#ffffff',
+        stroke: '#131313',
+        strokeThickness: 4,
+        fixedWidth: 120,
+        align: 'center',
+      }),
+    ]).setDepth(3601);
+
     // All Quests Completed
     this.game.vue.$root.$on('allQuestComplete', () => {
       this.lightsOff();
@@ -371,13 +396,32 @@ class PartyScene extends Phaser.Scene {
   }
 
   switchBGM(audioKey) {
-    if (this.bgm) this.bgm.stop();
+    if (!this.bgmOn) return;
+    if (this.bgm) {
+      this.bgm.off('complete');
+      this.bgm.stop();
+    }
     this.bgm = this.sound.add(audioKey).setVolume(0.4);
     this.bgm.on('complete', () => {
       this.ipodOn = false;
       this.switchBGM('treehouse');
     });
     this.bgm.play();
+  }
+
+  toggleBGM() {
+    this.bgmOn = !this.bgmOn;
+    if (this.bgmOn) {
+      this.musicImg.setTexture('musicon');
+      this.switchBGM('treehouse');
+    } else {
+      this.musicImg.setTexture('musicoff');
+      this.ipodOn = false;
+      if (this.bgm) {
+        this.bgm.off('complete');
+        this.bgm.stop();
+      }
+    }
   }
 }
 

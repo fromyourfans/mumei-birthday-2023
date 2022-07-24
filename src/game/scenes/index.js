@@ -34,6 +34,8 @@ import flag3 from '../assets/images/flag3.png';
 import ipod from '../assets/images/ipod.png';
 
 import quests from '../assets/images/quests.png';
+import musicOn from '../assets/images/music_on.png';
+import musicOff from '../assets/images/music_off.png';
 import bae from '../assets/images/bae.png';
 import mumei from '../assets/images/mumei.png';
 import kronii from '../assets/images/kronii.png';
@@ -126,6 +128,8 @@ class IndexScene extends Phaser.Scene {
     this.load.image('flag3', flag3);
     this.load.image('ipod', ipod);
     this.load.image('quests', quests);
+    this.load.image('musicon', musicOn);
+    this.load.image('musicoff', musicOff);
 
     this.load.image('bae', [bae, baeN]);
     this.load.image('mumei', [mumei, mumeiN]);
