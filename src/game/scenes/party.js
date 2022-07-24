@@ -396,6 +396,7 @@ class PartyScene extends Phaser.Scene {
     });
     this.friend.setPipeline('Light2D');
     this.questIcon.setVisible(false);
+    this.musicIcon.setVisible(false);
     this.lights.enable();
     this.light2.x = this.input.x;
     this.light2.y = this.input.y;
@@ -415,6 +416,7 @@ class PartyScene extends Phaser.Scene {
     });
     this.friend.setPipeline('MultiPipeline');
     this.questIcon.setVisible(true);
+    this.musicIcon.setVisible(true);
     this.lights.disable();
     this.confettiState = true;
     this.confettiEmitter.setVisible(this.confettiState);
