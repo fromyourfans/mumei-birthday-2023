@@ -8,6 +8,10 @@ const INTENSITY_Y = 0.004;
 class PartyScene extends Phaser.Scene {
   movables = {};
 
+  hoomans = [];
+
+  dance = null;
+
   confettiState = false;
 
   lightState = true;
@@ -107,8 +111,11 @@ class PartyScene extends Phaser.Scene {
     Object.entries(HoomansData)
       .forEach(([key, { sprite, frame, x, y, z, str }]) => {
         const container = this.add.container(centerX, centerY).setDepth(z * 10);
-        const image = this.add.sprite((width * x) - centerX, (height * y) - centerY, sprite, frame);
+        const image = this.add.sprite((width * x) - centerX, (height * y) - centerY, sprite, frame)
+          .setOrigin(0.5, 1).setScale(0.9, 0.9);
+        image.y += image.height * 0.5;
         container.add(image);
+        this.hoomans.push(image);
         this.transitionIn(container, 'top');
         // Add to movable list
         this.movables[key] = {
@@ -333,9 +340,11 @@ class PartyScene extends Phaser.Scene {
           // iPod on/off A New Start Remix
           if (this.ipodOn) {
             this.ipodOn = false;
+            this.stopDance();
             this.switchBGM('treehouse');
           } else {
             this.ipodOn = true;
+            this.startDance();
             this.switchBGM('newstart');
           }
           this.game.vue.$root.$emit('doneQuest', { questId: 'ipod' });
@@ -420,6 +429,7 @@ class PartyScene extends Phaser.Scene {
     this.bgm = this.sound.add(audioKey).setVolume(0.4);
     this.bgm.on('complete', () => {
       this.ipodOn = false;
+      this.stopDance();
       this.switchBGM('treehouse');
     });
     this.bgm.play();
@@ -433,10 +443,34 @@ class PartyScene extends Phaser.Scene {
     } else {
       this.musicImg.setTexture('musicoff');
       this.ipodOn = false;
+      this.stopDance();
       if (this.bgm) {
         this.bgm.off('complete');
         this.bgm.stop();
       }
+    }
+  }
+
+  startDance() {
+    this.stopDance();
+    if (!this.bgmOn) return;
+    this.dance = this.tweens.add({
+      targets: this.hoomans,
+      scaleX: { from: 0.9, to: 0.85 },
+      scaleY: { from: 0.9, to: 1 },
+      duration: 600,
+      loop: -1,
+      yoyo: true,
+    });
+  }
+
+  stopDance() {
+    if (this.dance) {
+      this.dance.stop();
+      this.hoomans.forEach((hooman) => {
+        hooman.setScale(0.9, 0.9);
+      });
+      this.dance = null;
     }
   }
 }
