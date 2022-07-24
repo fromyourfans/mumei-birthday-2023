@@ -29,11 +29,12 @@ export default {
   data: () => ({
     questText: {
       mural: 'Check the painting the Hoomans drew together',
-      messages: 'Check letters scattered on the floor (No need to mark messages as read)',
+      messages: 'Check letters scattered on the floor',
       friend: 'Friend has a few outfits he wants to show',
       animol: 'Click on animol and hear what she has to say',
       tour: 'Go outside, and meet Hoomans around the world',
       fanarts: 'Open birthday gifts at the bottom of the shelves',
+      ipod: 'Listen to the music player on the bed',
     },
   }),
   mounted() {
@@ -46,7 +47,7 @@ export default {
 
 <style lang="scss" scoped>
 .project {
-  height:60vh;
+  height:80vh;
   position:relative;
   .project-title {
     left:0;

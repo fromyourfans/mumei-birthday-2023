@@ -52,6 +52,7 @@ export default {
       animol: false,
       tour: false,
       fanarts: false,
+      ipod: false,
     },
   }),
   watch: {
