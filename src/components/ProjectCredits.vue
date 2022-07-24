@@ -38,16 +38,16 @@
           <ul>
             <li>Mumei - <strong>jetrico</strong></li>
             <li>Sana - <strong>IanCSamson</strong></li>
-            <li>Fauna - <strong>Faerieko (Nikko)</strong></li>
+            <li>Fauna - <strong>faerieko</strong></li>
             <li>Kronii - <strong>Abstraction</strong></li>
-            <li>Baelz - <strong>jamie_97 (AlphaCas)</strong></li>
+            <li>Baelz - <strong>AlphaCas</strong></li>
             <li>Room Layout - <strong>Nin-tan【人単】</strong></li>
             <li>Birthday Cake - <strong>bukiyos_art</strong></li>
             <li>Central Table - <strong>jetrico</strong></li>
             <li>Birthday Banner - <strong>Trix Mix</strong></li>
             <li>Hooman Avatars - <strong>collywob5</strong></li>
             <li>Painting - <strong>Trix Mix</strong></li>
-            <li>Letters on Floor - <strong>Faerieko (Nikko)</strong></li>
+            <li>Letters on Floor - <strong>faerieko</strong></li>
             <li>Balloon Sets - <strong>0btuse</strong></li>
             <li>Kronii Dakimakura, Pillows - <strong>sprub</strong></li>
             <li>Bananas, Berries - <strong>Mogu Mogu</strong></li>
@@ -55,14 +55,14 @@
             <li>Lantern - <strong>oCat</strong></li>
             <li>Spider - <strong>Error 404 Name Not Found</strong></li>
             <li>Rice - <strong>oCat</strong></li>
-            <li>Shelf Items - <strong>jamie_97 (AlphaCas)</strong></li>
+            <li>Shelf Items - <strong>AlphaCas</strong></li>
             <li>Friend (all variants) - <strong>Eli</strong></li>
             <li>Animol - <strong>Đay</strong></li>
             <li>Music Player - <strong>Wherefore</strong></li>
           </ul>
         </li>
         <li>
-          Music
+          Music &amp; Sounds
           <ul>
             <li>Main BGM - <strong>Wherefore</strong></li>
             <li>Lights Out BGM - <strong>Wherefore</strong></li>
