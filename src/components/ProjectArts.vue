@@ -21,24 +21,28 @@
     <div class="project-content">
       <div v-masonry="'bdaycards'" transition-duration="0.3s" item-selector=".card" stagger="0s">
         <div v-masonry-tile :class="[ 'card', censor ? 'card-censor' : '' ]">
-          <img src="@/assets/tour/sample1.png" />
-          <div class="artist text-center">submissionName</div>
+          <img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumei-bday2022/fanart/scount.png" />
+          <div class="artist text-center">scount</div>
         </div>
         <div v-masonry-tile :class="[ 'card', censor ? 'card-censor' : '' ]">
-          <img src="@/assets/tour/sample2.png" />
-          <div class="artist text-center">submissionName</div>
+          <img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumei-bday2022/fanart/nintan.png" />
+          <div class="artist text-center">Nin-tan</div>
         </div>
         <div v-masonry-tile :class="[ 'card', censor ? 'card-censor' : '' ]">
-          <img src="@/assets/tour/sample3.png" />
-          <div class="artist text-center">submissionName</div>
+          <img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumei-bday2022/fanart/alphacas.png" />
+          <div class="artist text-center">AlphaCas</div>
         </div>
         <div v-masonry-tile :class="[ 'card', censor ? 'card-censor' : '' ]">
-          <img src="@/assets/tour/sample4.png" />
-          <div class="artist text-center">submissionName</div>
+          <img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumei-bday2022/fanart/shiro.png" />
+          <div class="artist text-center">Shiro</div>
         </div>
         <div v-masonry-tile :class="[ 'card', censor ? 'card-censor' : '' ]">
-          <img src="@/assets/tour/sample5.png" />
-          <div class="artist text-center">submissionName</div>
+          <img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumei-bday2022/fanart/jisooooo.png" />
+          <div class="artist text-center">Jisooooo</div>
+        </div>
+        <div v-masonry-tile :class="[ 'card', censor ? 'card-censor' : '' ]">
+          <img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumei-bday2022/fanart/mogumogu.png" />
+          <div class="artist text-center">Mogu Mogu</div>
         </div>
       </div>
     </div>
@@ -58,7 +62,6 @@ export default {
     },
   },
   mounted() {
-    // Load data
     this.$nextTick(() => { this.$redrawVueMasonry('bdaycards'); });
     setTimeout(() => { this.$redrawVueMasonry('bdaycards'); }, 1000);
     setTimeout(() => { this.$redrawVueMasonry('bdaycards'); }, 5000);
@@ -123,7 +126,8 @@ export default {
     height:30px;
     line-height:30px;
     font-size:20px;
-    color:#927a4d;
+    font-weight:bold;
+    color:#3f3118;
   }
   &.card-censor {
     img {
