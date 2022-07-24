@@ -35,10 +35,10 @@ class PartyScene extends Phaser.Scene {
 
     // Bark sounds
     this.barks = [
-      this.sound.add('bark1').setVolume(0.4),
-      this.sound.add('bark2').setVolume(0.4),
-      this.sound.add('bark3').setVolume(0.4),
-      this.sound.add('bark4').setVolume(0.4),
+      this.sound.add('bark1').setVolume(0.7),
+      this.sound.add('bark2').setVolume(0.7),
+      this.sound.add('bark3').setVolume(0.7),
+      this.sound.add('bark4').setVolume(0.7),
     ];
 
     // Candle Lights
@@ -211,6 +211,9 @@ class PartyScene extends Phaser.Scene {
     this.game.vue.$root.$on('allQuestComplete', () => {
       this.lightsOff();
     });
+
+    // Default Room BGM
+    this.switchBGM('treehouse');
   }
 
   transitionIn(container, dir) {
@@ -321,7 +324,7 @@ class PartyScene extends Phaser.Scene {
     this.candleBlown = true;
     this.lightState = false;
     this.cover.setVisible(true);
-    this.bgm = this.sound.add('bgm').setVolume(0.7).play();
+    this.switchBGM('musicbox');
     Object.values(this.movables).forEach(({ image, sprite }) => {
       if (image) image.setPipeline('Light2D');
       if (sprite) {
@@ -353,6 +356,15 @@ class PartyScene extends Phaser.Scene {
     this.lights.disable();
     this.confettiState = true;
     this.confettiEmitter.setVisible(this.confettiState);
+  }
+
+  switchBGM(audioKey) {
+    if (this.bgm) this.bgm.stop();
+    this.bgm = this.sound.add(audioKey).setVolume(0.4);
+    this.bgm.on('complete', () => {
+      this.switchBGM('treehouse');
+    });
+    this.bgm.play();
   }
 }
 
