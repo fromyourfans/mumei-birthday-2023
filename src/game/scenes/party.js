@@ -90,23 +90,10 @@ class PartyScene extends Phaser.Scene {
 
     // Hoomans
     Object.entries(HoomansData)
-      .forEach(([key, { sprite, frame, x, y, z, str, name }]) => {
+      .forEach(([key, { sprite, frame, x, y, z, str }]) => {
         const container = this.add.container(centerX, centerY).setDepth(z * 10);
         const image = this.add.sprite((width * x) - centerX, (height * y) - centerY, sprite, frame);
-        const label = this.add.text(((width * x) - centerX) - 90, (height * y) - centerY, name || key, {
-          fontFamily: 'Arial',
-          fontStyle: 'bold',
-          fontSize: 16,
-          align: 'center',
-          color: '#ffffff',
-          stroke: '#131313',
-          strokeThickness: 3,
-          fixedWidth: 180,
-        })
-          .setVisible(false);
-        image.setInteractive().on('pointerover', () => { label.setVisible(true); });
-        image.setInteractive().on('pointerout', () => { label.setVisible(false); });
-        container.add([image, label]);
+        container.add(image);
         this.transitionIn(container, 'top');
         // Add to movable list
         this.movables[key] = {
