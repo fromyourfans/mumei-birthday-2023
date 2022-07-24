@@ -1,0 +1,304 @@
+{
+	"frames": {
+		"abstraction": {
+			"frame": {
+				"x": 1,
+				"y": 1,
+				"w": 117,
+				"h": 91
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 117,
+				"h": 91
+			},
+			"sourceSize": {
+				"w": 117,
+				"h": 91
+			}
+		},
+		"bukiyos": {
+			"frame": {
+				"x": 120,
+				"y": 1,
+				"w": 106,
+				"h": 101
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 106,
+				"h": 101
+			},
+			"sourceSize": {
+				"w": 106,
+				"h": 101
+			}
+		},
+		"dramon": {
+			"frame": {
+				"x": 228,
+				"y": 1,
+				"w": 92,
+				"h": 116
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 92,
+				"h": 116
+			},
+			"sourceSize": {
+				"w": 92,
+				"h": 116
+			}
+		},
+		"eli": {
+			"frame": {
+				"x": 322,
+				"y": 1,
+				"w": 122,
+				"h": 117
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 122,
+				"h": 117
+			},
+			"sourceSize": {
+				"w": 122,
+				"h": 117
+			}
+		},
+		"faerieko": {
+			"frame": {
+				"x": 1,
+				"y": 120,
+				"w": 184,
+				"h": 116
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 184,
+				"h": 116
+			},
+			"sourceSize": {
+				"w": 184,
+				"h": 116
+			}
+		},
+		"jackiechan": {
+			"frame": {
+				"x": 187,
+				"y": 120,
+				"w": 104,
+				"h": 104
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 104,
+				"h": 104
+			},
+			"sourceSize": {
+				"w": 104,
+				"h": 104
+			}
+		},
+		"jamie": {
+			"frame": {
+				"x": 293,
+				"y": 120,
+				"w": 134,
+				"h": 119
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 134,
+				"h": 119
+			},
+			"sourceSize": {
+				"w": 134,
+				"h": 119
+			}
+		},
+		"jetrico": {
+			"frame": {
+				"x": 1,
+				"y": 241,
+				"w": 127,
+				"h": 110
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 127,
+				"h": 110
+			},
+			"sourceSize": {
+				"w": 127,
+				"h": 110
+			}
+		},
+		"mogumogu": {
+			"frame": {
+				"x": 130,
+				"y": 241,
+				"w": 114,
+				"h": 110
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 114,
+				"h": 110
+			},
+			"sourceSize": {
+				"w": 114,
+				"h": 110
+			}
+		},
+		"nintan": {
+			"frame": {
+				"x": 246,
+				"y": 241,
+				"w": 119,
+				"h": 94
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 119,
+				"h": 94
+			},
+			"sourceSize": {
+				"w": 119,
+				"h": 94
+			}
+		},
+		"shoujobirb": {
+			"frame": {
+				"x": 246,
+				"y": 337,
+				"w": 201,
+				"h": 94
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 201,
+				"h": 94
+			},
+			"sourceSize": {
+				"w": 201,
+				"h": 94
+			}
+		},
+		"souuup": {
+			"frame": {
+				"x": 446,
+				"y": 1,
+				"w": 200,
+				"h": 196
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 200,
+				"h": 196
+			},
+			"sourceSize": {
+				"w": 200,
+				"h": 196
+			}
+		},
+		"sprub": {
+			"frame": {
+				"x": 429,
+				"y": 199,
+				"w": 130,
+				"h": 105
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 130,
+				"h": 105
+			},
+			"sourceSize": {
+				"w": 130,
+				"h": 105
+			}
+		},
+		"trixmix": {
+			"frame": {
+				"x": 449,
+				"y": 306,
+				"w": 165,
+				"h": 116
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 165,
+				"h": 116
+			},
+			"sourceSize": {
+				"w": 165,
+				"h": 116
+			}
+		},
+		"wowanator": {
+			"frame": {
+				"x": 1,
+				"y": 424,
+				"w": 106,
+				"h": 107
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 106,
+				"h": 107
+			},
+			"sourceSize": {
+				"w": 106,
+				"h": 107
+			}
+		}
+	}
+}

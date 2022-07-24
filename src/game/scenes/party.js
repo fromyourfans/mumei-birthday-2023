@@ -1,5 +1,6 @@
 import Phaser from 'phaser';
 import ElementsData from '@/data/elements';
+import HoomansData from '@/data/hoomans';
 
 const INTENSITY_X = 0.008;
 const INTENSITY_Y = 0.004;
@@ -75,6 +76,21 @@ class PartyScene extends Phaser.Scene {
           && key !== 'front1' && key !== 'front2' && key !== 'front3'
         ) this.transitionIn(container, dir);
         // Add to movable list
+        this.movables[key] = {
+          container,
+          strX: str * INTENSITY_X,
+          strY: str * INTENSITY_Y,
+          image,
+        };
+      });
+
+    // Hoomans
+    Object.entries(HoomansData)
+      .forEach(([key, { sprite, frame, x, y, z, str }]) => {
+        const container = this.add.container(centerX, centerY).setDepth(z * 10);
+        const image = this.add.sprite((width * x) - centerX, (height * y) - centerY, sprite, frame);
+        container.add(image);
+        // // Add to movable list
         this.movables[key] = {
           container,
           strX: str * INTENSITY_X,

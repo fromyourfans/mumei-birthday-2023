@@ -68,6 +68,8 @@ import confettiPng from '../assets/atlas/confetti.png';
 import confettiJson from '../assets/atlas/confetti.json';
 import friendPng from '../assets/atlas/friend.png';
 import friendJson from '../assets/atlas/friend.json';
+import hoomansPng from '../assets/atlas/hoomans.png';
+import hoomansJson from '../assets/atlas/hoomans.json';
 
 class IndexScene extends Phaser.Scene {
   loadingText = null;
@@ -133,6 +135,7 @@ class IndexScene extends Phaser.Scene {
 
     this.load.atlas('confetti', confettiPng, confettiJson);
     this.load.atlas('friend', friendPng, friendJson);
+    this.load.atlas('hoomans', hoomansPng, hoomansJson);
   }
 
   async create() {
