@@ -430,7 +430,9 @@ class PartyScene extends Phaser.Scene {
       this.bgm.off('complete');
       this.bgm.stop();
     }
-    this.bgm = this.sound.add(audioKey).setVolume(0.4);
+    this.bgm = this.sound.add(audioKey);
+    if (audioKey === 'musicbox') this.bgm.setVolume(1);
+    else this.bgm.setVolume(0.5);
     this.bgm.on('complete', () => {
       this.ipodOn = false;
       this.stopDance();
