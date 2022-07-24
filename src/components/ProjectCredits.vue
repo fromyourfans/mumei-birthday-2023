@@ -80,9 +80,36 @@
         </li>
       </ul>
 
+      <h3 class="brown--text">Friend Project: World Tour</h3>
+      <ul class="pb-4">
+        <li>Organized by <strong>Mumei's Sanctuary Discord Staff</strong></li>
+      </ul>
+
       <h3 class="brown--text">Special Thanks to:</h3>
       <ul class="pb-4">
         <li>Staff of Mumei Civilization and Sanctuary discords</li>
+      </ul>
+
+      <h3 class="brown--text">Links</h3>
+      <ul class="pb-4">
+        <li>
+          Source Code:
+          <a href="https://github.com/fromyourfans/mumei-birthday-2022/" target="_blank">
+            https://github.com/fromyourfans/mumei-birthday-2022/
+          </a>
+        </li>
+        <li>
+          Forked from
+          <a href="https://birthday.ennaalouette.com/" target="_blank">
+            https://birthday.ennaalouette.com
+          </a>
+        </li>
+        <li>
+          Drawing Board (closed):
+          <a href="https://aggie.io/gor2k0re89" target="_blank">
+            https://aggie.io/gor2k0re89
+          </a>
+        </li>
       </ul>
     </div>
     <div class="project-close">
