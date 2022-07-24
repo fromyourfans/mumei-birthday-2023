@@ -68,7 +68,7 @@ import musicbox from '../assets/audio/musicbox.ogg';
 import treehouse from '../assets/audio/treehouse.ogg';
 import newstart from '../assets/audio/newstart.mp3';
 
-import cursor from '../assets/cursor/cursor.png';
+import cursor from '../assets/cursor/cursor-sm.png';
 
 import confettiPng from '../assets/atlas/confetti.png';
 import confettiJson from '../assets/atlas/confetti.json';
