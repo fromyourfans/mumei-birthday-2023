@@ -216,7 +216,7 @@ class PartyScene extends Phaser.Scene {
       .setDisplaySize(70, 70)
       .setOrigin(0, 0);
     this.musicIcon = this.add.container(0, 0, [
-      this.add.circle(20, height - 340, 60, 0xffffff, 0.25)
+      this.add.circle(20, height - 340, 60, 0xffffff, 0)
         .setOrigin(0, 0)
         .setInteractive({ useHandCursor: true })
         .on('pointerdown', () => {
