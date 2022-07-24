@@ -26,16 +26,16 @@ class PartyScene extends Phaser.Scene {
     const centerY = height / 2;
 
     // Version number
-    this.add.text(width - 5, height - 25, 'Version 220723.1638', {
+    this.add.text(5, 5, 'Version 220723.2021', {
       fontFamily: 'Arial',
       fontSize: 16,
-      align: 'right',
+      align: 'left',
       color: '#ffffff',
       stroke: '#131313',
       strokeThickness: 4,
     })
       .setDepth(60000)
-      .setOrigin(1, 0);
+      .setOrigin(0, 0);
 
     // Bark sounds
     this.barks = [
@@ -90,11 +90,25 @@ class PartyScene extends Phaser.Scene {
 
     // Hoomans
     Object.entries(HoomansData)
-      .forEach(([key, { sprite, frame, x, y, z, str }]) => {
+      .forEach(([key, { sprite, frame, x, y, z, str, name }]) => {
         const container = this.add.container(centerX, centerY).setDepth(z * 10);
         const image = this.add.sprite((width * x) - centerX, (height * y) - centerY, sprite, frame);
-        container.add(image);
-        // // Add to movable list
+        const label = this.add.text(((width * x) - centerX) - 90, (height * y) - centerY, name || key, {
+          fontFamily: 'Arial',
+          fontStyle: 'bold',
+          fontSize: 16,
+          align: 'center',
+          color: '#ffffff',
+          stroke: '#131313',
+          strokeThickness: 3,
+          fixedWidth: 180,
+        })
+          .setVisible(false);
+        image.setInteractive().on('pointerover', () => { label.setVisible(true); });
+        image.setInteractive().on('pointerout', () => { label.setVisible(false); });
+        container.add([image, label]);
+        this.transitionIn(container, 'top');
+        // Add to movable list
         this.movables[key] = {
           container,
           strX: str * INTENSITY_X,
@@ -270,7 +284,7 @@ class PartyScene extends Phaser.Scene {
       ease: 'Circ.easeOut',
       duration: 300,
       repeat: 0,
-      offset: '-=230',
+      offset: '-=250',
     });
   }
 

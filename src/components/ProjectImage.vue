@@ -2,7 +2,10 @@
   <div class="project">
     <div class="project-description">
       <h2>Drawing Board</h2>
-      <p>Hoomans doodled their birthday greetings on a shared drawing board!</p>
+      <p>
+        Hoomans doodled their birthday greetings on a shared drawing board!
+        Click on the image to open full size in a new tab.
+      </p>
     </div>
     <div class="project-close">
       <v-btn

@@ -7,6 +7,7 @@ module.exports = {
     z: 15,
     str: 0.7,
     scale: 0.9,
+    name: 'Abstraction',
   },
   bukiyos: {
     sprite: 'hoomans',
@@ -16,6 +17,7 @@ module.exports = {
     z: 15.1,
     str: 0.9,
     scale: 0.9,
+    name: 'Mikki BUKIYOS',
   },
   dramon: {
     sprite: 'hoomans',
@@ -43,6 +45,7 @@ module.exports = {
     z: 103.1,
     str: -0.5,
     scale: 0.75,
+    name: 'Faerieko',
   },
   jackiechan: {
     sprite: 'hoomans',
@@ -52,6 +55,7 @@ module.exports = {
     z: 15.5,
     str: 0.85,
     scale: 0.9,
+    name: 'Jackie Chan',
   },
   jamie: {
     sprite: 'hoomans',
@@ -61,6 +65,7 @@ module.exports = {
     z: 103.2,
     str: 0.4,
     scale: 0.9,
+    name: 'AlphaCas',
   },
   jetrico: {
     sprite: 'hoomans',
@@ -79,6 +84,7 @@ module.exports = {
     z: 15.8,
     str: 0.2,
     scale: 0.9,
+    name: 'Mogu Mogu',
   },
   nintan: {
     sprite: 'hoomans',
@@ -88,6 +94,7 @@ module.exports = {
     z: 15.9,
     str: 0.85,
     scale: 0.9,
+    name: 'Nin-tan',
   },
   shoujobirb: {
     sprite: 'hoomans',
@@ -124,6 +131,7 @@ module.exports = {
     z: 16.3,
     str: 0.7,
     scale: 0.9,
+    name: 'TrixMix',
   },
   wowanator: {
     sprite: 'hoomans',
