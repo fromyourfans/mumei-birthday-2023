@@ -31,6 +31,7 @@ import shelftop from '../assets/images/shelftop.png';
 import flag1 from '../assets/images/flag1.png';
 import flag2 from '../assets/images/flag2.png';
 import flag3 from '../assets/images/flag3.png';
+import ipod from '../assets/images/ipod.png';
 
 import quests from '../assets/images/quests.png';
 import bae from '../assets/images/bae.png';
@@ -63,6 +64,7 @@ import bark3 from '../assets/audio/bark03.mp3';
 import bark4 from '../assets/audio/bark04.mp3';
 import musicbox from '../assets/audio/musicbox.ogg';
 import treehouse from '../assets/audio/treehouse.ogg';
+import newstart from '../assets/audio/newstart.mp3';
 
 import cursor from '../assets/cursor/cursor.png';
 
@@ -122,6 +124,7 @@ class IndexScene extends Phaser.Scene {
     this.load.image('flag1', flag1);
     this.load.image('flag2', flag2);
     this.load.image('flag3', flag3);
+    this.load.image('ipod', ipod);
     this.load.image('quests', quests);
 
     this.load.image('bae', [bae, baeN]);
@@ -136,6 +139,7 @@ class IndexScene extends Phaser.Scene {
     this.load.audio('bark4', bark4);
     this.load.audio('musicbox', musicbox);
     this.load.audio('treehouse', treehouse);
+    this.load.audio('newstart', newstart);
 
     this.load.atlas('confetti', confettiPng, confettiJson);
     this.load.atlas('friend', friendPng, friendJson);

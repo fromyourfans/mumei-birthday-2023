@@ -40,6 +40,16 @@ module.exports = {
     ox: 0,
     oy: 0,
   },
+  ipod: {
+    x: 0.228,
+    y: 0.421,
+    z: 3.2,
+    str: 0.85,
+    scale: 1.1,
+    text: 'Listen',
+    ly: -0.5,
+    font: 30,
+  },
   daki: {
     x: 0.12,
     y: 0.47,

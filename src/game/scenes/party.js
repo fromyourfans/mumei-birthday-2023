@@ -16,6 +16,8 @@ class PartyScene extends Phaser.Scene {
 
   candleBlown = false;
 
+  ipodOn = false;
+
   create() {
     const { width, height } = this.sys.game.canvas;
     const centerX = width / 2;
@@ -286,6 +288,16 @@ class PartyScene extends Phaser.Scene {
           const bark = this.barks[Math.floor(Math.random() * 4)];
           bark.play();
           this.game.vue.$root.$emit('doneQuest', { questId: 'animol' });
+        } else if (key === 'ipod') {
+          // iPod on/off A New Start Remix
+          if (this.ipodOn) {
+            this.ipodOn = false;
+            this.switchBGM('treehouse');
+          } else {
+            this.ipodOn = true;
+            this.switchBGM('newstart');
+          }
+          this.game.vue.$root.$emit('doneQuest', { questId: 'ipod' });
         } else if (key === 'lantern') {
           // Lights Off
           if (!this.candleBlown) this.lightsOff();
@@ -362,6 +374,7 @@ class PartyScene extends Phaser.Scene {
     if (this.bgm) this.bgm.stop();
     this.bgm = this.sound.add(audioKey).setVolume(0.4);
     this.bgm.on('complete', () => {
+      this.ipodOn = false;
       this.switchBGM('treehouse');
     });
     this.bgm.play();
