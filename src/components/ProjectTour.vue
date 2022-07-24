@@ -22,7 +22,7 @@
     <div class="project-content">
       <div v-masonry="'bdaycards'" transition-duration="0.3s" item-selector=".card" stagger="0s">
         <div v-masonry-tile :class="[ 'card', censor ? 'card-censor' : '' ]">
-          <div class="img"><v-img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumeitour/anon_dellfeld.png"></v-img></div>
+          <div class="img"><v-img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumei-bday2022/tour/anon_dellfeld.png"></v-img></div>
           <div class="artist text-center">Anonymous Hooman</div>
           <div class="location text-center">Dellfeld</div>
         </div>
@@ -30,13 +30,13 @@
           <div class="img">
             <v-carousel>
               <v-carousel-item>
-                <v-img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumeitour/kjwww_01.png"></v-img>
+                <v-img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumei-bday2022/tour/kjwww_01.png"></v-img>
               </v-carousel-item>
               <v-carousel-item>
-                <v-img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumeitour/kjwww_02.png"></v-img>
+                <v-img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumei-bday2022/tour/kjwww_02.png"></v-img>
               </v-carousel-item>
               <v-carousel-item>
-                <v-img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumeitour/kjwww_03.png"></v-img>
+                <v-img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumei-bday2022/tour/kjwww_03.png"></v-img>
               </v-carousel-item>
             </v-carousel>
           </div>
@@ -47,10 +47,10 @@
           <div class="img">
             <v-carousel>
               <v-carousel-item>
-                <v-img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumeitour/barghati_01.png"></v-img>
+                <v-img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumei-bday2022/tour/barghati_01.png"></v-img>
               </v-carousel-item>
               <v-carousel-item>
-                <v-img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumeitour/barghati_02.png"></v-img>
+                <v-img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumei-bday2022/tour/barghati_02.png"></v-img>
               </v-carousel-item>
             </v-carousel>
           </div>
@@ -58,7 +58,7 @@
           <div class="location text-center">Korea, seoul, Han-ok Village</div>
         </div>
         <div v-masonry-tile :class="[ 'card', censor ? 'card-censor' : '' ]">
-          <div class="img"><v-img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumeitour/kitsunej_01.png"></v-img></div>
+          <div class="img"><v-img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumei-bday2022/tour/kitsunej_01.png"></v-img></div>
           <div class="artist text-center">Kitsune J</div>
           <div class="location text-center">Essex County South Mountain Recreation Complex</div>
         </div>
@@ -66,10 +66,10 @@
           <div class="img">
             <v-carousel>
               <v-carousel-item>
-                <v-img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumeitour/lemon_01.png"></v-img>
+                <v-img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumei-bday2022/tour/lemon_01.png"></v-img>
               </v-carousel-item>
               <v-carousel-item>
-                <v-img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumeitour/lemon_02.png"></v-img>
+                <v-img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumei-bday2022/tour/lemon_02.png"></v-img>
               </v-carousel-item>
             </v-carousel>
           </div>
@@ -77,7 +77,7 @@
           <div class="location text-center">Time square, New York</div>
         </div>
         <div v-masonry-tile :class="[ 'card', censor ? 'card-censor' : '' ]">
-          <div class="img"><v-img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumeitour/anon_sanfran.png"></v-img></div>
+          <div class="img"><v-img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumei-bday2022/tour/anon_sanfran.png"></v-img></div>
           <div class="artist text-center">Anonymous Hooman</div>
           <div class="location text-center">San Francisco</div>
         </div>
@@ -85,13 +85,13 @@
           <div class="img">
             <v-carousel>
               <v-carousel-item>
-                <v-img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumeitour/gabyuwu_01.png"></v-img>
+                <v-img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumei-bday2022/tour/gabyuwu_01.png"></v-img>
               </v-carousel-item>
               <v-carousel-item>
-                <v-img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumeitour/gabyuwu_02.png"></v-img>
+                <v-img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumei-bday2022/tour/gabyuwu_02.png"></v-img>
               </v-carousel-item>
               <v-carousel-item>
-                <v-img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumeitour/gabyuwu_03.png"></v-img>
+                <v-img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumei-bday2022/tour/gabyuwu_03.png"></v-img>
               </v-carousel-item>
             </v-carousel>
           </div>
@@ -99,12 +99,12 @@
           <div class="location text-center">Bellas Artes Museum, Mexico</div>
         </div>
         <div v-masonry-tile :class="[ 'card', censor ? 'card-censor' : '' ]">
-          <div class="img"><v-img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumeitour/mikachu05_01.png"></v-img></div>
+          <div class="img"><v-img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumei-bday2022/tour/mikachu05_01.png"></v-img></div>
           <div class="artist text-center">mikachu05</div>
           <div class="location text-center">Castle Acre Norfolk England</div>
         </div>
         <div v-masonry-tile :class="[ 'card', censor ? 'card-censor' : '' ]">
-          <div class="img"><v-img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumeitour/anon_malecon.png"></v-img></div>
+          <div class="img"><v-img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumei-bday2022/tour/anon_malecon.png"></v-img></div>
           <div class="artist text-center">Anonymous Hooman</div>
           <div class="location text-center">Malecon 2000</div>
         </div>
@@ -112,19 +112,19 @@
           <div class="img">
             <v-carousel>
               <v-carousel-item>
-                <v-img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumeitour/grizzly_01.png"></v-img>
+                <v-img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumei-bday2022/tour/grizzly_01.png"></v-img>
               </v-carousel-item>
               <v-carousel-item>
-                <v-img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumeitour/grizzly_02.png"></v-img>
+                <v-img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumei-bday2022/tour/grizzly_02.png"></v-img>
               </v-carousel-item>
               <v-carousel-item>
-                <v-img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumeitour/grizzly_03.png"></v-img>
+                <v-img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumei-bday2022/tour/grizzly_03.png"></v-img>
               </v-carousel-item>
               <v-carousel-item>
-                <v-img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumeitour/grizzly_04.png"></v-img>
+                <v-img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumei-bday2022/tour/grizzly_04.png"></v-img>
               </v-carousel-item>
               <v-carousel-item>
-                <v-img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumeitour/grizzly_05.png"></v-img>
+                <v-img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumei-bday2022/tour/grizzly_05.png"></v-img>
               </v-carousel-item>
             </v-carousel>
           </div>
@@ -135,16 +135,16 @@
           <div class="img">
             <v-carousel>
               <v-carousel-item>
-                <v-img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumeitour/ignisdark_01.png"></v-img>
+                <v-img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumei-bday2022/tour/ignisdark_01.png"></v-img>
               </v-carousel-item>
               <v-carousel-item>
-                <v-img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumeitour/ignisdark_02.png"></v-img>
+                <v-img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumei-bday2022/tour/ignisdark_02.png"></v-img>
               </v-carousel-item>
               <v-carousel-item>
-                <v-img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumeitour/ignisdark_03.png"></v-img>
+                <v-img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumei-bday2022/tour/ignisdark_03.png"></v-img>
               </v-carousel-item>
               <v-carousel-item>
-                <v-img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumeitour/ignisdark_04.png"></v-img>
+                <v-img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumei-bday2022/tour/ignisdark_04.png"></v-img>
               </v-carousel-item>
             </v-carousel>
           </div>
@@ -155,16 +155,16 @@
           <div class="img">
             <v-carousel>
               <v-carousel-item>
-                <v-img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumeitour/winner_01.png"></v-img>
+                <v-img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumei-bday2022/tour/winner_01.png"></v-img>
               </v-carousel-item>
               <v-carousel-item>
-                <v-img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumeitour/winner_02.png"></v-img>
+                <v-img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumei-bday2022/tour/winner_02.png"></v-img>
               </v-carousel-item>
               <v-carousel-item>
-                <v-img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumeitour/winner_03.png"></v-img>
+                <v-img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumei-bday2022/tour/winner_03.png"></v-img>
               </v-carousel-item>
               <v-carousel-item>
-                <v-img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumeitour/winner_04.png"></v-img>
+                <v-img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumei-bday2022/tour/winner_04.png"></v-img>
               </v-carousel-item>
             </v-carousel>
           </div>
@@ -175,19 +175,19 @@
           <div class="img">
             <v-carousel>
               <v-carousel-item>
-                <v-img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumeitour/waffle_01.png"></v-img>
+                <v-img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumei-bday2022/tour/waffle_01.png"></v-img>
               </v-carousel-item>
               <v-carousel-item>
-                <v-img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumeitour/waffle_02.png"></v-img>
+                <v-img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumei-bday2022/tour/waffle_02.png"></v-img>
               </v-carousel-item>
               <v-carousel-item>
-                <v-img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumeitour/waffle_03.png"></v-img>
+                <v-img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumei-bday2022/tour/waffle_03.png"></v-img>
               </v-carousel-item>
               <v-carousel-item>
-                <v-img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumeitour/waffle_04.png"></v-img>
+                <v-img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumei-bday2022/tour/waffle_04.png"></v-img>
               </v-carousel-item>
               <v-carousel-item>
-                <v-img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumeitour/waffle_05.png"></v-img>
+                <v-img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumei-bday2022/tour/waffle_05.png"></v-img>
               </v-carousel-item>
             </v-carousel>
           </div>
@@ -198,19 +198,19 @@
           <div class="img">
             <v-carousel>
               <v-carousel-item>
-                <v-img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumeitour/euroaxleenthusiast_01.png"></v-img>
+                <v-img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumei-bday2022/tour/euroaxleenthusiast_01.png"></v-img>
               </v-carousel-item>
               <v-carousel-item>
-                <v-img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumeitour/euroaxleenthusiast_02.png"></v-img>
+                <v-img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumei-bday2022/tour/euroaxleenthusiast_02.png"></v-img>
               </v-carousel-item>
               <v-carousel-item>
-                <v-img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumeitour/euroaxleenthusiast_03.png"></v-img>
+                <v-img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumei-bday2022/tour/euroaxleenthusiast_03.png"></v-img>
               </v-carousel-item>
               <v-carousel-item>
-                <v-img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumeitour/euroaxleenthusiast_04.png"></v-img>
+                <v-img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumei-bday2022/tour/euroaxleenthusiast_04.png"></v-img>
               </v-carousel-item>
               <v-carousel-item>
-                <v-img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumeitour/euroaxleenthusiast_05.png"></v-img>
+                <v-img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumei-bday2022/tour/euroaxleenthusiast_05.png"></v-img>
               </v-carousel-item>
             </v-carousel>
           </div>
@@ -218,14 +218,14 @@
           <div class="location text-center">Friend visiting the council members</div>
         </div>
         <div v-masonry-tile :class="[ 'card', censor ? 'card-censor' : '' ]">
-          <div class="img"><v-img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumeitour/azusadesu_01.png"></v-img></div>
+          <div class="img"><v-img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumei-bday2022/tour/azusadesu_01.png"></v-img></div>
           <div class="artist text-center">あずさです!!</div>
           <div class="location text-center">
             Field overlooking Slieve [pronounced "Sleeve"] Donard, somewhere in Ireland
           </div>
         </div>
         <div v-masonry-tile :class="[ 'card', censor ? 'card-censor' : '' ]">
-          <div class="img"><v-img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumeitour/speedfreak_01.png"></v-img></div>
+          <div class="img"><v-img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumei-bday2022/tour/speedfreak_01.png"></v-img></div>
           <div class="artist text-center">XSpeedfreakX</div>
           <div class="location text-center">Mall Of Asia, Philippines</div>
         </div>
@@ -233,10 +233,10 @@
           <div class="img">
             <v-carousel>
               <v-carousel-item>
-                <v-img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumeitour/peralsey_01.png"></v-img>
+                <v-img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumei-bday2022/tour/peralsey_01.png"></v-img>
               </v-carousel-item>
               <v-carousel-item>
-                <v-img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumeitour/peralsey_02.png"></v-img>
+                <v-img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumei-bday2022/tour/peralsey_02.png"></v-img>
               </v-carousel-item>
             </v-carousel>
           </div>
@@ -247,19 +247,19 @@
           <div class="img">
             <v-carousel>
               <v-carousel-item>
-                <v-img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumeitour/sylfero_01.png"></v-img>
+                <v-img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumei-bday2022/tour/sylfero_01.png"></v-img>
               </v-carousel-item>
               <v-carousel-item>
-                <v-img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumeitour/sylfero_02.png"></v-img>
+                <v-img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumei-bday2022/tour/sylfero_02.png"></v-img>
               </v-carousel-item>
               <v-carousel-item>
-                <v-img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumeitour/sylfero_03.png"></v-img>
+                <v-img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumei-bday2022/tour/sylfero_03.png"></v-img>
               </v-carousel-item>
               <v-carousel-item>
-                <v-img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumeitour/sylfero_04.png"></v-img>
+                <v-img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumei-bday2022/tour/sylfero_04.png"></v-img>
               </v-carousel-item>
               <v-carousel-item>
-                <v-img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumeitour/sylfero_05.png"></v-img>
+                <v-img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumei-bday2022/tour/sylfero_05.png"></v-img>
               </v-carousel-item>
             </v-carousel>
           </div>
@@ -270,19 +270,19 @@
           <div class="img">
             <v-carousel>
               <v-carousel-item>
-                <v-img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumeitour/soouuup_01.png"></v-img>
+                <v-img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumei-bday2022/tour/soouuup_01.png"></v-img>
               </v-carousel-item>
               <v-carousel-item>
-                <v-img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumeitour/soouuup_02.png"></v-img>
+                <v-img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumei-bday2022/tour/soouuup_02.png"></v-img>
               </v-carousel-item>
               <v-carousel-item>
-                <v-img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumeitour/soouuup_03.png"></v-img>
+                <v-img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumei-bday2022/tour/soouuup_03.png"></v-img>
               </v-carousel-item>
               <v-carousel-item>
-                <v-img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumeitour/soouuup_04.png"></v-img>
+                <v-img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumei-bday2022/tour/soouuup_04.png"></v-img>
               </v-carousel-item>
               <v-carousel-item>
-                <v-img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumeitour/soouuup_05.png"></v-img>
+                <v-img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumei-bday2022/tour/soouuup_05.png"></v-img>
               </v-carousel-item>
             </v-carousel>
           </div>
@@ -293,19 +293,19 @@
           <div class="img">
             <v-carousel>
               <v-carousel-item>
-                <v-img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumeitour/manst_01.png"></v-img>
+                <v-img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumei-bday2022/tour/manst_01.png"></v-img>
               </v-carousel-item>
               <v-carousel-item>
-                <v-img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumeitour/manst_02.png"></v-img>
+                <v-img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumei-bday2022/tour/manst_02.png"></v-img>
               </v-carousel-item>
               <v-carousel-item>
-                <v-img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumeitour/manst_03.png"></v-img>
+                <v-img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumei-bday2022/tour/manst_03.png"></v-img>
               </v-carousel-item>
               <v-carousel-item>
-                <v-img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumeitour/manst_04.png"></v-img>
+                <v-img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumei-bday2022/tour/manst_04.png"></v-img>
               </v-carousel-item>
               <v-carousel-item>
-                <v-img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumeitour/manst_05.png"></v-img>
+                <v-img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumei-bday2022/tour/manst_05.png"></v-img>
               </v-carousel-item>
             </v-carousel>
           </div>
@@ -318,19 +318,19 @@
           <div class="img">
             <v-carousel>
               <v-carousel-item>
-                <v-img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumeitour/sinefinebelli_01.png"></v-img>
+                <v-img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumei-bday2022/tour/sinefinebelli_01.png"></v-img>
               </v-carousel-item>
               <v-carousel-item>
-                <v-img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumeitour/sinefinebelli_02.png"></v-img>
+                <v-img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumei-bday2022/tour/sinefinebelli_02.png"></v-img>
               </v-carousel-item>
               <v-carousel-item>
-                <v-img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumeitour/sinefinebelli_03.png"></v-img>
+                <v-img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumei-bday2022/tour/sinefinebelli_03.png"></v-img>
               </v-carousel-item>
               <v-carousel-item>
-                <v-img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumeitour/sinefinebelli_04.png"></v-img>
+                <v-img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumei-bday2022/tour/sinefinebelli_04.png"></v-img>
               </v-carousel-item>
               <v-carousel-item>
-                <v-img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumeitour/sinefinebelli_05.png"></v-img>
+                <v-img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumei-bday2022/tour/sinefinebelli_05.png"></v-img>
               </v-carousel-item>
             </v-carousel>
           </div>
