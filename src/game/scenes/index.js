@@ -86,8 +86,12 @@ class IndexScene extends Phaser.Scene {
 
     // Loading text
     const { width, height } = this.sys.game.canvas;
-    this.loadingText = this.add.text(width / 2, height / 2, 'Loading....', {
-      fontSize: 24,
+    this.add.graphics({ x: 0, y: 0 })
+      .fillGradientStyle(0xc2af8b, 0xc2af8b, 0xf1e7d5, 0xf1e7d5, 1, 1, 1, 1)
+      .fillRect(0, 0, width, height);
+    this.loadingText = this.add.text(width * 0.5, height * 0.7, 'Loading....', {
+      fontFamily: 'Arial',
+      fontSize: 30,
       color: '#ffffff',
       stroke: '#000000',
       strokeThickness: 3,
@@ -165,9 +169,6 @@ class IndexScene extends Phaser.Scene {
 
     // Backgrounds
     const { width, height } = this.sys.game.canvas;
-    this.add.graphics({ x: 0, y: 0 })
-      .fillGradientStyle(0xc2af8b, 0xc2af8b, 0xf1e7d5, 0xf1e7d5, 1, 1, 1, 1)
-      .fillRect(0, 0, width, height);
     this.add.image(0, 0, 'room')
       .setScale(1.1)
       .setAlpha(0.2)
