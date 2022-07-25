@@ -37,7 +37,7 @@ class PartyScene extends Phaser.Scene {
         this.game.vue.dialog = true;
         this.game.vue.openProject = 'credits';
       });
-    this.add.text(5, 5, 'Version 220724.0235', {
+    this.add.text(5, 5, 'Version 220725.0034', {
       fontFamily: 'Arial',
       fontSize: 14,
       align: 'left',
