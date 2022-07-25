@@ -45,7 +45,7 @@
             <li>Birthday Cake - <strong>bukiyos_art</strong></li>
             <li>Central Table - <strong>jetrico</strong></li>
             <li>Birthday Banner - <strong>Trix Mix</strong></li>
-            <li>Hooman Avatars - <strong>collywob5</strong></li>
+            <li>Hooman Avatars - <strong>collywop5</strong></li>
             <li>Painting - <strong>Trix Mix</strong></li>
             <li>Letters on Floor - <strong>faerieko</strong></li>
             <li>Balloon Sets - <strong>0btuse</strong></li>
