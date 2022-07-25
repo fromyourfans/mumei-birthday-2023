@@ -14,16 +14,12 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.a6162f5012e127d4f756955a4632e99d.js"
+  "/precache-manifest.73c3dae34604142447e4934fe2a83b77.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "mumei-birthday-2022"});
 
-self.addEventListener('message', (event) => {
-  if (event.data && event.data.type === 'SKIP_WAITING') {
-    self.skipWaiting();
-  }
-});
+workbox.core.skipWaiting();
 
 /**
  * The workboxSW.precacheAndRoute() method efficiently caches and responds to
