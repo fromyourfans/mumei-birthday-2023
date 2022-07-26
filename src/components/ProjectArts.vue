@@ -1,10 +1,9 @@
 <template>
   <div class="project">
     <div class="project-description">
-      <h2>Birthday Fan Art</h2>
+      <h2>Various Birthday Gifts</h2>
       <p>
-        Artists prepared gifts for Mumei's birthday!
-        These are also set to be posted on Mumei's birthday hashtag.
+        Hoomans prepared various gifts for Mumei's birthday!
       </p>
     </div>
     <div class="project-close">
@@ -82,6 +81,25 @@
           <img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumei-bday2022/fanart/fozzy.png" />
           <div class="artist text-center">Fozzy</div>
         </div>
+        <div v-masonry-tile :class="[ 'card', censor ? 'card-censor' : '' ]">
+          <div class="gift">
+            Weeks before a stream,<br />
+            Every hooman had hands on deck.<br />
+            Lovingly and carefully planning,<br />
+            On what Mumei might want to peck.<br />
+            Very early, we settled on some berries,<br />
+            Everyone was ready and willing to go -<br />
+            Yet we had a few who still forgor,<br />
+            Or at least they told us so.<br />
+            Under threat of project failure,<br />
+            Many of us prayed for days!<br />
+            Understanding that our efforts could maybe<br />
+            Make our owlshi's day.<br />
+            Everyone is happy, everyone is here!<br />
+            It is our best wishes to you, on this celebration of the year!
+          </div>
+          <div class="artist text-center">Xuda</div>
+        </div>
       </div>
     </div>
   </div>
@@ -157,6 +175,10 @@ export default {
   img {
     width:100%;
   }
+  div.gift {
+    width:100%;
+    padding:10px;
+  }
   .gift-note {
     font-size:16px;
     margin:0px 0px 5px 0px;
@@ -175,6 +197,9 @@ export default {
   &.card-censor {
     img {
       filter:blur(20px);
+    }
+    div.gift {
+      filter:blur(5px);
     }
   }
 }
