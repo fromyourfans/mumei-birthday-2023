@@ -100,6 +100,14 @@
           </div>
           <div class="artist text-center">Xuda</div>
         </div>
+        <div v-masonry-tile :class="[ 'card', censor ? 'card-censor' : '' ]">
+          <img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumei-bday2022/fanart/lazulis.png" />
+          <div class="artist text-center">Lazulis, the Moom Knight (Aspirant)</div>
+        </div>
+        <div v-masonry-tile :class="[ 'card', censor ? 'card-censor' : '' ]">
+          <img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumei-bday2022/fanart/faerieko.png" />
+          <div class="artist text-center">Faerieko</div>
+        </div>
       </div>
     </div>
   </div>
