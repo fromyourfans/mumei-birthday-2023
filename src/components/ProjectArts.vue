@@ -105,8 +105,16 @@
           <div class="artist text-center">Lazulis, the Moom Knight (Aspirant)</div>
         </div>
         <div v-masonry-tile :class="[ 'card', censor ? 'card-censor' : '' ]">
-          <img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumei-bday2022/fanart/faerieko.png" />
+          <img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumei-bday2022/fanart/faerieko3.png" />
           <div class="artist text-center">Faerieko</div>
+        </div>
+        <div v-masonry-tile :class="[ 'card', censor ? 'card-censor' : '' ]">
+          <img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumei-bday2022/fanart/c.gif" />
+          <div class="gift-anniv text-center">
+            Another project is in the works ⏳<br />
+            Coming around 1-year Anniversary<br />
+            📖📚📖📚📖📚
+          </div>
         </div>
       </div>
     </div>
@@ -190,6 +198,10 @@ export default {
   .gift-note {
     font-size:16px;
     margin:0px 0px 5px 0px;
+  }
+  .gift-anniv {
+    font-size:16px;
+    margin:0px 0px 0px 0px;
   }
   .artist {
     position:absolute;
