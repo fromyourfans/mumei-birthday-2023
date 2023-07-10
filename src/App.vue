@@ -120,8 +120,10 @@ body {
   );
   #app {
     background:none;
+    background-color: #000;
     #bg {
-      background-image: url(./game/assets/images/room.png);
+      background-color: #000;
+      background-image: url(./game/assets/images2023/room.png);
       background-size:cover;
       z-index:1;
       position:absolute;
@@ -130,7 +132,7 @@ body {
       right:0;
       bottom:-300px;
       filter:blur(5px);
-      opacity:0.4;
+      opacity:0.7;
     }
     #game-container {
       z-index:2;

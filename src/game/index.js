@@ -15,7 +15,7 @@ class EnnaBirthday {
         mode: Phaser.Scale.FIT,
         autoCenter: Phaser.Scale.CENTER_BOTH,
         width: 1920,
-        height: 937,
+        height: 1080,
       },
       backgroundColor: Phaser.Display.Color.HexStringToColor('#242424').color,
       plugins,

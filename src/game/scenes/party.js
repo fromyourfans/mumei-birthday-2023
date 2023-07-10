@@ -1,16 +1,9 @@
 import Phaser from 'phaser';
-import ElementsData from '@/data/elements';
-import HoomansData from '@/data/hoomans';
-
-const INTENSITY_X = 0.008;
-const INTENSITY_Y = 0.004;
 
 class PartyScene extends Phaser.Scene {
   movables = {};
 
   hoomans = [];
-
-  dance = null;
 
   lightState = true;
 
@@ -28,15 +21,15 @@ class PartyScene extends Phaser.Scene {
     const centerY = height / 2;
 
     // Version number
-    this.add.rectangle(0, 0, 150, 50)
-      .setDepth(60001).setOrigin(0, 0)
-      .setInteractive()
-      .on('pointerdown', () => {
-        this.game.vue.$root.$emit('doneQuest', { questId: 'credits' });
-        this.overlay.setVisible(true);
-        this.game.vue.dialog = true;
-        this.game.vue.openProject = 'credits';
-      });
+    // this.add.rectangle(0, 0, 150, 50)
+    //   .setDepth(60001).setOrigin(0, 0)
+    //   .setInteractive()
+    //   .on('pointerdown', () => {
+    //     this.game.vue.$root.$emit('doneQuest', { questId: 'credits' });
+    //     this.overlay.setVisible(true);
+    //     this.game.vue.dialog = true;
+    //     this.game.vue.openProject = 'credits';
+    //   });
     this.add.text(5, 5, 'Version 220726.0424', {
       fontFamily: 'Arial',
       fontSize: 14,
@@ -45,141 +38,75 @@ class PartyScene extends Phaser.Scene {
       stroke: '#131313',
       strokeThickness: 3,
     }).setDepth(60002).setOrigin(0, 0);
-    this.add.text(5, 22, 'Credits', {
-      fontFamily: 'Arial',
-      fontSize: 16,
-      align: 'left',
-      color: '#ffffff',
-      stroke: '#131313',
-      strokeThickness: 4,
-    }).setDepth(60003).setOrigin(0, 0);
+    // this.add.text(5, 22, 'Credits', {
+    //   fontFamily: 'Arial',
+    //   fontSize: 16,
+    //   align: 'left',
+    //   color: '#ffffff',
+    //   stroke: '#131313',
+    //   strokeThickness: 4,
+    // }).setDepth(60003).setOrigin(0, 0);
 
-    // Bark sounds
-    this.barks = [
-      this.sound.add('bark1').setVolume(0.7),
-      this.sound.add('bark2').setVolume(0.7),
-      this.sound.add('bark3').setVolume(0.7),
-      this.sound.add('bark4').setVolume(0.7),
-    ];
+    // // Bark sounds
+    // this.barks = [
+    //   this.sound.add('bark1').setVolume(0.7),
+    //   this.sound.add('bark2').setVolume(0.7),
+    //   this.sound.add('bark3').setVolume(0.7),
+    //   this.sound.add('bark4').setVolume(0.7),
+    // ];
 
-    // Candle Lights
-    this.lights.setAmbientColor(0x0e0e0e);
-    this.light1 = this.lights.addLight(width * 0.5, height * 0.75, 900, 0xffdd88, 1);
-    this.light2 = this.lights.addLight(width * 0.5, height * 0.75, 1200, 0xffdd88, 1);
-
-    // Animation transition
-    this.transition = this.tweens.createTimeline();
+    // // Candle Lights
+    // this.lights.setAmbientColor(0x0e0e0e);
+    // this.light1 = this.lights.addLight(width * 0.5, height * 0.75, 900, 0xffdd88, 1);
+    // this.light2 = this.lights.addLight(width * 0.5, height * 0.75, 1200, 0xffdd88, 1);
 
     // Create game objects and placements
-    Object.entries(ElementsData)
-      .forEach(([key, {
-        texture, x, y, z, scale, str, ox, oy, lx, ly,
-        text, project, font, dir,
-      }]) => {
-        const container = this.add.container(centerX, centerY).setDepth(z * 10);
-        // Image
-        const image = this.add.image((width * x) - centerX, (height * y) - centerY, texture || key)
-          .setOrigin(ox, oy);
-        if (scale) image.setScale(scale);
-        container.add(image);
-        // Cover
-        if (key === 'cover') {
-          this.cover = container;
-          this.cover.setVisible(false);
-        }
-        // Interactive object
-        if (text) {
-          this.interactiveElement(key, container, image, text, project, font, lx, ly);
-        }
-        // Transition
-        if (
-          key !== 'room' && key !== 'trunk' && key !== 'table'
-          && key !== 'front1' && key !== 'front2' && key !== 'front3'
-        ) this.transitionIn(container, dir);
-        // Add to movable list
-        this.movables[key] = {
-          container,
-          strX: str * INTENSITY_X,
-          strY: str * INTENSITY_Y,
-          image,
-        };
-      });
+    // this.add.image(0, 0, 'preview').setAlpha(0.3).setOrigin(0, 0).setDepth(99999);
 
-    // Hoomans
-    Object.entries(HoomansData)
-      .forEach(([key, { sprite, frame, x, y, z, str }]) => {
-        const container = this.add.container(centerX, centerY).setDepth(z * 10);
-        const image = this.add.sprite((width * x) - centerX, (height * y) - centerY, sprite, frame)
-          .setOrigin(0.5, 1).setScale(0.9, 0.9);
-        image.y += image.height * 0.5;
-        container.add(image);
-        this.hoomans.push(image);
-        this.transitionIn(container, 'top');
-        // Add to movable list
-        this.movables[key] = {
-          container,
-          strX: str * INTENSITY_X,
-          strY: str * INTENSITY_Y,
-          image,
-        };
-      });
+    this.add.image(0, 0, 'room').setOrigin(0, 0);
+    this.add.image(1420, 340, 'kronii').setOrigin(0, 0);
+    this.add.image(5, 60, 'balloon').setOrigin(0, 0);
 
-    // Friend
-    const friendContainer = this.add.container(centerX, centerY).setDepth(900);
-    let friendNum = Math.ceil(Math.random() * 96);
-    let friendNumStr = String(friendNum).padStart(4, '0');
-    this.friend = this.add.sprite(
-      (width * 0.41) - centerX,
-      (height * 0.61) - centerY,
-      'friend',
-      `f${friendNumStr}.png`,
-    )
-      .setDepth(1000)
-      .setInteractive({ useHandCursor: true })
-      .on('pointerdown', () => {
-        friendNum += 1;
-        if (friendNum > 96) friendNum = 1;
-        friendNumStr = String(friendNum).padStart(4, '0');
-        this.friend.setFrame(`f${friendNumStr}.png`);
-        this.game.vue.$root.$emit('doneQuest', { questId: 'friend' });
-      });
-    this.add.tween({
-      targets: this.friend,
-      y: this.friend.y - 30,
-      x: this.friend.x - 7,
-      angle: 5,
-      ease: 'Cubic.easeInOut',
-      yoyo: true,
-      duration: 4000,
-      loop: -1,
-    });
-    friendContainer.add(this.friend);
-    this.movables.friend = {
-      container: friendContainer,
-      strX: 0.85 * INTENSITY_X,
-      strY: 0.85 * INTENSITY_Y,
-    };
+    this.add.sprite(320, 460, 'animol').setOrigin(0, 0).play('animol');
+    this.add.sprite(120, 380, 'irys').setOrigin(0, 0).play('irys');
+    this.add.sprite(1131, 368, 'bae').setOrigin(0, 0).play('bae');
+    this.add.sprite(624, 523, 'sana').setOrigin(0, 0).play('sana');
+    this.add.sprite(1111, 675, 'friend').setOrigin(0, 0).play('friend');
 
-    // Transition Animation
-    this.transition
-      .on('complete', () => {
-        // Parallax
-        this.input.on('pointermove', (pointer) => {
-          if (!this.lightState) {
-            this.light2.x = pointer.x;
-            this.light2.y = pointer.y;
-          } else {
-            const dx = pointer.x - centerX;
-            const dy = pointer.y - centerY;
-            Object.values(this.movables).forEach(({ container, strX, strY }) => {
-              const newX = centerX - (dx * strX);
-              const newY = centerY - (dy * strY);
-              container.setPosition(newX, newY);
-            });
-          }
-        });
-      })
-      .play();
+    this.add.image(365, 305, 'hoo').setOrigin(0, 0);
+    this.add.image(785, 730, 'table').setOrigin(0, 0);
+    this.add.image(0, 1080, 'fore').setOrigin(0, 1);
+
+    // // Friend
+    // const friendContainer = this.add.container(centerX, centerY).setDepth(900);
+    // let friendNum = Math.ceil(Math.random() * 96);
+    // let friendNumStr = String(friendNum).padStart(4, '0');
+    // this.friend = this.add.sprite(
+    //   (width * 0.41) - centerX,
+    //   (height * 0.61) - centerY,
+    //   'friend',
+    //   `f${friendNumStr}.png`,
+    // )
+    //   .setDepth(1000)
+    //   .setInteractive({ useHandCursor: true })
+    //   .on('pointerdown', () => {
+    //     friendNum += 1;
+    //     if (friendNum > 96) friendNum = 1;
+    //     friendNumStr = String(friendNum).padStart(4, '0');
+    //     this.friend.setFrame(`f${friendNumStr}.png`);
+    //     this.game.vue.$root.$emit('doneQuest', { questId: 'friend' });
+    //   });
+    // this.add.tween({
+    //   targets: this.friend,
+    //   y: this.friend.y - 30,
+    //   x: this.friend.x - 7,
+    //   angle: 5,
+    //   ease: 'Cubic.easeInOut',
+    //   yoyo: true,
+    //   duration: 4000,
+    //   loop: -1,
+    // });
+    // friendContainer.add(this.friend);
 
     // Overlay
     this.input.topOnly = true;
@@ -193,8 +120,8 @@ class PartyScene extends Phaser.Scene {
       this.overlay.setVisible(false);
     });
 
-    // Confetti
-    this.confetti = this.add.particles('confetti').setDepth(1009);
+    // // Confetti
+    // this.confetti = this.add.particles('confetti').setDepth(1009);
 
     // Quests
     this.questIcon = this.add.container(0, 0, [
@@ -322,18 +249,6 @@ class PartyScene extends Phaser.Scene {
           const bark = this.barks[Math.floor(Math.random() * 4)];
           bark.play();
           this.game.vue.$root.$emit('doneQuest', { questId: 'animol' });
-        } else if (key === 'ipod') {
-          // iPod on/off A New Start Remix
-          if (this.ipodOn) {
-            this.ipodOn = false;
-            this.stopDance();
-            this.switchBGM('treehouse');
-          } else {
-            this.ipodOn = true;
-            this.startDance();
-            this.switchBGM('newstart');
-          }
-          this.game.vue.$root.$emit('doneQuest', { questId: 'ipod' });
         } else if (key === 'lantern') {
           // Lights Off
           if (!this.candleBlown) this.lightsOff();
@@ -432,10 +347,9 @@ class PartyScene extends Phaser.Scene {
     }
     this.bgm = this.sound.add(audioKey);
     if (audioKey === 'musicbox') this.bgm.setVolume(1);
-    else this.bgm.setVolume(0.5);
+    else this.bgm.setVolume(0.2);
     this.bgm.on('complete', () => {
       this.ipodOn = false;
-      this.stopDance();
       this.switchBGM('treehouse');
     });
     this.bgm.play();
@@ -449,34 +363,10 @@ class PartyScene extends Phaser.Scene {
     } else {
       this.musicImg.setTexture('musicoff');
       this.ipodOn = false;
-      this.stopDance();
       if (this.bgm) {
         this.bgm.off('complete');
         this.bgm.stop();
       }
-    }
-  }
-
-  startDance() {
-    this.stopDance();
-    if (!this.bgmOn) return;
-    this.dance = this.tweens.add({
-      targets: this.hoomans,
-      scaleX: { from: 0.9, to: 0.85 },
-      scaleY: { from: 0.9, to: 1 },
-      duration: 600,
-      loop: -1,
-      yoyo: true,
-    });
-  }
-
-  stopDance() {
-    if (this.dance) {
-      this.dance.stop();
-      this.hoomans.forEach((hooman) => {
-        hooman.setScale(0.9, 0.9);
-      });
-      this.dance = null;
     }
   }
 }
