@@ -47,13 +47,13 @@ class PartyScene extends Phaser.Scene {
     //   strokeThickness: 4,
     // }).setDepth(60003).setOrigin(0, 0);
 
-    // // Bark sounds
-    // this.barks = [
-    //   this.sound.add('bark1').setVolume(0.7),
-    //   this.sound.add('bark2').setVolume(0.7),
-    //   this.sound.add('bark3').setVolume(0.7),
-    //   this.sound.add('bark4').setVolume(0.7),
-    // ];
+    // Bark sounds
+    this.barks = [
+      this.sound.add('bark1').setVolume(0.7),
+      this.sound.add('bark2').setVolume(0.7),
+      this.sound.add('bark3').setVolume(0.7),
+      this.sound.add('bark4').setVolume(0.7),
+    ];
 
     // // Candle Lights
     // this.lights.setAmbientColor(0x0e0e0e);
@@ -64,49 +64,94 @@ class PartyScene extends Phaser.Scene {
     // this.add.image(0, 0, 'preview').setAlpha(0.3).setOrigin(0, 0).setDepth(99999);
 
     this.add.image(0, 0, 'room').setOrigin(0, 0);
-    this.add.image(1420, 340, 'kronii').setOrigin(0, 0);
     this.add.image(5, 60, 'balloon').setOrigin(0, 0);
 
-    this.add.sprite(320, 460, 'animol').setOrigin(0, 0).play('animol');
-    this.add.sprite(120, 380, 'irys').setOrigin(0, 0).play('irys');
-    this.add.sprite(1131, 368, 'bae').setOrigin(0, 0).play('bae');
-    this.add.sprite(624, 523, 'sana').setOrigin(0, 0).play('sana');
-    this.add.sprite(1111, 675, 'friend').setOrigin(0, 0).play('friend');
+    this.hoverSprites = {
+      animol: this.add.sprite(320, 460, 'animol').setOrigin(0, 0), // .play('animol'),
+      irys: this.add.sprite(120, 380, 'irys').setOrigin(0, 0), // .play('irys'),
+      bae: this.add.sprite(1131, 368, 'bae').setOrigin(0, 0), // .play('bae'),
+      sana: this.add.sprite(624, 523, 'sana').setOrigin(0, 0), // .play('sana'),
+      kronii: this.add.sprite(1420, 340, 'kronii').setOrigin(0, 0), // .play('kronii'),
+      friend: this.add.sprite(1111, 675, 'friend').setOrigin(0, 0).setDepth(100), // .play('friend'),
+    };
 
     this.add.image(365, 305, 'hoo').setOrigin(0, 0);
     this.add.image(785, 730, 'table').setOrigin(0, 0);
+
+    this.input.topOnly = true;
+    this.windowFrame = this.add.image(0, 0, 'window')
+      .setOrigin(0, 0).setAlpha(1)
+      .setInteractive({ useHandCursor: false });
+
     this.add.image(0, 1080, 'fore').setOrigin(0, 1);
 
-    // // Friend
-    // const friendContainer = this.add.container(centerX, centerY).setDepth(900);
-    // let friendNum = Math.ceil(Math.random() * 96);
-    // let friendNumStr = String(friendNum).padStart(4, '0');
-    // this.friend = this.add.sprite(
-    //   (width * 0.41) - centerX,
-    //   (height * 0.61) - centerY,
-    //   'friend',
-    //   `f${friendNumStr}.png`,
-    // )
-    //   .setDepth(1000)
-    //   .setInteractive({ useHandCursor: true })
-    //   .on('pointerdown', () => {
-    //     friendNum += 1;
-    //     if (friendNum > 96) friendNum = 1;
-    //     friendNumStr = String(friendNum).padStart(4, '0');
-    //     this.friend.setFrame(`f${friendNumStr}.png`);
-    //     this.game.vue.$root.$emit('doneQuest', { questId: 'friend' });
-    //   });
-    // this.add.tween({
-    //   targets: this.friend,
-    //   y: this.friend.y - 30,
-    //   x: this.friend.x - 7,
-    //   angle: 5,
-    //   ease: 'Cubic.easeInOut',
-    //   yoyo: true,
-    //   duration: 4000,
-    //   loop: -1,
-    // });
-    // friendContainer.add(this.friend);
+    // Animol hover
+    this.tweens.add({
+      targets: this.hoverSprites.animol,
+      y: '-=20',
+      duration: 5000,
+      yoyo: true,
+      loop: -1,
+      ease: 'Circ.easeInOut',
+    });
+
+    Object.entries(this.hoverSprites).forEach(([key, sprite]) => {
+      sprite.setInteractive({ useHandCursor: true })
+        .on('pointerover', () => {
+          sprite.setFrame(1);
+        })
+        .on('pointerout', () => {
+          sprite.setFrame(0);
+        });
+
+      // Animol barks
+      if (key === 'animol') {
+        sprite
+          .off('pointerover')
+          .off('pointerout')
+          .on('pointerdown', () => {
+            sprite.play({ key: 'animol', repeat: 0 });
+            const bark = this.barks[Math.floor(Math.random() * 4)];
+            bark.play();
+            this.game.vue.$root.$emit('doneQuest', { questId: 'animol' });
+          });
+      }
+
+      if (key === 'friend') {
+        sprite.on('pointerdown', () => {
+          this.tweens.add({
+            targets: this.windowFrame,
+            alpha: { from: 1, to: 0 },
+            duration: 500,
+            onComplete: () => {
+              this.windowFrame.setVisible(false);
+            },
+          });
+          this.tweens.add({
+            targets: sprite,
+            x: '-=200',
+            y: '-=220',
+            scale: { from: 1, to: 0.4 },
+            ease: 'Back.easeIn',
+            duration: 1000,
+            onComplete: () => {
+              this.tweens.add({
+                targets: sprite,
+                y: '-=20',
+                duration: 3000,
+                yoyo: true,
+                loop: -1,
+                ease: 'Back.easeInOut',
+              });
+            },
+          });
+          sprite.off('pointerover');
+          sprite.off('pointerout');
+          sprite.setFrame(0);
+          this.input.topOnly = false;
+        });
+      }
+    });
 
     // Overlay
     this.input.topOnly = true;
@@ -177,6 +222,7 @@ class PartyScene extends Phaser.Scene {
 
     // Default Room BGM
     this.switchBGM('treehouse');
+    this.toggleBGM();
   }
 
   transitionIn(container, dir) {
@@ -245,10 +291,7 @@ class PartyScene extends Phaser.Scene {
           // Cake available if lights off
           if (!this.lightState) this.fanfare();
         } else if (key === 'animol') {
-          // Animol barks
-          const bark = this.barks[Math.floor(Math.random() * 4)];
-          bark.play();
-          this.game.vue.$root.$emit('doneQuest', { questId: 'animol' });
+
         } else if (key === 'lantern') {
           // Lights Off
           if (!this.candleBlown) this.lightsOff();

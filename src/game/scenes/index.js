@@ -23,13 +23,12 @@ import bark3 from '../assets/audio/bark03.mp3';
 import bark4 from '../assets/audio/bark04.mp3';
 import treehouse from '../assets/audio/treehouse.ogg';
 
-import kronii from '../assets/images2023/kronii-1.png';
-
 import animol from '../assets/sprites/animol.png';
 import bae from '../assets/sprites/bae.png';
 import friend from '../assets/sprites/friend.png';
 import irys from '../assets/sprites/irys.png';
 import sana from '../assets/sprites/sana.png';
+import kronii from '../assets/sprites/kronii.png';
 
 class IndexScene extends Phaser.Scene {
   loadingText = null;
@@ -63,7 +62,6 @@ class IndexScene extends Phaser.Scene {
     this.load.image('fore', fore);
     this.load.image('balloon', balloon);
     this.load.image('hoo', hoo);
-    this.load.image('kronii', kronii);
 
     this.load.image('quests', quests);
     this.load.image('musicon', musicOn);
@@ -89,6 +87,9 @@ class IndexScene extends Phaser.Scene {
     });
     this.load.spritesheet('sana', sana, {
       frameWidth: 251, frameHeight: 343, margin: 0, spacing: 0,
+    });
+    this.load.spritesheet('kronii', kronii, {
+      frameWidth: 240, frameHeight: 675, margin: 0, spacing: 0,
     });
   }
 
@@ -130,6 +131,12 @@ class IndexScene extends Phaser.Scene {
     this.anims.create({
       key: 'sana',
       frames: this.anims.generateFrameNumbers('sana'),
+      frameRate: 2,
+      repeat: -1,
+    });
+    this.anims.create({
+      key: 'kronii',
+      frames: this.anims.generateFrameNumbers('kronii'),
       frameRate: 2,
       repeat: -1,
     });
