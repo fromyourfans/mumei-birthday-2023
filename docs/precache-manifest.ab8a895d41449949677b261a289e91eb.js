@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "dac6398ac1445ee31326",
+    "revision": "e763bb9a40bb018de2f2",
     "url": "/css/app.88fa2d7e.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/favicon.ico"
   },
   {
-    "revision": "5bcb0c35963b2a12fbf53c46ca828ca2",
-    "url": "/img/animol.5bcb0c35.png"
+    "revision": "4981a43f4ce6cbd892f60087897819a5",
+    "url": "/img/animol.4981a43f.png"
   },
   {
     "revision": "6867e778e27bb8c54291a33ab46168c6",
@@ -21,11 +21,35 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   },
   {
     "revision": "6756b9431a09aeb6df757459bf0ca4e3",
-    "url": "/img/balloon.6756b943.png"
+    "url": "/img/balloons1.6756b943.png"
+  },
+  {
+    "revision": "d1bda738bd8f24c55246c766a7bd099d",
+    "url": "/img/balloons2.d1bda738.png"
+  },
+  {
+    "revision": "a3b7ab9fe91184f78700d511cea6ad24",
+    "url": "/img/bat.a3b7ab9f.png"
   },
   {
     "revision": "1ec153d7019339ed070e1d0bd13e7f44",
     "url": "/img/cursor-sm.1ec153d7.png"
+  },
+  {
+    "revision": "af9aeef0938d13b83491946d206785e5",
+    "url": "/img/fauna.af9aeef0.png"
+  },
+  {
+    "revision": "ff1aaecf76755b337a19e671288ca559",
+    "url": "/img/figs.ff1aaecf.png"
+  },
+  {
+    "revision": "b5800b4463802f6e04abf68465146e7c",
+    "url": "/img/flags1.b5800b44.png"
+  },
+  {
+    "revision": "6c23a49f8644ab2a3fbce01a08cd7353",
+    "url": "/img/flags2.6c23a49f.png"
   },
   {
     "revision": "b55e368b76347f8921f7aaab1883cf74",
@@ -36,8 +60,60 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/friend.c43a2639.png"
   },
   {
-    "revision": "1b3d7b400d89cd6bf3d4bf3a595ba09e",
-    "url": "/img/hoo.1b3d7b40.png"
+    "revision": "135a302b79a623808ed118f3bb25743b",
+    "url": "/img/gifts1.135a302b.png"
+  },
+  {
+    "revision": "0e75f23ffe8597164a7f3b0844af677d",
+    "url": "/img/gifts2.0e75f23f.png"
+  },
+  {
+    "revision": "2d62fd56128875d6f3c69b1fa25f007e",
+    "url": "/img/globos.2d62fd56.png"
+  },
+  {
+    "revision": "31a9dc59ad1de43b44edea6d18ca3cec",
+    "url": "/img/h-alphaca.31a9dc59.png"
+  },
+  {
+    "revision": "ac9acbac30670387818d1809daf04f30",
+    "url": "/img/h-chlorine.ac9acbac.png"
+  },
+  {
+    "revision": "8e08d4319513e2a569226a69835409bf",
+    "url": "/img/h-deez.8e08d431.png"
+  },
+  {
+    "revision": "6413f911576e0d30937199ce538f81f2",
+    "url": "/img/h-emi.6413f911.png"
+  },
+  {
+    "revision": "793ef2d67eecd0c01aa5a25776b2c582",
+    "url": "/img/h-fae.793ef2d6.png"
+  },
+  {
+    "revision": "0d28bcdd9ed79ab4380fcdcb9e9999c1",
+    "url": "/img/h-jackiegnome.0d28bcdd.png"
+  },
+  {
+    "revision": "8e06440f50f804c49016f2e3310b8783",
+    "url": "/img/h-jake.8e06440f.png"
+  },
+  {
+    "revision": "7ab6ebf700bec7196626ecdae800a4d0",
+    "url": "/img/h-jesusa.7ab6ebf7.png"
+  },
+  {
+    "revision": "3cbd7121067bdf25a322c7e7610a7754",
+    "url": "/img/h-nintan.3cbd7121.png"
+  },
+  {
+    "revision": "762c706af62acb6f82af5a2cc863c933",
+    "url": "/img/h-sayowl.762c706a.png"
+  },
+  {
+    "revision": "5d03b402e6aa1aede0ebc28e6f1bbf3d",
+    "url": "/img/h-scounty.5d03b402.png"
   },
   {
     "revision": "0c3c9f78fbed2a5745c546edc6e81250",
@@ -100,12 +176,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/icons/safari-pinned-tab.svg"
   },
   {
-    "revision": "fea009bf2434f47bfd0266ef66830cc5",
-    "url": "/img/irys.fea009bf.png"
+    "revision": "9d0ac4a715d78af5931eeb06aab1423c",
+    "url": "/img/irys.9d0ac4a7.png"
   },
   {
     "revision": "48f92df6b5298422d52a778b0c8b98ba",
     "url": "/img/kronii.48f92df6.png"
+  },
+  {
+    "revision": "26cfdbad8afc9cfa175dd1d7f28fa242",
+    "url": "/img/letters.26cfdbad.png"
   },
   {
     "revision": "77a0a4814ee6b103040bca13886476cb",
@@ -140,16 +220,20 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/table.f69df64f.png"
   },
   {
+    "revision": "9a930d731df7be15368e3c25299921e7",
+    "url": "/img/ticket.9a930d73.png"
+  },
+  {
     "revision": "47a2f5c08b63de03809c811d3c97bb3a",
     "url": "/img/window.47a2f5c0.png"
   },
   {
-    "revision": "04a4511566c4a1931cf275475aa8db9c",
+    "revision": "6a35ab520fe377c5da3f035c1c255292",
     "url": "/index.html"
   },
   {
-    "revision": "dac6398ac1445ee31326",
-    "url": "/js/app.98ed10e8.js"
+    "revision": "e763bb9a40bb018de2f2",
+    "url": "/js/app.c5192a1e.js"
   },
   {
     "revision": "97418435c4fac19f1bb6",
