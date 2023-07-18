@@ -64,36 +64,90 @@ class PartyScene extends Phaser.Scene {
     // this.add.image(0, 0, 'preview').setAlpha(0.3).setOrigin(0, 0).setDepth(99999);
 
     this.add.image(0, 0, 'room').setOrigin(0, 0);
-    this.add.image(5, 60, 'balloon').setOrigin(0, 0);
+    this.add.image(0, 0, 'flags2').setOrigin(0, 0);
+    this.add.image(5, 60, 'balloons1').setOrigin(0, 0);
+    this.add.image(1480, 730, 'balloons2').setOrigin(0, 0);
+    this.add.image(1323, 514, 'bat').setOrigin(0, 0);
+    this.add.image(1028, 557, 'figs').setOrigin(0, 0);
 
     this.hoverSprites = {
-      animol: this.add.sprite(320, 460, 'animol').setOrigin(0, 0), // .play('animol'),
-      irys: this.add.sprite(120, 380, 'irys').setOrigin(0, 0), // .play('irys'),
+      hfae: this.add.sprite(534, 428, 'hfae').setOrigin(0, 0),
+      hdeez: this.add.sprite(885, 289, 'hdeez').setOrigin(0, 0),
+
+      animol: this.add.sprite(410, 250, 'animol').setOrigin(0, 0), // .play('animol'),
       bae: this.add.sprite(1131, 368, 'bae').setOrigin(0, 0), // .play('bae'),
-      sana: this.add.sprite(624, 523, 'sana').setOrigin(0, 0), // .play('sana'),
       kronii: this.add.sprite(1420, 340, 'kronii').setOrigin(0, 0), // .play('kronii'),
-      friend: this.add.sprite(1111, 675, 'friend').setOrigin(0, 0).setDepth(100), // .play('friend'),
+      fauna: this.add.sprite(395, 420, 'fauna').setOrigin(0, 0), // .play('kronii'),
+      sana: this.add.sprite(624, 523, 'sana').setOrigin(0, 0), // .play('sana'),
+      friend: this.add.sprite(1111, 675, 'friend').setOrigin(0, 0).setDepth(303), // .play('friend'),
+      irys: this.add.sprite(120, 380, 'irys').setOrigin(0, 0), // .play('irys'),
+
+      hnintan: this.add.sprite(767, 843, 'hnintan').setOrigin(0, 0).setDepth(1),
+      hjackiegnome: this.add.sprite(935, 809, 'hjackiegnome').setOrigin(0, 0).setDepth(1),
+      hjake: this.add.sprite(1182, 796, 'hjake').setOrigin(0, 0).setDepth(1),
+      hemi: this.add.sprite(1267, 742, 'hemi').setOrigin(0, 0).setDepth(1),
+      hchlorine: this.add.sprite(1358, 811, 'hchlorine').setOrigin(0, 0).setDepth(1),
+      hscounty: this.add.sprite(1610, 895, 'hscounty').setOrigin(0, 0).setDepth(1),
+
+      halphaca: this.add.sprite(1655, 567, 'halphaca').setOrigin(0, 0).setDepth(1),
+      hsayowl: this.add.sprite(1762, 598, 'hsayowl').setOrigin(0, 0).setDepth(1),
     };
 
-    this.add.image(365, 305, 'hoo').setOrigin(0, 0);
-    this.add.image(785, 730, 'table').setOrigin(0, 0);
+    this.add.image(786, 717, 'table').setOrigin(0, 0);
+    this.add.image(617, 286, 'globos').setOrigin(0, 0);
+    this.add.image(410, 778, 'hjesusa').setOrigin(0, 0);
+    this.add.image(3, 0, 'flags1').setOrigin(0, 0);
+    this.add.image(3, 0, 'flags1').setOrigin(0, 0);
+    this.add.image(532, 817, 'gifts1').setOrigin(0, 0);
+    this.add.image(1097, 889, 'gifts2').setOrigin(0, 0);
+    this.add.image(714, 964, 'letters').setOrigin(0, 0);
 
     this.input.topOnly = true;
     this.windowFrame = this.add.image(0, 0, 'window')
+      .setDepth(301)
       .setOrigin(0, 0).setAlpha(1)
       .setInteractive({ useHandCursor: false });
 
-    this.add.image(0, 1080, 'fore').setOrigin(0, 1);
+    this.bush = this.add.image(0, 1080, 'fore').setOrigin(0, 1).setDepth(302);
+    this.ticket = this.add.image(960, 900, 'ticket').setScale(1.4).setDepth(304).setVisible(false);
 
     // Animol hover
     this.tweens.add({
       targets: this.hoverSprites.animol,
-      y: '-=20',
+      y: 230,
+      angle: -4,
       duration: 5000,
       yoyo: true,
       loop: -1,
       ease: 'Circ.easeInOut',
     });
+
+    // Ticket enter
+    this.ticket.setInteractive({ useHandCursor: true })
+      .on('pointerdown', () => {
+        this.input.topOnly = false;
+        this.tweens.add({
+          targets: this.windowFrame,
+          alpha: { from: 1, to: 0 },
+          duration: 500,
+          onComplete: () => {
+            this.windowFrame.setVisible(false);
+          },
+        });
+        this.tweens.add({
+          targets: this.ticket,
+          alpha: { from: 1, to: 0 },
+          scale: { from: 1.4, to: 2 },
+          duration: 500,
+        });
+        this.foregrounds.setVisible(true);
+        this.tweens.add({
+          targets: this.foregrounds,
+          alpha: { from: 0, to: 1 },
+          y: { from: 200, to: 0 },
+          duration: 500,
+        });
+      });
 
     Object.entries(this.hoverSprites).forEach(([key, sprite]) => {
       sprite.setInteractive({ useHandCursor: true })
@@ -110,7 +164,11 @@ class PartyScene extends Phaser.Scene {
           .off('pointerover')
           .off('pointerout')
           .on('pointerdown', () => {
-            sprite.play({ key: 'animol', repeat: 0 });
+            sprite
+              .on('animationcomplete', () => {
+                sprite.setFrame(0);
+              })
+              .play({ key: 'animol', repeat: 0 });
             const bark = this.barks[Math.floor(Math.random() * 4)];
             bark.play();
             this.game.vue.$root.$emit('doneQuest', { questId: 'animol' });
@@ -118,26 +176,21 @@ class PartyScene extends Phaser.Scene {
       }
 
       if (key === 'friend') {
-        sprite.on('pointerdown', () => {
-          this.tweens.add({
-            targets: this.windowFrame,
-            alpha: { from: 1, to: 0 },
-            duration: 500,
-            onComplete: () => {
-              this.windowFrame.setVisible(false);
-            },
-          });
+        sprite.once('pointerdown', () => {
+          sprite.disableInteractive();
+          sprite.setDepth(100);
+          this.ticket.setVisible(true);
           this.tweens.add({
             targets: sprite,
-            x: '-=200',
-            y: '-=220',
-            scale: { from: 1, to: 0.4 },
+            x: 960,
+            y: 400,
+            scale: { from: 1, to: 0.3 },
             ease: 'Back.easeIn',
             duration: 1000,
             onComplete: () => {
               this.tweens.add({
                 targets: sprite,
-                y: '-=20',
+                y: 380,
                 duration: 3000,
                 yoyo: true,
                 loop: -1,
@@ -148,14 +201,13 @@ class PartyScene extends Phaser.Scene {
           sprite.off('pointerover');
           sprite.off('pointerout');
           sprite.setFrame(0);
-          this.input.topOnly = false;
         });
       }
     });
 
     // Overlay
     this.input.topOnly = true;
-    this.overlay = this.add.rectangle(centerX, centerY, 1920, 937, 0x1a1a1a)
+    this.overlay = this.add.rectangle(centerX, centerY, 1920, 1080, 0x1a1a1a)
       .setInteractive()
       .setAlpha(0.75)
       .setDepth(4000)
@@ -214,6 +266,13 @@ class PartyScene extends Phaser.Scene {
         align: 'center',
       }),
     ]).setDepth(3601);
+
+    // Foregrounds group
+    this.foregrounds = this.add.container(0, 200, [
+      this.bush,
+      this.questIcon,
+      this.musicIcon,
+    ]).setVisible(false);
 
     // All Quests Completed
     this.game.vue.$root.$on('allQuestComplete', () => {

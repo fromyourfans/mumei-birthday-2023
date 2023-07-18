@@ -14,8 +14,17 @@ import room from '../assets/images2023/room.png';
 import table from '../assets/images2023/table.png';
 import window from '../assets/images2023/window.png';
 import fore from '../assets/images2023/fore.png';
-import balloon from '../assets/images2023/balloon.png';
-import hoo from '../assets/images2023/hoo.png';
+import balloons1 from '../assets/images2023/balloons1.png';
+import balloons2 from '../assets/images2023/balloons2.png';
+import bat from '../assets/images2023/bat.png';
+import figs from '../assets/images2023/figs.png';
+import flags1 from '../assets/images2023/flags1.png';
+import flags2 from '../assets/images2023/flags2.png';
+import gifts1 from '../assets/images2023/gifts1.png';
+import gifts2 from '../assets/images2023/gifts2.png';
+import globos from '../assets/images2023/globos.png';
+import letters from '../assets/images2023/letters.png';
+import ticket from '../assets/images2023/ticket.png';
 
 import bark1 from '../assets/audio/bark01.mp3';
 import bark2 from '../assets/audio/bark02.mp3';
@@ -28,7 +37,20 @@ import bae from '../assets/sprites/bae.png';
 import friend from '../assets/sprites/friend.png';
 import irys from '../assets/sprites/irys.png';
 import sana from '../assets/sprites/sana.png';
+import fauna from '../assets/sprites/fauna.png';
 import kronii from '../assets/sprites/kronii.png';
+
+import halphaca from '../assets/sprites/h-alphaca.png';
+import hchlorine from '../assets/sprites/h-chlorine.png';
+import hdeez from '../assets/sprites/h-deez.png';
+import hemi from '../assets/sprites/h-emi.png';
+import hfae from '../assets/sprites/h-fae.png';
+import hjackiegnome from '../assets/sprites/h-jackiegnome.png';
+import hjake from '../assets/sprites/h-jake.png';
+import hnintan from '../assets/sprites/h-nintan.png';
+import hsayowl from '../assets/sprites/h-sayowl.png';
+import hscounty from '../assets/sprites/h-scounty.png';
+import hjesusa from '../assets/images2023/h-jesusa.png';
 
 class IndexScene extends Phaser.Scene {
   loadingText = null;
@@ -60,8 +82,19 @@ class IndexScene extends Phaser.Scene {
     this.load.image('table', table);
     this.load.image('window', window);
     this.load.image('fore', fore);
-    this.load.image('balloon', balloon);
-    this.load.image('hoo', hoo);
+    this.load.image('balloons1', balloons1);
+    this.load.image('balloons2', balloons2);
+
+    this.load.image('bat', bat);
+    this.load.image('figs', figs);
+    this.load.image('flags1', flags1);
+    this.load.image('flags2', flags2);
+    this.load.image('gifts1', gifts1);
+    this.load.image('gifts2', gifts2);
+    this.load.image('globos', globos);
+    this.load.image('letters', letters);
+    this.load.image('ticket', ticket);
+    this.load.image('hjesusa', hjesusa);
 
     this.load.image('quests', quests);
     this.load.image('musicon', musicOn);
@@ -74,7 +107,7 @@ class IndexScene extends Phaser.Scene {
     this.load.audio('treehouse', treehouse);
 
     this.load.spritesheet('animol', animol, {
-      frameWidth: 223, frameHeight: 164, margin: 2, spacing: 4,
+      frameWidth: 223, frameHeight: 161, margin: 2, spacing: 4,
     });
     this.load.spritesheet('irys', irys, {
       frameWidth: 334, frameHeight: 689, margin: 0, spacing: 0,
@@ -90,6 +123,40 @@ class IndexScene extends Phaser.Scene {
     });
     this.load.spritesheet('kronii', kronii, {
       frameWidth: 240, frameHeight: 675, margin: 0, spacing: 0,
+    });
+    this.load.spritesheet('fauna', fauna, {
+      frameWidth: 308, frameHeight: 430, margin: 0, spacing: 0,
+    });
+
+    this.load.spritesheet('halphaca', halphaca, {
+      frameWidth: 136, frameHeight: 123, margin: 0, spacing: 0,
+    });
+    this.load.spritesheet('hchlorine', hchlorine, {
+      frameWidth: 121, frameHeight: 109, margin: 0, spacing: 0,
+    });
+    this.load.spritesheet('hdeez', hdeez, {
+      frameWidth: 104, frameHeight: 96, margin: 0, spacing: 0,
+    });
+    this.load.spritesheet('hemi', hemi, {
+      frameWidth: 136, frameHeight: 124, margin: 0, spacing: 0,
+    });
+    this.load.spritesheet('hfae', hfae, {
+      frameWidth: 89, frameHeight: 97, margin: 0, spacing: 0,
+    });
+    this.load.spritesheet('hjackiegnome', hjackiegnome, {
+      frameWidth: 183, frameHeight: 166, margin: 0, spacing: 0,
+    });
+    this.load.spritesheet('hjake', hjake, {
+      frameWidth: 96, frameHeight: 98, margin: 0, spacing: 0,
+    });
+    this.load.spritesheet('hnintan', hnintan, {
+      frameWidth: 136, frameHeight: 103, margin: 0, spacing: 0,
+    });
+    this.load.spritesheet('hsayowl', hsayowl, {
+      frameWidth: 115, frameHeight: 106, margin: 0, spacing: 0,
+    });
+    this.load.spritesheet('hscounty', hscounty, {
+      frameWidth: 131, frameHeight: 102, margin: 0, spacing: 0,
     });
   }
 
