@@ -28,11 +28,11 @@ module.exports = {
         'og:title': 'Happy Birthday Mumei!',
         'og:type': 'website',
         'og:description': 'Hoomans celebrate Nanashi Mumei\'s Birthday',
-        'og:image': 'https://mumei-birthday.fromyour.fans/ogimage.png',
+        'og:image': 'https://mumei-bday-2023.fromyour.fans/ogimage.png',
         'twitter:card': 'summary_large_image',
         'twitter:title': 'Happy Birthday Mumei!',
         'twitter:description': 'Hoomans celebrate Nanashi Mumei\'s Birthday',
-        'twitter:image': 'https://mumei-birthday.fromyour.fans/ogimage.png',
+        'twitter:image': 'https://mumei-bday-2023.fromyour.fans/ogimage.png',
       };
       return args;
     });
