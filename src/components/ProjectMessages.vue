@@ -46,7 +46,7 @@ import twemoji from 'twemoji';
 
 export default {
   data: () => ({
-    source: 'https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumei2022.json',
+    source: 'https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumeibday2023.json',
     cards: [],
     read: {},
     countRead: 0,
@@ -57,7 +57,7 @@ export default {
     toggleRead(key) {
       if (typeof this.read[key] === 'undefined') this.read[key] = false;
       this.read = { ...this.read, [key]: !this.read[key] };
-      localStorage.setItem('mumei2022_read', JSON.stringify(this.read));
+      localStorage.setItem('mumeibday2023_read', JSON.stringify(this.read));
       this.countRead = Object.values(this.read).filter((v) => !!v).length;
     },
     spoiler() {
@@ -67,8 +67,8 @@ export default {
   mounted() {
     // Load data
     (async () => {
-      if (!localStorage.getItem('mumei2022_read')) localStorage.setItem('mumei2022_read', '{}');
-      this.read = JSON.parse(localStorage.getItem('mumei2022_read'));
+      if (!localStorage.getItem('mumeibday2023_read')) localStorage.setItem('mumeibday2023_read', '{}');
+      this.read = JSON.parse(localStorage.getItem('mumeibday2023_read'));
       this.countRead = Object.values(this.read).filter((v) => !!v).length;
       const fetchSource = await axios.get(this.source).catch(() => null);
       const data = fetchSource && fetchSource.data ? fetchSource.data : {};

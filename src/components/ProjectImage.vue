@@ -69,7 +69,7 @@ export default {
     left: 0;
     right: 0;
     bottom: 0;
-    background: #c2af8b;
+    background: #f0f0f0;
   }
   .project-close {
     position:absolute;

@@ -7,28 +7,31 @@
     <div class="project-close">
       <v-btn
         @click="$root.$emit('closeProject')"
-        block large elevation="1" color="purple lighten-4">
+        block large elevation="1" color="brown lighten-4">
         Close
       </v-btn>
     </div>
-    <div class="project-content text-right">
-      <iframe
-        width="100%" height="100%"
-        :src="video"
-        frameborder="0"
-        allow="encrypted-media;"
-        allowfullscreen>
-      </iframe>
+    <div class="project-content" ref="container">
+      ...
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  props: ['video'],
+  props: ['image'],
   data: () => ({
-    //
+    maxHeight: 480,
   }),
+  methods: {
+    onImgLoaded() {
+      console.log(this.$refs.container.clientHeight);
+      this.maxHeight = this.$refs.container.clientHeight;
+    },
+    onImgClick() {
+      window.open(this.image);
+    },
+  },
 };
 </script>
 
@@ -41,7 +44,7 @@ export default {
     top: 0;
     left: 0;
     right: 0;
-    height: 60px;
+    height: 70px;
     overflow:none;
     h3 {
       padding:0;
@@ -54,10 +57,11 @@ export default {
   }
   .project-content {
     position:absolute;
-    top: 60px;
+    top: 70px;
     left: 0;
     right: 0;
     bottom: 0;
+    background: #f0f0f0;
   }
   .project-close {
     position:absolute;

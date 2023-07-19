@@ -6,14 +6,20 @@
       :max-width="dialogWidth"
       elevation="0" overlay-color="brown darken-4" overlay-opacity="0.85">
       <v-card tile class="pa-4">
-        <div v-if="openProject === 'tour'">
-          <ProjectTour />
-        </div>
         <div v-if="openProject === 'mural'">
           <ProjectImage :image="MuralImg" />
         </div>
         <div v-if="openProject === 'messages'">
           <ProjectMessages/>
+        </div>
+        <div v-if="openProject === 'fanarts'">
+          <ProjectArts />
+        </div>
+        <div v-if="openProject === 'certificate'">
+          <ProjectCertificate />
+        </div>
+        <div v-if="openProject === 'video'">
+          <ProjectVideo video="https://www.youtube.com/embed/cLdTjcYzNAA" />
         </div>
         <div v-if="openProject === 'credits'">
           <ProjectCredits/>
@@ -21,22 +27,20 @@
         <div v-if="openProject === 'quests'">
           <ProjectQuests :questStatus="questStatus" />
         </div>
-        <div v-if="openProject === 'fanarts'">
-          <ProjectArts />
-        </div>
       </v-card>
     </v-dialog>
   </v-app>
 </template>
 
 <script>
-import MuralImg from '@/assets/mural-20220724.jpg';
-import ProjectTour from '@/components/ProjectTour.vue';
+import MuralImg from '@/assets/mural-20220719.png';
 import ProjectImage from '@/components/ProjectImage.vue';
 import ProjectMessages from '@/components/ProjectMessages.vue';
+import ProjectArts from '@/components/ProjectArts.vue';
+import ProjectCertificate from '@/components/ProjectCertificate.vue';
+import ProjectVideo from '@/components/ProjectVideo.vue';
 import ProjectCredits from '@/components/ProjectCredits.vue';
 import ProjectQuests from '@/components/ProjectQuests.vue';
-import ProjectArts from '@/components/ProjectArts.vue';
 import EnnaBirthday from './game';
 
 export default {
@@ -48,11 +52,10 @@ export default {
     questStatus: {
       mural: false,
       messages: false,
-      friend: false,
       animol: false,
-      tour: false,
       fanarts: false,
-      ipod: false,
+      certificate: false,
+      video: false,
       credits: false,
     },
   }),
@@ -93,12 +96,13 @@ export default {
     });
   },
   components: {
-    ProjectTour,
     ProjectImage,
     ProjectMessages,
+    ProjectArts,
+    ProjectCertificate,
+    ProjectVideo,
     ProjectCredits,
     ProjectQuests,
-    ProjectArts,
   },
 };
 </script>
