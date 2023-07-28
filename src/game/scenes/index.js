@@ -25,6 +25,13 @@ import gifts2 from '../assets/images2023/gifts2.png';
 import globos from '../assets/images2023/globos.png';
 import letters from '../assets/images2023/letters.png';
 import ticket from '../assets/images2023/ticket.png';
+import banner from '../assets/images2023/banner.png';
+import certificate from '../assets/images2023/certificate.png';
+import closet from '../assets/images2023/closet.png';
+import computer from '../assets/images2023/computer.png';
+import drawings from '../assets/images2023/drawings.png';
+import photos from '../assets/images2023/photos.png';
+import sanalite from '../assets/images2023/sanalite.png';
 
 import bark1 from '../assets/audio/bark01.mp3';
 import bark2 from '../assets/audio/bark02.mp3';
@@ -50,7 +57,9 @@ import hjake from '../assets/sprites/h-jake.png';
 import hnintan from '../assets/sprites/h-nintan.png';
 import hsayowl from '../assets/sprites/h-sayowl.png';
 import hscounty from '../assets/sprites/h-scounty.png';
-import hjesusa from '../assets/images2023/h-jesusa.png';
+import hjesus from '../assets/sprites/h-jesus.png';
+import hobtuse from '../assets/sprites/h-obtuse.png';
+import hhootsie from '../assets/sprites/h-hootsie.png';
 
 class IndexScene extends Phaser.Scene {
   loadingText = null;
@@ -94,7 +103,13 @@ class IndexScene extends Phaser.Scene {
     this.load.image('globos', globos);
     this.load.image('letters', letters);
     this.load.image('ticket', ticket);
-    this.load.image('hjesusa', hjesusa);
+    this.load.image('banner', banner);
+    this.load.image('certificate', certificate);
+    this.load.image('closet', closet);
+    this.load.image('computer', computer);
+    this.load.image('drawings', drawings);
+    this.load.image('photos', photos);
+    this.load.image('sanalite', sanalite);
 
     this.load.image('quests', quests);
     this.load.image('musicon', musicOn);
@@ -157,6 +172,15 @@ class IndexScene extends Phaser.Scene {
     });
     this.load.spritesheet('hscounty', hscounty, {
       frameWidth: 131, frameHeight: 102, margin: 0, spacing: 0,
+    });
+    this.load.spritesheet('hjesus', hjesus, {
+      frameWidth: 112, frameHeight: 105, margin: 0, spacing: 0,
+    });
+    this.load.spritesheet('hobtuse', hobtuse, {
+      frameWidth: 153, frameHeight: 130, margin: 0, spacing: 0,
+    });
+    this.load.spritesheet('hhootsie', hhootsie, {
+      frameWidth: 120, frameHeight: 127, margin: 0, spacing: 0,
     });
   }
 

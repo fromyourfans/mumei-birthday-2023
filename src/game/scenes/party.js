@@ -19,7 +19,7 @@ class PartyScene extends Phaser.Scene {
         this.game.vue.$root.$emit('doneQuest', { questId: 'credits' });
         this.openProject('credits');
       });
-    this.add.text(10, 5, 'Version 220719.1711', {
+    this.add.text(10, 5, 'Version 220728.1825', {
       fontFamily: 'Arial',
       fontSize: 14,
       align: 'left',
@@ -60,13 +60,19 @@ class PartyScene extends Phaser.Scene {
     this.hoverElement(1610, 895, 'hscounty').setDepth(1);
     this.hoverElement(1510, 945, 'halphaca').setDepth(1);
     this.hoverElement(1730, 945, 'hsayowl').setDepth(1);
+    this.hoverElement(395, 829, 'hjesus').setDepth(1);
+    this.hoverElement(1269, 935, 'hobtuse').setDepth(1);
+    this.hoverElement(482, 908, 'hhootsie').setDepth(1);
+    this.add.image(629, 529, 'sanalite').setOrigin(0, 0);
     this.add.image(786, 717, 'table').setOrigin(0, 0);
-    this.add.image(617, 286, 'globos').setOrigin(0, 0);
-    this.add.image(410, 798, 'hjesusa').setOrigin(0, 0);
+    this.add.image(610, 240, 'globos').setScale(0.76).setOrigin(0, 0);
     this.add.image(3, 0, 'flags1').setOrigin(0, 0);
     this.add.image(3, 0, 'flags1').setOrigin(0, 0);
     this.add.image(532, 817, 'gifts1').setOrigin(0, 0);
     this.add.image(1097, 889, 'gifts2').setOrigin(0, 0);
+    this.add.image(centerX, 0, 'banner').setScale(0.85).setOrigin(0.5, 0);
+    this.add.image(823, 406, 'closet').setOrigin(0, 0);
+
     const windowFrame = this.add.image(0, 0, 'window').setDepth(301).setOrigin(0, 0).setAlpha(1)
       .setInteractive({ useHandCursor: false });
     const bush = this.add.image(0, 1080, 'fore').setOrigin(0, 1).setDepth(302);
@@ -103,39 +109,19 @@ class PartyScene extends Phaser.Scene {
       });
 
     // INTERACTIVE: Letters -> messages
-    this.interactiveElement(784, 1000, 'letters', 800, 964, 'Birthday Messages', 'messages');
+    this.interactiveElement(784, 1000, 'letters', 800, 944, 'Messages', 'messages');
 
     // INTERACTIVE: Photos -> fanarts
-    this.add.rectangle(190, 421, 200, 80, 0xffffff, 0.8).setOrigin(0, 0)
-      .setInteractive({ useHandCursor: true })
-      .on('pointerdown', () => {
-        this.game.vue.$root.$emit('doneQuest', { questId: 'fanarts' });
-        this.openProject('fanarts');
-      });
+    this.interactiveElement(252, 470, 'photos', 252, 430, 'Gallery', 'fanarts');
 
     // INTERACTIVE: Drawings -> mural
-    this.add.rectangle(21, 650, 100, 100, 0xffffff, 0.8).setOrigin(0, 0)
-      .setInteractive({ useHandCursor: true })
-      .on('pointerdown', () => {
-        this.game.vue.$root.$emit('doneQuest', { questId: 'mural' });
-        this.openProject('mural');
-      });
+    this.interactiveElement(91, 711, 'drawings', 91, 651, 'Drawings', 'mural');
 
     // INTERACTIVE: Computer -> video
-    this.add.rectangle(1710, 585, 100, 100, 0xffffff, 0.8).setOrigin(0, 0)
-      .setInteractive({ useHandCursor: true })
-      .on('pointerdown', () => {
-        this.game.vue.$root.$emit('doneQuest', { questId: 'video' });
-        this.openProject('video');
-      });
+    this.interactiveElement(1780, 620, 'computer', 1800, 500, 'Computer', 'video');
 
-    // INTERACTIVE: Computer -> video
-    this.add.rectangle(870, 490, 100, 100, 0xffffff, 0.8).setOrigin(0, 0)
-      .setInteractive({ useHandCursor: true })
-      .on('pointerdown', () => {
-        this.game.vue.$root.$emit('doneQuest', { questId: 'certificate' });
-        this.openProject('certificate');
-      });
+    // INTERACTIVE: Certificate -> video
+    this.interactiveElement(750, 460, 'certificate', 750, 400, 'Certificate', 'certificate');
 
     // Friend
     friend.once('pointerdown', () => {

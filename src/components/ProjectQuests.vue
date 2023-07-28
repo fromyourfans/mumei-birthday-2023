@@ -27,7 +27,7 @@ export default {
   props: ['questStatus'],
   data: () => ({
     questText: {
-      mural: 'Look at the pile of crayon drawings',
+      mural: 'Look at the pile of crayon drawings on the left',
       messages: 'Check the bundled letters on the floor',
       animol: 'Click on animol and hear what she has to say',
       fanarts: 'Check the photos by the bed',
