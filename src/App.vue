@@ -33,7 +33,7 @@
 </template>
 
 <script>
-import MuralImg from '@/assets/mural-20220728.jpg';
+import MuralImg from '@/assets/mural-20220730.jpg';
 import ProjectImage from '@/components/ProjectImage.vue';
 import ProjectMessages from '@/components/ProjectMessages.vue';
 import ProjectArts from '@/components/ProjectArts.vue';
