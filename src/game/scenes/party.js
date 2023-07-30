@@ -3,7 +3,7 @@ import Phaser from 'phaser';
 class PartyScene extends Phaser.Scene {
   bgm = null;
 
-  bgmOn = true;
+  bgmOn = false;
 
   create() {
     const { width, height } = this.sys.game.canvas;
@@ -246,7 +246,7 @@ class PartyScene extends Phaser.Scene {
     ]).setVisible(false);
 
     // Default Room BGM
-    this.bgm = this.sound.add('treehouse').setVolume(0.2);
+    this.bgm = this.sound.add('bgm2023').setVolume(0.3);
     this.toggleBGM();
   }
 

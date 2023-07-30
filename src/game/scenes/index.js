@@ -37,7 +37,7 @@ import bark1 from '../assets/audio/bark01.mp3';
 import bark2 from '../assets/audio/bark02.mp3';
 import bark3 from '../assets/audio/bark03.mp3';
 import bark4 from '../assets/audio/bark04.mp3';
-import treehouse from '../assets/audio/treehouse.ogg';
+import bgm2023 from '../assets/audio/2023.ogg';
 
 import animol from '../assets/sprites/animol.png';
 import bae from '../assets/sprites/bae.png';
@@ -119,7 +119,7 @@ class IndexScene extends Phaser.Scene {
     this.load.audio('bark2', bark2);
     this.load.audio('bark3', bark3);
     this.load.audio('bark4', bark4);
-    this.load.audio('treehouse', treehouse);
+    this.load.audio('bgm2023', bgm2023);
 
     this.load.spritesheet('animol', animol, {
       frameWidth: 223, frameHeight: 200, margin: 0, spacing: 0,
