@@ -117,6 +117,10 @@
           <img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumei-bday2023/umicross.png" />
           <div class="artist text-center">Umicross</div>
         </div>
+        <div v-masonry-tile :class="[ 'card', censor ? 'card-censor' : '' ]">
+          <img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumei-bday2023/noobilator.png" />
+          <div class="artist text-center">The Noobilator</div>
+        </div>
       </div>
     </div>
   </div>
