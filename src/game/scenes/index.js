@@ -122,41 +122,41 @@ class IndexScene extends Phaser.Scene {
     this.load.audio('treehouse', treehouse);
 
     this.load.spritesheet('animol', animol, {
-      frameWidth: 223, frameHeight: 161, margin: 2, spacing: 4,
+      frameWidth: 223, frameHeight: 200, margin: 0, spacing: 0,
     });
     this.load.spritesheet('irys', irys, {
-      frameWidth: 334, frameHeight: 689, margin: 0, spacing: 0,
+      frameWidth: 340, frameHeight: 700, margin: 0, spacing: 0,
     });
     this.load.spritesheet('bae', bae, {
-      frameWidth: 330, frameHeight: 453, margin: 0, spacing: 0,
+      frameWidth: 348, frameHeight: 473, margin: 0, spacing: 0,
     });
     this.load.spritesheet('friend', friend, {
-      frameWidth: 375, frameHeight: 465, margin: 0, spacing: 0,
+      frameWidth: 380, frameHeight: 470, margin: 0, spacing: 0,
     });
     this.load.spritesheet('sana', sana, {
-      frameWidth: 251, frameHeight: 343, margin: 0, spacing: 0,
+      frameWidth: 260, frameHeight: 360, margin: 0, spacing: 0,
     });
     this.load.spritesheet('kronii', kronii, {
-      frameWidth: 240, frameHeight: 675, margin: 0, spacing: 0,
+      frameWidth: 260, frameHeight: 700, margin: 0, spacing: 0,
     });
     this.load.spritesheet('fauna', fauna, {
-      frameWidth: 308, frameHeight: 430, margin: 0, spacing: 0,
+      frameWidth: 320, frameHeight: 450, margin: 0, spacing: 0,
     });
 
     this.load.spritesheet('halphaca', halphaca, {
-      frameWidth: 136, frameHeight: 123, margin: 0, spacing: 0,
+      frameWidth: 140, frameHeight: 130, margin: 0, spacing: 0,
     });
     this.load.spritesheet('hchlorine', hchlorine, {
-      frameWidth: 121, frameHeight: 109, margin: 0, spacing: 0,
+      frameWidth: 125, frameHeight: 115, margin: 0, spacing: 0,
     });
     this.load.spritesheet('hdeez', hdeez, {
       frameWidth: 104, frameHeight: 96, margin: 0, spacing: 0,
     });
     this.load.spritesheet('hemi', hemi, {
-      frameWidth: 136, frameHeight: 124, margin: 0, spacing: 0,
+      frameWidth: 136, frameHeight: 130, margin: 0, spacing: 0,
     });
     this.load.spritesheet('hfae', hfae, {
-      frameWidth: 89, frameHeight: 97, margin: 0, spacing: 0,
+      frameWidth: 93, frameHeight: 97, margin: 0, spacing: 0,
     });
     this.load.spritesheet('hjackiegnome', hjackiegnome, {
       frameWidth: 183, frameHeight: 166, margin: 0, spacing: 0,
@@ -168,7 +168,7 @@ class IndexScene extends Phaser.Scene {
       frameWidth: 136, frameHeight: 103, margin: 0, spacing: 0,
     });
     this.load.spritesheet('hsayowl', hsayowl, {
-      frameWidth: 115, frameHeight: 106, margin: 0, spacing: 0,
+      frameWidth: 115, frameHeight: 110, margin: 0, spacing: 0,
     });
     this.load.spritesheet('hscounty', hscounty, {
       frameWidth: 131, frameHeight: 102, margin: 0, spacing: 0,
@@ -177,10 +177,10 @@ class IndexScene extends Phaser.Scene {
       frameWidth: 112, frameHeight: 105, margin: 0, spacing: 0,
     });
     this.load.spritesheet('hobtuse', hobtuse, {
-      frameWidth: 153, frameHeight: 130, margin: 0, spacing: 0,
+      frameWidth: 156, frameHeight: 136, margin: 0, spacing: 0,
     });
     this.load.spritesheet('hhootsie', hhootsie, {
-      frameWidth: 120, frameHeight: 127, margin: 0, spacing: 0,
+      frameWidth: 130, frameHeight: 140, margin: 0, spacing: 0,
     });
   }
 

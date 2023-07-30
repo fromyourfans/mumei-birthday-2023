@@ -45,7 +45,6 @@ class PartyScene extends Phaser.Scene {
     this.add.image(1028, 557, 'figs').setOrigin(0, 0);
     this.hoverElement(534, 428, 'hfae');
     this.hoverElement(885, 289, 'hdeez');
-    const animol = this.hoverElement(410, 250, 'animol');
     this.hoverElement(1131, 368, 'bae');
     this.hoverElement(1420, 340, 'kronii');
     this.hoverElement(395, 420, 'fauna');
@@ -66,6 +65,7 @@ class PartyScene extends Phaser.Scene {
     this.add.image(629, 529, 'sanalite').setOrigin(0, 0);
     this.add.image(786, 717, 'table').setOrigin(0, 0);
     this.add.image(610, 240, 'globos').setScale(0.76).setOrigin(0, 0);
+    const animol = this.hoverElement(410, 250, 'animol').setScale(0.9);
     this.add.image(3, 0, 'flags1').setOrigin(0, 0);
     this.add.image(3, 0, 'flags1').setOrigin(0, 0);
     this.add.image(532, 817, 'gifts1').setOrigin(0, 0);
