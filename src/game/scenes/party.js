@@ -293,11 +293,7 @@ class PartyScene extends Phaser.Scene {
     this.bgmOn = !this.bgmOn;
     if (this.bgmOn) {
       this.musicImg.setTexture('musicon');
-      this.bgm.on('complete', () => {
-        this.ipodOn = false;
-        this.switchBGM('treehouse');
-      });
-      this.bgm.play();
+      this.bgm.setLoop(true).play();
     } else {
       this.musicImg.setTexture('musicoff');
       this.bgm.stop();
