@@ -21,100 +21,101 @@
     <div class="project-content">
       <div v-masonry="'bdaycards'" transition-duration="0.3s" item-selector=".card" stagger="0s">
         <div v-masonry-tile :class="[ 'card', censor ? 'card-censor' : '' ]">
-          <img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumei-bday2022/fanart/thumb-dondon.png" />
+          <img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumei-bday2023/anewstartremixpackage.png" />
           <div class="gift-note text-center">
-            <a href="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumei-bday2022/DON%20DON%20Hand%20Assets%20by%20%C4%90ay.zip" target="_blank">
-              DonDon Hand Assets (Download)
+            <a href="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumei-bday2023/anewstartremixpackage.zip" target="_blank">
+              A New Start Remix Package (Download)
             </a>
           </div>
-          <div class="artist text-center">Hand Assets from Đay</div>
+          <div class="artist text-center">romeo the silliest</div>
         </div>
         <div v-masonry-tile :class="[ 'card', censor ? 'card-censor' : '' ]">
-          <img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumei-bday2022/fanart/bukiyosart.png" />
-          <div class="artist text-center">Mikki BUKIYOS</div>
+          <img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumei-bday2023/$photos1.png" />
+          <div class="artist text-center">Abigail Casanova / Sayowl</div>
         </div>
         <div v-masonry-tile :class="[ 'card', censor ? 'card-censor' : '' ]">
-          <img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumei-bday2022/fanart/scount.png" />
+          <img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumei-bday2023/$photos2.png" />
+          <div class="artist text-center">Mocha Alpaca</div>
+        </div>
+        <div v-masonry-tile :class="[ 'card', censor ? 'card-censor' : '' ]">
+          <img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumei-bday2023/sayowl.png" />
+          <div class="artist text-center">Abigail Casanova / Sayowl</div>
+        </div>
+        <div v-masonry-tile :class="[ 'card', censor ? 'card-censor' : '' ]">
+          <img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumei-bday2023/scount.png" />
           <div class="artist text-center">scount</div>
         </div>
         <div v-masonry-tile :class="[ 'card', censor ? 'card-censor' : '' ]">
-          <img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumei-bday2022/fanart/nintan.png" />
-          <div class="artist text-center">Nin-tan</div>
-        </div>
-        <div v-masonry-tile :class="[ 'card', censor ? 'card-censor' : '' ]">
-          <img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumei-bday2022/fanart/alphacas.png" />
+          <img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumei-bday2023/alphacas.png" />
           <div class="artist text-center">AlphaCas</div>
         </div>
         <div v-masonry-tile :class="[ 'card', censor ? 'card-censor' : '' ]">
-          <img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumei-bday2022/fanart/shiro.png" />
-          <div class="artist text-center">Shiro</div>
+          <img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumei-bday2023/jesusalberto.png" />
+          <div class="artist text-center">Jesús Alberto</div>
         </div>
         <div v-masonry-tile :class="[ 'card', censor ? 'card-censor' : '' ]">
-          <img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumei-bday2022/fanart/jisooooo.png" />
-          <div class="artist text-center">Jisooooo</div>
+          <img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumei-bday2023/akka.png" />
+          <div class="artist text-center">Akkaネン</div>
         </div>
         <div v-masonry-tile :class="[ 'card', censor ? 'card-censor' : '' ]">
-          <img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumei-bday2022/fanart/mogumogu.png" />
-          <div class="artist text-center">Mogu Mogu</div>
+          <img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumei-bday2023/dangercatra.png" />
+          <div class="artist text-center">DangerCatra</div>
         </div>
         <div v-masonry-tile :class="[ 'card', censor ? 'card-censor' : '' ]">
-          <img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumei-bday2022/fanart/minh.png" />
-          <div class="artist text-center">Minh</div>
+          <img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumei-bday2023/deez.png" />
+          <div class="artist text-center">DeezNiceDrawins</div>
         </div>
         <div v-masonry-tile :class="[ 'card', censor ? 'card-censor' : '' ]">
-          <img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumei-bday2022/fanart/ari33_06.png" />
-          <div class="artist text-center">Ari33_06</div>
+          <img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumei-bday2023/miyach.png" />
+          <div class="artist text-center">Mumei Gundam</div>
         </div>
         <div v-masonry-tile :class="[ 'card', censor ? 'card-censor' : '' ]">
-          <img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumei-bday2022/fanart/dodee.png" />
-          <div class="artist text-center">Dodee</div>
+          <img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumei-bday2023/no87.png" />
+          <div class="artist text-center">No.87</div>
         </div>
         <div v-masonry-tile :class="[ 'card', censor ? 'card-censor' : '' ]">
-          <img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumei-bday2022/fanart/eli.png" />
-          <div class="artist text-center">Eli</div>
+          <img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumei-bday2023/solodestructo.png" />
+          <div class="artist text-center">Solo_K_art</div>
         </div>
         <div v-masonry-tile :class="[ 'card', censor ? 'card-censor' : '' ]">
-          <img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumei-bday2022/fanart/leukocytek.png" />
-          <div class="artist text-center">@LeukocyteK</div>
+          <img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumei-bday2023/mocha.png" />
+          <div class="artist text-center">Mocha Alpaca</div>
         </div>
         <div v-masonry-tile :class="[ 'card', censor ? 'card-censor' : '' ]">
-          <img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumei-bday2022/fanart/fozzy.png" />
-          <div class="artist text-center">Fozzy</div>
+          <img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumei-bday2023/veejaiii.png" />
+          <div class="artist text-center">VeeJaiii The Moomin Silly</div>
         </div>
         <div v-masonry-tile :class="[ 'card', censor ? 'card-censor' : '' ]">
-          <div class="gift">
-            Weeks before a stream,<br />
-            Every hooman had hands on deck.<br />
-            Lovingly and carefully planning,<br />
-            On what Mumei might want to peck.<br />
-            Very early, we settled on some berries,<br />
-            Everyone was ready and willing to go -<br />
-            Yet we had a few who still forgor,<br />
-            Or at least they told us so.<br />
-            Under threat of project failure,<br />
-            Many of us prayed for days!<br />
-            Understanding that our efforts could maybe<br />
-            Make our owlshi's day.<br />
-            Everyone is happy, everyone is here!<br />
-            It is our best wishes to you, on this celebration of the year!
-          </div>
-          <div class="artist text-center">Xuda</div>
+          <img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumei-bday2023/okami.png" />
+          <div class="artist text-center">Okami</div>
         </div>
         <div v-masonry-tile :class="[ 'card', censor ? 'card-censor' : '' ]">
-          <img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumei-bday2022/fanart/lazulis.png" />
-          <div class="artist text-center">Lazulis, the Moom Knight (Aspirant)</div>
+          <img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumei-bday2023/ryougraph.png" />
+          <div class="artist text-center">Mikki RYOUGRAPH</div>
         </div>
         <div v-masonry-tile :class="[ 'card', censor ? 'card-censor' : '' ]">
-          <img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumei-bday2022/fanart/faerieko3.png" />
-          <div class="artist text-center">Faerieko</div>
+          <img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumei-bday2023/sine2.png" />
+          <div class="artist text-center">Sine_Fine_Belli</div>
         </div>
         <div v-masonry-tile :class="[ 'card', censor ? 'card-censor' : '' ]">
-          <img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumei-bday2022/fanart/c.gif" />
-          <div class="gift-anniv text-center">
-            Another project is in the works ⏳<br />
-            Coming around 1-year Anniversary<br />
-            📖📚📖📚📖📚
-          </div>
+          <img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumei-bday2023/mameng.png" />
+          <div class="artist text-center">Mameng</div>
+        </div>
+        <div v-masonry-tile :class="[ 'card', censor ? 'card-censor' : '' ]">
+          <img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumei-bday2023/eli.png" />
+          <div class="artist text-center">Angsty Eli</div>
+        </div>
+        <div v-masonry-tile :class="[ 'card', censor ? 'card-censor' : '' ]">
+          <img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumei-bday2023/gorani.png" />
+          <div class="artist text-center">Gorani</div>
+        </div>
+        <div v-masonry-tile :class="[ 'card', censor ? 'card-censor' : '' ]">
+          <img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumei-bday2023/kudarannn.png" />
+          <div class="artist text-center">Kudarannn</div>
+        </div>
+        <div v-masonry-tile :class="[ 'card', censor ? 'card-censor' : '' ]">
+          <img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumei-bday2023/umicross.png" />
+          <div class="artist text-center">Umicross</div>
         </div>
       </div>
     </div>
@@ -135,8 +136,8 @@ export default {
   },
   mounted() {
     this.$nextTick(() => { this.$redrawVueMasonry('bdaycards'); });
-    setTimeout(() => { this.$redrawVueMasonry('bdaycards'); }, 1000);
-    setTimeout(() => { this.$redrawVueMasonry('bdaycards'); }, 5000);
+    setInterval(() => { this.$redrawVueMasonry('bdaycards'); }, 1000);
+    // setTimeout(() => { this.$redrawVueMasonry('bdaycards'); }, 5000);
   },
 };
 </script>
