@@ -38,6 +38,10 @@
           <div class="artist text-center">Mocha Alpaca</div>
         </div>
         <div v-masonry-tile :class="[ 'card', censor ? 'card-censor' : '' ]">
+          <img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumei-bday2023/$photos3.png" />
+          <div class="artist text-center">Emi</div>
+        </div>
+        <div v-masonry-tile :class="[ 'card', censor ? 'card-censor' : '' ]">
           <img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumei-bday2023/sayowl.png" />
           <div class="artist text-center">Abigail Casanova / Sayowl</div>
         </div>
