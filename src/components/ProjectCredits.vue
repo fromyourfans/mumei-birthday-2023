@@ -9,8 +9,9 @@
         Happy Birthday Mumei, Meimei, Mumeishi, Moomsuke, Moomei, Mooms, Moomers, etc!
         This year the Hoomans have once again worked together
         to create a website for your birthday gift!
-        There's lots of presents contained within here that were made with lots of
-        love and care in the hopes that we can repay back all the love and care you've given us.
+        There's lots of presents contained within here that were made
+        with lots of love and care in the hopes that
+        we can repay back all the love and care you've given us.
         Don't worry about being able to show everything on stream,
         feel free to appreciate what you can and check it out later if you'd like!
       </p>
@@ -48,7 +49,7 @@
             <li>Friend - <strong>Chlorine Cocktail</strong></li>
             <li>Hootsie - <strong>0btuse</strong></li>
             <li>Letter Pile - <strong>DeezNiceDrawins</strong></li>
-            <li>Photos by the bed - <strong>Sayowl</strong></li>
+            <li>Photos by the bed - <strong>Sayowl, Mocha Alpaca</strong></li>
             <li>PC - <strong>Sayowl</strong></li>
             <li>Framed Owl Adoption Certificate - <strong>Sayowl</strong></li>
             <li>Pile of drawings - <strong>AlphaCas</strong></li>
@@ -59,13 +60,15 @@
               <strong>Chlorine Cocktail</strong>
             </li>
             <li>Sanalite - <strong>Nofuukee</strong></li>
+            <li>Unique Hooman - <strong>Jesus Alberto</strong></li>
+            <li>Clothing in Closet - <strong>Akkaネン</strong></li>
           </ul>
         </li>
         <li>
           Music &amp; Sounds
           <ul>
             <li>Main BGM - <strong>Wherefore</strong></li>
-            <li>Barks - <strong>Animol</strong></li>
+            <li>Barks - <strong>Animal</strong></li>
           </ul>
         </li>
         <li>
@@ -76,6 +79,49 @@
             <li>BGM Icon - <strong>Wherefore</strong></li>
           </ul>
         </li>
+      </ul>
+
+      <h3 class="brown--text">Birthday Website</h3>
+      <ul class="pb-4">
+        <li>Organised by <strong>The Gnome’s Prophet</strong></li>
+        <li>Donations by <strong>Hoomans</strong></li>
+        <li>The Owls Trust in the UK</strong></li>
+      </ul>
+
+      <h3 class="brown--text">Appreciation Video Project</h3>
+      <ul class="pb-4">
+        <li>Organised by <strong>Jackie Chan</strong></li>
+        <li>Script by <strong>Jackie Chan</strong></li>
+        <li>Edited by <strong>Jackie Chan</strong></li>
+        <li>Music by <strong>DOVA-SYNDROME Youtube Official</strong></li>
+        <li>
+          Art by
+          <ul>
+            <li><strong>Abigail Casanova</strong></li>
+            <li><strong>DeezNiceDrawins</strong></li>
+            <li><strong>AlphaCas</strong></li>
+            <li><strong>YmirDraws</strong></li>
+            <li><strong>Leftovers</strong></li>
+            <li><strong>romeo (the silliest)</strong></li>
+            <li><strong>Ghostbyun</strong></li>
+            <li><strong>angsty eli</strong></li>
+            <li><strong>Mocha Alpaca</strong></li>
+            <li><strong>mochirice</strong></li>
+            <li><strong>The Arrow</strong></li>
+            <li><strong>crim</strong></li>
+          </ul>
+        </li>
+      </ul>
+
+      <h3 class="brown--text">Special Thanks to</h3>
+      <ul class="pb-4">
+        <li>Staff of Mumei Civilization and Sanctuary discords</li>
+      </ul>
+
+      <h3 class="brown--text">Links</h3>
+      <ul class="pb-4">
+        <li>Drawing Board (closed): <strong>https://magma.com/d/zcJiFfe09Y</strong></li>
+        <li>Owls Trust Organisation: <a href="https://theowlstrust.org/" target="_blank">https://theowlstrust.org/</a></li>
       </ul>
     </div>
     <div class="project-close">
