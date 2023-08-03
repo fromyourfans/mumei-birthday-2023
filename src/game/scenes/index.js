@@ -33,6 +33,7 @@ import drawings from '../assets/images2023/drawings.png';
 import photos from '../assets/images2023/photos.png';
 import sanalite from '../assets/images2023/sanalite.png';
 import hjesusa from '../assets/images2023/h-jesusa.png';
+import cake from '../assets/images2023/cake.png';
 
 import bark1 from '../assets/audio/bark01.mp3';
 import bark2 from '../assets/audio/bark02.mp3';
@@ -112,6 +113,7 @@ class IndexScene extends Phaser.Scene {
     this.load.image('photos', photos);
     this.load.image('sanalite', sanalite);
     this.load.image('hjesusa', hjesusa);
+    this.load.image('cake', cake);
 
     this.load.image('quests', quests);
     this.load.image('musicon', musicOn);

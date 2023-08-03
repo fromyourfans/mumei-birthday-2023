@@ -73,6 +73,7 @@ class PartyScene extends Phaser.Scene {
     this.add.image(1097, 889, 'gifts2').setOrigin(0, 0);
     this.add.image(centerX, 0, 'banner').setScale(0.85).setOrigin(0.5, 0);
     this.add.image(823, 406, 'closet').setOrigin(0, 0);
+    this.add.image(883, 595, 'cake').setOrigin(0, 0);
 
     const windowFrame = this.add.image(0, 0, 'window').setDepth(301).setOrigin(0, 0).setAlpha(1)
       .setInteractive({ useHandCursor: false });
