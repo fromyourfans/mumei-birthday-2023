@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ed5571d1d96c34c35160",
+    "revision": "04c835952ba76048a928",
     "url": "/css/app.d1f23ffb.css"
   },
   {
@@ -36,8 +36,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/bat.ee01ed60.png"
   },
   {
-    "revision": "482f964ec5436c19d6048e0f47fbb09a",
-    "url": "/img/cake.482f964e.png"
+    "revision": "3a8fd4f616ae46a54c025fb412db6ec7",
+    "url": "/img/cake.3a8fd4f6.png"
   },
   {
     "revision": "a4a5ccb01ab01a57e9c132af7c2bedba",
@@ -236,6 +236,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/letters.29a7865c.png"
   },
   {
+    "revision": "c9f1d9f03f36b13626291a805a8fc209",
+    "url": "/img/mumei.c9f1d9f0.png"
+  },
+  {
     "revision": "d4e4a1f9507b79c1c21e0f17c87d3156",
     "url": "/img/mural-20220730.d4e4a1f9.jpg"
   },
@@ -284,12 +288,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/window.47a2f5c0.png"
   },
   {
-    "revision": "11646f78e09d548c9acd32293883c660",
+    "revision": "a0788dc9e781355ca9dcba5220075763",
     "url": "/index.html"
   },
   {
-    "revision": "ed5571d1d96c34c35160",
-    "url": "/js/app.bbf4fdcb.js"
+    "revision": "04c835952ba76048a928",
+    "url": "/js/app.a1431be7.js"
   },
   {
     "revision": "85419d6609126ea7b8cf",
