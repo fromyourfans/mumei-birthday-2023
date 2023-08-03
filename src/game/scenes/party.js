@@ -19,7 +19,7 @@ class PartyScene extends Phaser.Scene {
         this.game.vue.$root.$emit('doneQuest', { questId: 'credits' });
         this.openProject('credits');
       });
-    this.add.text(10, 5, 'Version 220730.1000', {
+    this.add.text(10, 5, 'Version 220803.1752', {
       fontFamily: 'Arial',
       fontSize: 14,
       align: 'left',

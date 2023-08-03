@@ -1,7 +1,7 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b231f0070800837f0a4c",
-    "url": "/css/app.ea8952ad.css"
+    "revision": "4093124cebdb5dd77784",
+    "url": "/css/app.46fea05e.css"
   },
   {
     "revision": "85419d6609126ea7b8cf",
@@ -34,6 +34,22 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "ee01ed60eb2e890f405bb6bb73a67d29",
     "url": "/img/bat.ee01ed60.png"
+  },
+  {
+    "revision": "482f964ec5436c19d6048e0f47fbb09a",
+    "url": "/img/cake.482f964e.png"
+  },
+  {
+    "revision": "a4a5ccb01ab01a57e9c132af7c2bedba",
+    "url": "/img/cert1.a4a5ccb0.png"
+  },
+  {
+    "revision": "e686ec312337d9e5cbc99fdfaee9cf39",
+    "url": "/img/cert2.e686ec31.png"
+  },
+  {
+    "revision": "437820956d1c1acdf33936b4f4e4a34c",
+    "url": "/img/cert3.43782095.png"
   },
   {
     "revision": "3e7cf772659457b5a70249e392e24224",
@@ -220,10 +236,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/letters.29a7865c.png"
   },
   {
-    "revision": "a902554da110813362669c985eea6306",
-    "url": "/img/mural-20220719.a902554d.png"
-  },
-  {
     "revision": "d4e4a1f9507b79c1c21e0f17c87d3156",
     "url": "/img/mural-20220730.d4e4a1f9.jpg"
   },
@@ -272,12 +284,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/img/window.47a2f5c0.png"
   },
   {
-    "revision": "546c0823909d9eaf3cb32d525dc3cce9",
+    "revision": "d11122254bb604fa942af66a1a9a96c3",
     "url": "/index.html"
   },
   {
-    "revision": "b231f0070800837f0a4c",
-    "url": "/js/app.f3a8a6fd.js"
+    "revision": "4093124cebdb5dd77784",
+    "url": "/js/app.111d3460.js"
   },
   {
     "revision": "85419d6609126ea7b8cf",
