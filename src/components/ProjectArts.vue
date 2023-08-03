@@ -27,7 +27,7 @@
               A New Start Remix Package (Download)
             </a>
           </div>
-          <div class="artist text-center">romeo the silliest</div>
+          <div class="artist text-center">Wherefore</div>
         </div>
         <div v-masonry-tile :class="[ 'card', censor ? 'card-censor' : '' ]">
           <img src="https://vtubertools.sfo3.digitaloceanspaces.com/tribute/mumei-bday2023/$photos1.png" />
