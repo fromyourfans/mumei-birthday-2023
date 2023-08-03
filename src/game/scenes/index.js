@@ -48,6 +48,7 @@ import irys from '../assets/sprites/irys.png';
 import sana from '../assets/sprites/sana.png';
 import fauna from '../assets/sprites/fauna.png';
 import kronii from '../assets/sprites/kronii.png';
+import mumei from '../assets/sprites/mumei.png';
 
 import halphaca from '../assets/sprites/h-alphaca.png';
 import hchlorine from '../assets/sprites/h-chlorine.png';
@@ -145,6 +146,9 @@ class IndexScene extends Phaser.Scene {
     });
     this.load.spritesheet('fauna', fauna, {
       frameWidth: 320, frameHeight: 450, margin: 0, spacing: 0,
+    });
+    this.load.spritesheet('mumei', mumei, {
+      frameWidth: 299, frameHeight: 353, margin: 0, spacing: 0,
     });
 
     this.load.spritesheet('halphaca', halphaca, {

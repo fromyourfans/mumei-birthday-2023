@@ -49,10 +49,10 @@ class PartyScene extends Phaser.Scene {
     this.hoverElement(1420, 340, 'kronii');
     this.hoverElement(395, 420, 'fauna');
     this.hoverElement(624, 523, 'sana');
-    const friend = this.hoverElement(1111, 675, 'friend').setDepth(303);
+    const friend = this.hoverElement(1111, 675, 'friend').setDepth(1).setDepth(303);
     this.hoverElement(140, 520, 'irys').setScale(0.9);
-    this.hoverElement(767, 843, 'hnintan').setDepth(1);
-    this.hoverElement(935, 809, 'hjackiegnome').setDepth(1);
+    this.hoverElement(767, 843, 'hnintan').setDepth(4);
+    this.hoverElement(935, 809, 'hjackiegnome').setDepth(5);
     this.hoverElement(1182, 796, 'hjake').setDepth(1);
     this.hoverElement(1267, 742, 'hemi').setDepth(1);
     this.hoverElement(1358, 811, 'hchlorine').setDepth(1);
@@ -63,8 +63,9 @@ class PartyScene extends Phaser.Scene {
     this.hoverElement(790, 292, 'hjesus').setDepth(1).setScale(0.9);
     this.hoverElement(1269, 935, 'hobtuse').setDepth(1);
     this.hoverElement(482, 908, 'hhootsie').setDepth(1);
+    this.hoverElement(881, 475, 'mumei').setScale(1.03).setDepth(2);
     this.add.image(629, 529, 'sanalite').setOrigin(0, 0);
-    this.add.image(786, 717, 'table').setOrigin(0, 0);
+    this.add.image(786, 717, 'table').setDepth(3).setOrigin(0, 0);
     this.add.image(610, 240, 'globos').setScale(0.76).setOrigin(0, 0);
     const animol = this.hoverElement(410, 250, 'animol').setScale(0.9);
     this.add.image(3, 0, 'flags1').setOrigin(0, 0);
@@ -73,7 +74,7 @@ class PartyScene extends Phaser.Scene {
     this.add.image(1097, 889, 'gifts2').setOrigin(0, 0);
     this.add.image(centerX, 0, 'banner').setScale(0.85).setOrigin(0.5, 0);
     this.add.image(823, 406, 'closet').setOrigin(0, 0);
-    this.add.image(883, 595, 'cake').setOrigin(0, 0);
+    this.add.image(893, 630, 'cake').setScale(0.94).setDepth(4).setOrigin(0, 0);
 
     const windowFrame = this.add.image(0, 0, 'window').setDepth(301).setOrigin(0, 0).setAlpha(1)
       .setInteractive({ useHandCursor: false });
@@ -130,17 +131,18 @@ class PartyScene extends Phaser.Scene {
       friend.disableInteractive();
       friend.setDepth(100);
       ticket.setVisible(true);
+      friend.setDepth(1);
       this.tweens.add({
         targets: friend,
         x: 960,
-        y: 400,
+        y: 360,
         scale: { from: 1, to: 0.3 },
         ease: 'Back.easeIn',
         duration: 1000,
         onComplete: () => {
           this.tweens.add({
             targets: friend,
-            y: 380,
+            y: 340,
             duration: 3000,
             yoyo: true,
             loop: -1,
