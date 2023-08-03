@@ -19,7 +19,7 @@
           <ProjectCertificate />
         </div>
         <div v-if="openProject === 'video'">
-          <ProjectVideo video="https://www.youtube.com/embed/cLdTjcYzNAA" />
+          <ProjectVideo video="https://www.youtube.com/embed/C1gkpXGf6Fc" />
         </div>
         <div v-if="openProject === 'credits'">
           <ProjectCredits/>

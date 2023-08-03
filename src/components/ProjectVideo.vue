@@ -1,8 +1,8 @@
 <template>
   <div class="project">
     <div class="project-description">
-      <h3>PlaceholderTitle</h3>
-      <p>PlaceholderDescription</p>
+      <h3>Hoomanity's Appreciation Spotlight</h3>
+      <p>A short video that highlights the community built around Mumei, featuring original art by Hooman's across the world!</p>
     </div>
     <div class="project-close">
       <v-btn
