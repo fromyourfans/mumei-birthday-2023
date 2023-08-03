@@ -122,6 +122,8 @@
       <ul class="pb-4">
         <li>Drawing Board (closed): <strong>https://magma.com/d/zcJiFfe09Y</strong></li>
         <li>Owls Trust Organisation: <a href="https://theowlstrust.org/" target="_blank">https://theowlstrust.org/</a></li>
+        <li>MumeiCiv: <a href="https://twitter.com/MumeiCiv" target="_blank">https://twitter.com/MumeiCiv</a></li>
+        <li>MumeisCivilization: <a href="https://www.youtube.com/@MumeisCivilization" target="_blank">https://www.youtube.com/@MumeisCivilization</a></li>
       </ul>
     </div>
     <div class="project-close">
