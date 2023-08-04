@@ -41,7 +41,7 @@
             <li>Baelz - <strong>Sayowl</strong></li>
             <li>Irys - <strong>Nin-tan【人単】</strong></li>
             <li>Room Layout - <strong>Nin-tan【人単】</strong></li>
-            <li>Birthday Cake - <strong>Faerieko</strong></li>
+            <li>Birthday Cake - <strong>Sayowl & Faerieko</strong></li>
             <li>Central Table - <strong>Nin-tan【人単】</strong></li>
             <li>Birthday Banner - <strong>Pet</strong></li>
             <li>Animal - <strong>AlphaCas</strong></li>
