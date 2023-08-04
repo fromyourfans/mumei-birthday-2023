@@ -63,7 +63,7 @@ class PartyScene extends Phaser.Scene {
     this.hoverElement(790, 292, 'hjesus').setDepth(1).setScale(0.9);
     this.hoverElement(1269, 935, 'hobtuse').setDepth(1);
     this.hoverElement(482, 908, 'hhootsie').setDepth(1);
-    this.hoverElement(881, 475, 'mumei').setScale(1.03).setDepth(2);
+    this.hoverElement(890, 475, 'mumei').setScale(1.08).setDepth(2);
     this.add.image(629, 529, 'sanalite').setOrigin(0, 0);
     this.add.image(786, 717, 'table').setDepth(3).setOrigin(0, 0);
     this.add.image(610, 240, 'globos').setScale(0.76).setOrigin(0, 0);

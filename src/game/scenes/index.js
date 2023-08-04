@@ -148,7 +148,7 @@ class IndexScene extends Phaser.Scene {
       frameWidth: 320, frameHeight: 450, margin: 0, spacing: 0,
     });
     this.load.spritesheet('mumei', mumei, {
-      frameWidth: 299, frameHeight: 353, margin: 0, spacing: 0,
+      frameWidth: 271, frameHeight: 320, margin: 0, spacing: 0,
     });
 
     this.load.spritesheet('halphaca', halphaca, {
